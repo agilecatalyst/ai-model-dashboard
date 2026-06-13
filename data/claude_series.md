@@ -1,0 +1,128 @@
+---
+models:
+  - id: claude-3-5-sonnet
+    name: Claude 3.5 Sonnet
+    developer: Anthropic
+    release_date: 2024-06-20
+    access: Commercial
+    class: Frontier Balanced
+    benchmarks:
+      mmlu: 88.7
+      gpqa: 59.4
+      swe_bench: 49.0
+      human_eval: 92.0
+      aime: 35.0
+    hallucination_rate: 2.2
+    ethics_rating: 8.5
+    iq_lower: 102
+    iq_upper: 135
+    eq_bench: 83
+    arena_elo: 1345
+    ethics_notes: Developed using Constitutional AI. High safety adherence. Often praised for its professional tone and detailed coding outputs.
+    lying_rate: 2.0
+    lying_notes: Cautious refusal profile. Often prefers to refuse a prompt or state "I cannot verify this" rather than hallucinate, reducing its lying rate but increasing refusals on edgy prompts.
+    best_applications:
+      - Advanced software engineering and refactoring
+      - High-quality content generation and document analysis
+      - Visual data extraction and UI mockup generation
+    links:
+      website: https://www.anthropic.com/claude/3-5-sonnet
+      system_card: https://www.anthropic.com/claude/system-card
+
+  - id: claude-3-7-sonnet
+    name: Claude 3.7 Sonnet
+    developer: Anthropic
+    release_date: 2025-02-24
+    access: Commercial
+    class: Frontier Hybrid Reasoning
+    benchmarks:
+      mmlu: 92.1
+      gpqa: 75.4
+      swe_bench: 62.1
+      human_eval: 94.5
+      aime: 78.0
+    hallucination_rate: 1.6
+    ethics_rating: 8.8
+    iq_lower: 115
+    iq_upper: 145
+    eq_bench: 92
+    arena_elo: 1400
+    ethics_notes: First model with an integrated "extended thinking" mode. The safety alignment runs through the reasoning token path, allowing the model to actively self-police its outputs before they are generated.
+    lying_rate: 1.5
+    lying_notes: The model's visible reasoning steps help identify logical discrepancies, making it more honest about its knowledge limits.
+    best_applications:
+      - Software development with complex requirements
+      - Interactive debugging and reasoning tasks
+      - Detailed logical analysis
+    links:
+      website: https://www.anthropic.com/news/claude-3-7-sonnet
+      system_card: https://www.anthropic.com/claude/system-card-3-7
+
+  - id: claude-haiku-4-5
+    name: Claude Haiku 4.5
+    developer: Anthropic
+    release_date: 2025-10-15
+    access: Commercial
+    class: Fast Agentic
+    benchmarks:
+      mmlu: 84.2
+      gpqa: 49.8
+      swe_bench: 28.5
+      human_eval: 87.0
+      aime: 22.0
+    hallucination_rate: 2.8
+    ethics_rating: 8.0
+    iq_lower: 95
+    iq_upper: 122
+    eq_bench: 68
+    arena_elo: 1200
+    ethics_notes: Optimized for speed and low cost. First Haiku model supporting "Computer Use" API actions, meaning extensive safety evaluations were done on action boundary escapes.
+    lying_rate: 3.0
+    lying_notes: Shows low rate of fabrications on standard tasks, but under high speed constraints, it can make slight retrieval errors.
+    best_applications:
+      - High-volume customer support automation
+      - Fast code autocomplete and script writing
+      - Low-latency visual analysis and scraping
+    links:
+      website: https://www.anthropic.com/news/claude-haiku-4-5
+      system_card: https://www.anthropic.com/claude/system-card-haiku-4-5
+
+  - id: claude-opus-4-8
+    name: Claude Opus 4.8
+    developer: Anthropic
+    release_date: 2026-05-28
+    access: Commercial
+    class: Next-Gen Flagship
+    benchmarks:
+      mmlu: 96.2
+      gpqa: 91.0
+      swe_bench: 69.2
+      human_eval: 98.2
+      aime: 94.0
+    hallucination_rate: 1.0
+    ethics_rating: 9.2
+    iq_lower: 128
+    iq_upper: 154
+    eq_bench: 94
+    arena_elo: 1420
+    ethics_notes: State-of-the-art ethical alignment using refined Constitutional AI. Demonstrates strong safety adherence and a low rate of safety bypasses.
+    lying_rate: 0.8
+    lying_notes: Engineered specifically for high truthfulness and "honesty". It is 4x less likely than previous models to let flaws in its outputs or code go unremarked.
+    best_applications:
+      - High-stakes coding agents (e.g. Claude Code integration)
+      - Complex regulatory compliance and legal analysis
+      - Multi-agent coordination with high reliability
+    links:
+      website: https://www.anthropic.com/news/claude-opus-4-8
+      system_card: https://www.anthropic.com/claude/system-card-opus-4-8
+---
+
+# Anthropic Claude Series
+
+Anthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).
+
+### Key Features:
+1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.
+2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.
+3. **Claude 3.7 Hybrid Reasoning:** Toggling "extended thinking" allowed users to balance token speed against deep analytical reasoning.
+4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.

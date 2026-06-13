@@ -1,0 +1,1749 @@
+{
+  "models": [
+    {
+      "id": "claude-3-5-sonnet",
+      "benchmarks": {
+        "mmlu": 88.7,
+        "gpqa": 59.4,
+        "swe_bench": 49,
+        "human_eval": 92,
+        "aime": 35
+      },
+      "best_applications": [
+        "Advanced software engineering and refactoring",
+        "High-quality content generation and document analysis",
+        "Visual data extraction and UI mockup generation"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/claude/3-5-sonnet",
+        "system_card": "https://www.anthropic.com/claude/system-card"
+      },
+      "name": "Claude 3.5 Sonnet",
+      "developer": "Anthropic",
+      "release_date": "2024-06-20",
+      "access": "Commercial",
+      "class": "Frontier Balanced",
+      "hallucination_rate": 2.2,
+      "ethics_rating": 8.5,
+      "iq_lower": 102,
+      "iq_upper": 135,
+      "eq_bench": 83,
+      "arena_elo": 1345,
+      "ethics_notes": "Developed using Constitutional AI. High safety adherence. Often praised for its professional tone and detailed coding outputs.",
+      "lying_rate": 2,
+      "lying_notes": "Cautious refusal profile. Often prefers to refuse a prompt or state \"I cannot verify this\" rather than hallucinate, reducing its lying rate but increasing refusals on edgy prompts.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+    },
+    {
+      "id": "claude-3-7-sonnet",
+      "benchmarks": {
+        "mmlu": 92.1,
+        "gpqa": 75.4,
+        "swe_bench": 62.1,
+        "human_eval": 94.5,
+        "aime": 78
+      },
+      "best_applications": [
+        "Software development with complex requirements",
+        "Interactive debugging and reasoning tasks",
+        "Detailed logical analysis"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/news/claude-3-7-sonnet",
+        "system_card": "https://www.anthropic.com/claude/system-card-3-7"
+      },
+      "name": "Claude 3.7 Sonnet",
+      "developer": "Anthropic",
+      "release_date": "2025-02-24",
+      "access": "Commercial",
+      "class": "Frontier Hybrid Reasoning",
+      "hallucination_rate": 1.6,
+      "ethics_rating": 8.8,
+      "iq_lower": 115,
+      "iq_upper": 145,
+      "eq_bench": 92,
+      "arena_elo": 1400,
+      "ethics_notes": "First model with an integrated \"extended thinking\" mode. The safety alignment runs through the reasoning token path, allowing the model to actively self-police its outputs before they are generated.",
+      "lying_rate": 1.5,
+      "lying_notes": "The model's visible reasoning steps help identify logical discrepancies, making it more honest about its knowledge limits.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "benchmarks": {
+        "mmlu": 84.2,
+        "gpqa": 49.8,
+        "swe_bench": 28.5,
+        "human_eval": 87,
+        "aime": 22
+      },
+      "best_applications": [
+        "High-volume customer support automation",
+        "Fast code autocomplete and script writing",
+        "Low-latency visual analysis and scraping"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/news/claude-haiku-4-5",
+        "system_card": "https://www.anthropic.com/claude/system-card-haiku-4-5"
+      },
+      "name": "Claude Haiku 4.5",
+      "developer": "Anthropic",
+      "release_date": "2025-10-15",
+      "access": "Commercial",
+      "class": "Fast Agentic",
+      "hallucination_rate": 2.8,
+      "ethics_rating": 8,
+      "iq_lower": 95,
+      "iq_upper": 122,
+      "eq_bench": 68,
+      "arena_elo": 1200,
+      "ethics_notes": "Optimized for speed and low cost. First Haiku model supporting \"Computer Use\" API actions, meaning extensive safety evaluations were done on action boundary escapes.",
+      "lying_rate": 3,
+      "lying_notes": "Shows low rate of fabrications on standard tasks, but under high speed constraints, it can make slight retrieval errors.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+    },
+    {
+      "id": "claude-opus-4-8",
+      "benchmarks": {
+        "mmlu": 96.2,
+        "gpqa": 91,
+        "swe_bench": 69.2,
+        "human_eval": 98.2,
+        "aime": 94
+      },
+      "best_applications": [
+        "High-stakes coding agents (e.g. Claude Code integration)",
+        "Complex regulatory compliance and legal analysis",
+        "Multi-agent coordination with high reliability"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/news/claude-opus-4-8",
+        "system_card": "https://www.anthropic.com/claude/system-card-opus-4-8"
+      },
+      "name": "Claude Opus 4.8",
+      "developer": "Anthropic",
+      "release_date": "2026-05-28",
+      "access": "Commercial",
+      "class": "Next-Gen Flagship",
+      "hallucination_rate": 1,
+      "ethics_rating": 9.2,
+      "iq_lower": 128,
+      "iq_upper": 154,
+      "eq_bench": 94,
+      "arena_elo": 1420,
+      "ethics_notes": "State-of-the-art ethical alignment using refined Constitutional AI. Demonstrates strong safety adherence and a low rate of safety bypasses.",
+      "lying_rate": 0.8,
+      "lying_notes": "Engineered specifically for high truthfulness and \"honesty\". It is 4x less likely than previous models to let flaws in its outputs or code go unremarked.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+    },
+    {
+      "id": "deepseek-v3",
+      "benchmarks": {
+        "mmlu": 88.5,
+        "gpqa": 59.1,
+        "swe_bench": 23.5,
+        "human_eval": 90.1,
+        "aime": 14.5
+      },
+      "best_applications": [
+        "Low-cost cloud API text generation",
+        "Multi-turn conversational chatbots",
+        "Bulk text processing and coding (highly efficient token throughput)"
+      ],
+      "links": {
+        "website": "https://www.deepseek.com",
+        "system_card": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/DeepSeek_V3.pdf"
+      },
+      "name": "DeepSeek-V3",
+      "developer": "DeepSeek",
+      "release_date": "2024-12-26",
+      "access": "Open Weights",
+      "class": "Frontier MoE",
+      "hallucination_rate": 2.7,
+      "ethics_rating": 6,
+      "iq_lower": 102,
+      "iq_upper": 134,
+      "eq_bench": 71,
+      "arena_elo": 1260,
+      "ethics_notes": "Released under an open-weights license with specific commercial and safety guidelines. Governed under Chinese regulations, leading to structural censorship/filters on politically sensitive topics.",
+      "lying_rate": 3.2,
+      "lying_notes": "Under pressure regarding sensitive geographic or historical topics, it defaults to pre-programmed safe refusals or standard diplomatic phrasing.",
+      "description_markdown": "# DeepSeek Series\n\nDeepSeek, a Chinese AI firm, disrupted the global AI landscape in late 2024 and early 2025 by launching frontier-class models at a fraction of the training and hosting costs of U.S. competitors. They popularized massive Mixture-of-Experts (MoE) architectures with specialized routing algorithms (Multi-head Latent Attention, MLA).\n\n### Key Features:\n1. **Multi-head Latent Attention (MLA):** Dramatically reduces KV-cache sizes during inference, making long-context processing highly efficient.\n2. **DeepSeek-R1:** A breakthrough reasoning model that open-sourced its training methodology (using cold-start data and direct reinforcement learning), sparking a worldwide wave of local reasoning research.\n3. **DeepSeek-V4:** Released in April 2026 as a 1.6T MoE, offering top-tier performance at extremely low API pricing, putting massive pricing pressure on OpenAI and Anthropic.\n4. **Ethics & Alignment Challenges:** While highly open and technically transparent, the weights are censored on specific topics due to regulatory requirements."
+    },
+    {
+      "id": "deepseek-r1",
+      "benchmarks": {
+        "mmlu": 90,
+        "gpqa": 90,
+        "swe_bench": 49.2,
+        "human_eval": 96.3,
+        "aime": 97.3
+      },
+      "best_applications": [
+        "Advanced mathematical proofs and coding agents",
+        "Solving high-difficulty logic puzzles",
+        "Local reasoning pipelines"
+      ],
+      "links": {
+        "website": "https://www.deepseek.com",
+        "system_card": "https://github.com/deepseek-ai/DeepSeek-R1/blob/main/DeepSeek_R1.pdf"
+      },
+      "name": "DeepSeek-R1",
+      "developer": "DeepSeek",
+      "release_date": "2025-01-20",
+      "access": "Open Weights",
+      "class": "Frontier Reasoning",
+      "hallucination_rate": 2.9,
+      "ethics_rating": 6.2,
+      "iq_lower": 115,
+      "iq_upper": 145,
+      "eq_bench": 83,
+      "arena_elo": 1365,
+      "ethics_notes": "Open-weights reasoning model using reinforcement learning. First open model to match OpenAI o1 on complex reasoning. Safe on general topics, but censored on specific political topics.",
+      "lying_rate": 2,
+      "lying_notes": "Reasoning chain (visible in raw outputs) allows it to cross-reference rules and math, reducing confabulation in logical fields.",
+      "description_markdown": "# DeepSeek Series\n\nDeepSeek, a Chinese AI firm, disrupted the global AI landscape in late 2024 and early 2025 by launching frontier-class models at a fraction of the training and hosting costs of U.S. competitors. They popularized massive Mixture-of-Experts (MoE) architectures with specialized routing algorithms (Multi-head Latent Attention, MLA).\n\n### Key Features:\n1. **Multi-head Latent Attention (MLA):** Dramatically reduces KV-cache sizes during inference, making long-context processing highly efficient.\n2. **DeepSeek-R1:** A breakthrough reasoning model that open-sourced its training methodology (using cold-start data and direct reinforcement learning), sparking a worldwide wave of local reasoning research.\n3. **DeepSeek-V4:** Released in April 2026 as a 1.6T MoE, offering top-tier performance at extremely low API pricing, putting massive pricing pressure on OpenAI and Anthropic.\n4. **Ethics & Alignment Challenges:** While highly open and technically transparent, the weights are censored on specific topics due to regulatory requirements."
+    },
+    {
+      "id": "deepseek-v4-pro",
+      "benchmarks": {
+        "mmlu": 94,
+        "gpqa": 82.5,
+        "swe_bench": 44.5,
+        "human_eval": 95.8,
+        "aime": 82
+      },
+      "best_applications": [
+        "Massive-scale data processing and extraction",
+        "Low-cost enterprise agent orchestrations",
+        "Coding copilots and private RAG pipelines"
+      ],
+      "links": {
+        "website": "https://www.deepseek.com",
+        "system_card": "https://github.com/deepseek-ai/DeepSeek-V4/blob/main/DeepSeek_V4.pdf"
+      },
+      "name": "DeepSeek-V4-Pro",
+      "developer": "DeepSeek",
+      "release_date": "2026-04-24",
+      "access": "Open Weights",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.5,
+      "ethics_rating": 6.5,
+      "iq_lower": 122,
+      "iq_upper": 150,
+      "eq_bench": 87,
+      "arena_elo": 1390,
+      "ethics_notes": "Flagship 1.6-trillion parameter MoE model. Deeply cost-disruptive (75% API price cut in May 2026). Open-weights under permissive conditions. Fails to provide details on training data origins.",
+      "lying_rate": 1.8,
+      "lying_notes": "Chain-of-thought is integrated, but retains characteristic geopolitical bias/filters as required by Chinese regulatory compliance.",
+      "description_markdown": "# DeepSeek Series\n\nDeepSeek, a Chinese AI firm, disrupted the global AI landscape in late 2024 and early 2025 by launching frontier-class models at a fraction of the training and hosting costs of U.S. competitors. They popularized massive Mixture-of-Experts (MoE) architectures with specialized routing algorithms (Multi-head Latent Attention, MLA).\n\n### Key Features:\n1. **Multi-head Latent Attention (MLA):** Dramatically reduces KV-cache sizes during inference, making long-context processing highly efficient.\n2. **DeepSeek-R1:** A breakthrough reasoning model that open-sourced its training methodology (using cold-start data and direct reinforcement learning), sparking a worldwide wave of local reasoning research.\n3. **DeepSeek-V4:** Released in April 2026 as a 1.6T MoE, offering top-tier performance at extremely low API pricing, putting massive pricing pressure on OpenAI and Anthropic.\n4. **Ethics & Alignment Challenges:** While highly open and technically transparent, the weights are censored on specific topics due to regulatory requirements."
+    },
+    {
+      "id": "gemini-1-5-pro",
+      "benchmarks": {
+        "mmlu": 85.9,
+        "gpqa": 46.2,
+        "swe_bench": 19.5,
+        "human_eval": 84.1,
+        "aime": 20
+      },
+      "best_applications": [
+        "Long-document analysis (up to 2 million tokens context)",
+        "Video and audio native processing",
+        "Complex multimodal parsing (books, codebases)"
+      ],
+      "links": {
+        "website": "https://deepmind.google/technologies/gemini/",
+        "system_card": "https://arxiv.org/pdf/2403.05530"
+      },
+      "name": "Gemini 1.5 Pro",
+      "developer": "Google",
+      "release_date": "2024-05-14",
+      "access": "Commercial",
+      "class": "Frontier Multimodal",
+      "hallucination_rate": 2,
+      "ethics_rating": 7.8,
+      "iq_lower": 95,
+      "iq_upper": 125,
+      "eq_bench": 75,
+      "arena_elo": 1290,
+      "ethics_notes": "Managed under Google's Responsible AI Principles. Tested extensively for bias and safety hazards. Features built-in safety filters on Google AI Studio APIs.",
+      "lying_rate": 2.4,
+      "lying_notes": "Strong retrieval consistency due to massive context window, but can occasionally hallucinate on complex reasoning or when inputs conflict.",
+      "description_markdown": "# Google Gemini Series\n\nGoogle's Gemini series stands out for its **native multimodality** and **massive context window** (up to 2 million tokens). Instead of training separate text, vision, and audio models and gluing them together, Google trained Gemini to process different modalities natively from the ground up.\n\n### Key Features:\n1. **2 Million Token Context:** The largest context window in the industry, allowing users to upload whole books, hours of video, or entire codebases.\n2. **Native Multimodality:** Handles video, audio, and images natively without helper models, allowing for richer audio-visual reasoning.\n3. **Gemini 3.5 Flash:** Released in May 2026, it is optimized for high-speed agentic execution, outperforming previous Pro models on tool-use and coding benchmarks.\n4. **Vectara Leaderboard Success:** Flash-lite and Flash versions frequently rank high in factual consistency due to Google's focus on search-grounded training.",
+      "local_system_card": "system_cards/gemini-1-5-pro-system-card.md"
+    },
+    {
+      "id": "gemini-2-0-flash",
+      "benchmarks": {
+        "mmlu": 83,
+        "gpqa": 55.4,
+        "swe_bench": 24,
+        "human_eval": 88,
+        "aime": 32.5
+      },
+      "best_applications": [
+        "Real-time video/voice call translation and agents",
+        "Fast code generation and tool usage",
+        "Conversational customer support"
+      ],
+      "links": {
+        "website": "https://deepmind.google/technologies/gemini/",
+        "system_card": "https://deepmind.google/technologies/gemini/"
+      },
+      "name": "Gemini 2.0 Flash",
+      "developer": "Google",
+      "release_date": "2024-12-11",
+      "access": "Commercial",
+      "class": "Fast Multimodal",
+      "hallucination_rate": 1.8,
+      "ethics_rating": 8,
+      "iq_lower": 96,
+      "iq_upper": 124,
+      "eq_bench": 80,
+      "arena_elo": 1335,
+      "ethics_notes": "Designed for low latency real-time voice and video agents. Underwent significant red-teaming for real-time safety, emotional alignment, and sound-based safety filters.",
+      "lying_rate": 2.2,
+      "lying_notes": "Very fast, but can occasionally make minor conversational assumptions (hallucinations) during rapid interactions.",
+      "description_markdown": "# Google Gemini Series\n\nGoogle's Gemini series stands out for its **native multimodality** and **massive context window** (up to 2 million tokens). Instead of training separate text, vision, and audio models and gluing them together, Google trained Gemini to process different modalities natively from the ground up.\n\n### Key Features:\n1. **2 Million Token Context:** The largest context window in the industry, allowing users to upload whole books, hours of video, or entire codebases.\n2. **Native Multimodality:** Handles video, audio, and images natively without helper models, allowing for richer audio-visual reasoning.\n3. **Gemini 3.5 Flash:** Released in May 2026, it is optimized for high-speed agentic execution, outperforming previous Pro models on tool-use and coding benchmarks.\n4. **Vectara Leaderboard Success:** Flash-lite and Flash versions frequently rank high in factual consistency due to Google's focus on search-grounded training.",
+      "local_system_card": "system_cards/gemini-2-0-flash-system-card.md"
+    },
+    {
+      "id": "gemini-2-5-flash-lite",
+      "benchmarks": {
+        "mmlu": 85.2,
+        "gpqa": 58,
+        "swe_bench": 29.2,
+        "human_eval": 89.5,
+        "aime": 42
+      },
+      "best_applications": [
+        "High-fidelity RAG pipelines",
+        "Cheap and reliable summarization of medical/legal files",
+        "Parallel agent tool execution"
+      ],
+      "links": {
+        "website": "https://deepmind.google/technologies/gemini/",
+        "system_card": "https://deepmind.google/technologies/gemini/"
+      },
+      "name": "Gemini 2.5 Flash Lite",
+      "developer": "Google",
+      "release_date": "2025-09-18",
+      "access": "Commercial",
+      "class": "Fast Multimodal",
+      "hallucination_rate": 1.5,
+      "ethics_rating": 8.2,
+      "iq_lower": 98,
+      "iq_upper": 126,
+      "eq_bench": 70,
+      "arena_elo": 1225,
+      "ethics_notes": "Highlighted on the Vectara HHEM leaderboard for its low hallucination rate (~3.3% on complex document summarization). Safety checks are optimized for edge workflows.",
+      "lying_rate": 1.7,
+      "lying_notes": "Shows low confabulation rate in document processing; highly faithful to grounding material.",
+      "description_markdown": "# Google Gemini Series\n\nGoogle's Gemini series stands out for its **native multimodality** and **massive context window** (up to 2 million tokens). Instead of training separate text, vision, and audio models and gluing them together, Google trained Gemini to process different modalities natively from the ground up.\n\n### Key Features:\n1. **2 Million Token Context:** The largest context window in the industry, allowing users to upload whole books, hours of video, or entire codebases.\n2. **Native Multimodality:** Handles video, audio, and images natively without helper models, allowing for richer audio-visual reasoning.\n3. **Gemini 3.5 Flash:** Released in May 2026, it is optimized for high-speed agentic execution, outperforming previous Pro models on tool-use and coding benchmarks.\n4. **Vectara Leaderboard Success:** Flash-lite and Flash versions frequently rank high in factual consistency due to Google's focus on search-grounded training.",
+      "local_system_card": "system_cards/gemini-2-5-flash-lite-system-card.md"
+    },
+    {
+      "id": "gemini-3-5-flash",
+      "benchmarks": {
+        "mmlu": 90.5,
+        "gpqa": 71.2,
+        "swe_bench": 39,
+        "human_eval": 93.8,
+        "aime": 70.5
+      },
+      "best_applications": [
+        "Real-time agentic workflows and coding (AI Mode in Search, Gemini App)",
+        "Large codebase navigation and refactoring (2M token context)",
+        "Advanced financial and data modeling"
+      ],
+      "links": {
+        "website": "https://deepmind.google/technologies/gemini-3-5/",
+        "system_card": "https://deepmind.google/technologies/gemini-3-5/"
+      },
+      "name": "Gemini 3.5 Flash",
+      "developer": "Google",
+      "release_date": "2026-05-19",
+      "access": "Commercial",
+      "class": "Next-Gen Balanced",
+      "hallucination_rate": 1.1,
+      "ethics_rating": 8.5,
+      "iq_lower": 110,
+      "iq_upper": 138,
+      "eq_bench": 88,
+      "arena_elo": 1380,
+      "ethics_notes": "Google I/O 2026 flagship announcement. Integrates advanced MCP (Model Context Protocol) safety guidelines. Red-teamed for autonomous computer control.",
+      "lying_rate": 1.2,
+      "lying_notes": "Displays high honesty by refusing to claim knowledge outside of search results or context.",
+      "description_markdown": "# Google Gemini Series\n\nGoogle's Gemini series stands out for its **native multimodality** and **massive context window** (up to 2 million tokens). Instead of training separate text, vision, and audio models and gluing them together, Google trained Gemini to process different modalities natively from the ground up.\n\n### Key Features:\n1. **2 Million Token Context:** The largest context window in the industry, allowing users to upload whole books, hours of video, or entire codebases.\n2. **Native Multimodality:** Handles video, audio, and images natively without helper models, allowing for richer audio-visual reasoning.\n3. **Gemini 3.5 Flash:** Released in May 2026, it is optimized for high-speed agentic execution, outperforming previous Pro models on tool-use and coding benchmarks.\n4. **Vectara Leaderboard Success:** Flash-lite and Flash versions frequently rank high in factual consistency due to Google's focus on search-grounded training.",
+      "local_system_card": "system_cards/gemini-3-5-flash-system-card.md"
+    },
+    {
+      "id": "gemma-2-27b",
+      "benchmarks": {
+        "mmlu": 83.2,
+        "gpqa": 32.5,
+        "swe_bench": 11,
+        "human_eval": 78.4,
+        "aime": 10.5
+      },
+      "best_applications": [
+        "Local text summarization and chat",
+        "Task-specific fine-tuning",
+        "Running on mid-tier developer machines"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma",
+        "system_card": "https://storage.googleapis.com/deepmind-media/gemma/gemma-2-report.pdf"
+      },
+      "name": "Gemma 2 27B",
+      "developer": "Google DeepMind",
+      "release_date": "2024-06-27",
+      "access": "Open Weights",
+      "class": "Lightweight Dense",
+      "hallucination_rate": 3.2,
+      "ethics_rating": 7.2,
+      "iq_lower": 88,
+      "iq_upper": 114,
+      "eq_bench": 55,
+      "arena_elo": 1150,
+      "ethics_notes": "Google open model license. Restricts malicious use. Adheres to Google's safety thresholds. Refusal profile can sometimes be overly cautious.",
+      "lying_rate": 3.8,
+      "lying_notes": "Under pressure, can yield to user assumptions (sycophancy) and hallucinate details to support them.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions.",
+      "local_system_card": "system_cards/gemma-2-report.md"
+    },
+    {
+      "id": "gemma-3-27b",
+      "benchmarks": {
+        "mmlu": 85.5,
+        "gpqa": 44.8,
+        "swe_bench": 18,
+        "human_eval": 84.1,
+        "aime": 20.8
+      },
+      "best_applications": [
+        "Local visual document understanding",
+        "Multilingual chatbots and translators",
+        "Retrieval-augmented generation (RAG)"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma/gemma3",
+        "system_card": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf"
+      },
+      "name": "Gemma 3 27B",
+      "developer": "Google DeepMind",
+      "release_date": "2025-03-12",
+      "access": "Open Weights",
+      "class": "Lightweight Multimodal",
+      "hallucination_rate": 2.6,
+      "ethics_rating": 7.5,
+      "iq_lower": 94,
+      "iq_upper": 121,
+      "eq_bench": 64,
+      "arena_elo": 1205,
+      "ethics_notes": "Google open model license. Features native multimodal support (vision-language) and supports over 140 languages. Safety-aligned across languages.",
+      "lying_rate": 3.1,
+      "lying_notes": "Reduced sycophancy, but multimodal parsing can lead to minor layout description errors.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions.",
+      "local_system_card": "system_cards/Gemma3Report.md"
+    },
+    {
+      "id": "gemma-4-31b",
+      "benchmarks": {
+        "mmlu": 92.4,
+        "gpqa": 84.3,
+        "swe_bench": 56.5,
+        "human_eval": 91.2,
+        "aime": 89.2
+      },
+      "best_applications": [
+        "Self-hosted coding assistants and agents (Apache 2.0)",
+        "Complex local mathematical and scientific reasoning",
+        "Private corporate knowledge engines"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma/gemma4",
+        "system_card": "https://huggingface.co/google/gemma-4-31b"
+      },
+      "name": "Gemma 4 31B Dense",
+      "developer": "Google DeepMind",
+      "release_date": "2026-04-02",
+      "access": "Open Weights",
+      "class": "Frontier Dense",
+      "hallucination_rate": 1.6,
+      "ethics_rating": 8.5,
+      "iq_lower": 114,
+      "iq_upper": 142,
+      "eq_bench": 73,
+      "arena_elo": 1280,
+      "ethics_notes": "Released under the highly permissive Apache 2.0 license. Developed using the same research as the Gemini 3 series. Highly aligned for safety, privacy, and sovereignty.",
+      "lying_rate": 1.8,
+      "lying_notes": "Shows advanced logical self-correction. Under standard benchmarks, it has a low lying rate due to its reasoning-based alignment.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions.",
+      "local_system_card": "system_cards/gemma-4-31b-system-card.md"
+    },
+    {
+      "id": "gemma-3-4b",
+      "benchmarks": {
+        "mmlu": 79.1,
+        "gpqa": 36.2,
+        "swe_bench": 8.5,
+        "aime": 12
+      },
+      "best_applications": [
+        "Mobile & Edge multimodal assistants",
+        "Low-latency local processing (under 4GB RAM)",
+        "Edge voice/vision integration"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma/gemma3",
+        "system_card": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf"
+      },
+      "name": "Gemma 3 4B",
+      "developer": "Google DeepMind",
+      "release_date": "2025-03-12",
+      "access": "Open Weights",
+      "class": "Edge Multimodal",
+      "hallucination_rate": 2.9,
+      "ethics_rating": 7.8,
+      "iq_lower": 85,
+      "iq_upper": 108,
+      "eq_bench": 58,
+      "arena_elo": 1160,
+      "ethics_notes": "Google Gemma Terms of Use license (free commercial use under 500M monthly active users, competitive training restricted). Features native vision/text multilingual support.",
+      "lying_rate": 3.4,
+      "lying_notes": "High susceptibility to sycophancy on edge devices.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions.",
+      "local_system_card": "system_cards/Gemma3Report.md"
+    },
+    {
+      "id": "gemma-3-12b",
+      "benchmarks": {
+        "mmlu": 82.8,
+        "gpqa": 41.5,
+        "swe_bench": 13.2,
+        "aime": 16.5
+      },
+      "best_applications": [
+        "Private visual document understanding",
+        "Multi-agent local orchestration",
+        "High-throughput multilingual translation"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma/gemma3",
+        "system_card": "https://storage.googleapis.com/deepmind-media/gemma/Gemma3Report.pdf"
+      },
+      "name": "Gemma 3 12B",
+      "developer": "Google DeepMind",
+      "release_date": "2025-03-12",
+      "access": "Open Weights",
+      "class": "Lightweight Multimodal",
+      "hallucination_rate": 2.7,
+      "ethics_rating": 7.7,
+      "iq_lower": 90,
+      "iq_upper": 116,
+      "eq_bench": 61,
+      "arena_elo": 1185,
+      "ethics_notes": "Google Gemma Terms of Use license (free commercial use under 500M monthly active users, competitive training restricted). Built with multilingual visual capabilities.",
+      "lying_rate": 3.2,
+      "lying_notes": "Slightly sycophantic, but has robust visual alignment.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions.",
+      "local_system_card": "system_cards/Gemma3Report.md"
+    },
+    {
+      "id": "gemma-4-12b",
+      "benchmarks": {
+        "mmlu": 88.7,
+        "gpqa": 78.8,
+        "swe_bench": 46.5,
+        "aime": 77.5
+      },
+      "best_applications": [
+        "Fully commercial agentic tools and extensions (Apache 2.0)",
+        "Fine-tuning for specialized enterprise tasks",
+        "Local code generation and debugging"
+      ],
+      "links": {
+        "website": "https://ai.google.dev/gemma/gemma4",
+        "system_card": "https://huggingface.co/google/gemma-4-12b"
+      },
+      "name": "Gemma 4 12B",
+      "developer": "Google DeepMind",
+      "release_date": "2026-04-02",
+      "access": "Open Weights",
+      "class": "Lightweight Dense",
+      "hallucination_rate": 1.9,
+      "ethics_rating": 8.2,
+      "iq_lower": 104,
+      "iq_upper": 130,
+      "eq_bench": 69,
+      "arena_elo": 1245,
+      "ethics_notes": "Released under the fully permissive Apache 2.0 open-source license. Developed with Google's latest Gemini 3 model research, optimized for reasoning.",
+      "lying_rate": 2.1,
+      "lying_notes": "Features self-correction steps. Hallucinates significantly less than Gemma 3.",
+      "description_markdown": "# Google Gemma Series (Open Weights)\n\nGemma is Google's family of lightweight, state-of-the-art open models, built from the same research and technology used to create the Gemini models. Developed by Google DeepMind and other teams across Google, Gemma is designed for responsible open innovation.\n\n### Key Milestones:\n1. **Gemma 2 (2024):** Introduced a novel architecture utilizing sliding window attention and logit soft-capping, enabling the 27B model to punch well above its weight class.\n2. **Gemma 3 (2025):** Added native multimodal capabilities and expanded language support to 140+ languages, bringing Google's multimodal leadership to the open-weights space.\n3. **Gemma 4 (2026):** A massive performance leap utilizing Gemini 3 research, achieving state-of-the-art reasoning (89.2% on AIME) and released under a fully permissive **Apache 2.0 license** for the first time.\n\n### Licensing Model & What It Means:\n- **Gemma Terms of Use (Gemma 2, Gemma 3):** A custom open-weights agreement. While free for research and commercial operations, it restricts using the model to train competing models and enforces a 500 million monthly active user cap. It is not an OSI-approved open-source license.\n- **Apache 2.0 (Gemma 4):** A fully permissive, open-source OSI license. Allows royalty-free commercial usage, modification, redistribution, and sublicensing with no user caps or competitive training restrictions."
+    },
+    {
+      "id": "glm-4-air",
+      "benchmarks": {
+        "mmlu": 80.5,
+        "gpqa": 38.2,
+        "swe_bench": 12,
+        "human_eval": 82,
+        "aime": 14.5
+      },
+      "best_applications": [
+        "High-throughput conversational agent pipelines",
+        "Real-time customer service automation",
+        "Fast multilingual text translation"
+      ],
+      "links": {
+        "website": "https://zhipuai.com",
+        "system_card": "https://github.com/THUDM/GLM-4"
+      },
+      "name": "GLM-4 Air",
+      "developer": "Zhipu AI",
+      "release_date": "2024-08-29",
+      "access": "Commercial",
+      "class": "Fast Multimodal",
+      "hallucination_rate": 2.8,
+      "ethics_rating": 6.5,
+      "iq_lower": 88,
+      "iq_upper": 118,
+      "eq_bench": 57,
+      "arena_elo": 1170,
+      "ethics_notes": "Governed under Chinese AI regulations. High bilingual capability. Employs security checks and active keyword/semantic blocklists for regulatory alignment.",
+      "lying_rate": 3.2,
+      "lying_notes": "Optimized for high speed and low latency, which can occasionally lead to premature factual assertions or conversational sycophancy.",
+      "description_markdown": "# Zhipu AI GLM Series (z.ai)\n\nZhipu AI (formerly THUDM, originating from Tsinghua University) has established itself as one of the leading global AI research labs, developing the powerful GLM (General Language Model) family. Rebranded as **Z.ai** in 2026, the company specializes in Mixture-of-Experts (MoE) architectures and has taken a leading role in training models on non-NVIDIA (Huawei Ascend) hardware using the MindSpore framework.\n\n### Key Milestones:\n1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.\n2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.\n3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.",
+      "local_system_card": "system_cards/glm-4-system-card.md"
+    },
+    {
+      "id": "glm-4-plus",
+      "benchmarks": {
+        "mmlu": 86,
+        "gpqa": 45.8,
+        "swe_bench": 16.5,
+        "human_eval": 85.4,
+        "aime": 25.2
+      },
+      "best_applications": [
+        "Enterprise bilingual search and summarization",
+        "Multimodal image and diagram understanding",
+        "Complex planning agent workflows"
+      ],
+      "links": {
+        "website": "https://zhipuai.com",
+        "system_card": "https://github.com/THUDM/GLM-4"
+      },
+      "name": "GLM-4 Plus",
+      "developer": "Zhipu AI",
+      "release_date": "2024-08-29",
+      "access": "Commercial",
+      "class": "Frontier Multimodal",
+      "hallucination_rate": 2.4,
+      "ethics_rating": 6.5,
+      "iq_lower": 94,
+      "iq_upper": 126,
+      "eq_bench": 65,
+      "arena_elo": 1230,
+      "ethics_notes": "Flagship API offering. Subject to Chinese generative AI security reviews. Safety alignment includes strict toxic language filtering and sensitive topic constraints.",
+      "lying_rate": 2.8,
+      "lying_notes": "Accurate on structured information retrieval, but can hallucinatively yield to user assumptions on niche topics.",
+      "description_markdown": "# Zhipu AI GLM Series (z.ai)\n\nZhipu AI (formerly THUDM, originating from Tsinghua University) has established itself as one of the leading global AI research labs, developing the powerful GLM (General Language Model) family. Rebranded as **Z.ai** in 2026, the company specializes in Mixture-of-Experts (MoE) architectures and has taken a leading role in training models on non-NVIDIA (Huawei Ascend) hardware using the MindSpore framework.\n\n### Key Milestones:\n1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.\n2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.\n3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.",
+      "local_system_card": "system_cards/glm-4-system-card.md"
+    },
+    {
+      "id": "glm-4-5-open",
+      "benchmarks": {
+        "mmlu": 88.5,
+        "gpqa": 79.1,
+        "swe_bench": 64.2,
+        "human_eval": 91,
+        "aime": 91
+      },
+      "best_applications": [
+        "Local agentic coding and math reasoning",
+        "Domain-specific offline fine-tuning",
+        "Advanced RAG systems for private enterprises"
+      ],
+      "links": {
+        "website": "https://zhipuai.com",
+        "system_card": "https://github.com/THUDM/GLM-4"
+      },
+      "name": "GLM-4.5 Open",
+      "developer": "Zhipu AI",
+      "release_date": "2025-07-28",
+      "access": "Open Weights",
+      "class": "Frontier MoE",
+      "hallucination_rate": 1.8,
+      "ethics_rating": 7,
+      "iq_lower": 104,
+      "iq_upper": 135,
+      "eq_bench": 61,
+      "arena_elo": 1210,
+      "ethics_notes": "Released under the open weights MIT license. Aligned using Tsinghua university safety datasets for helpfulness and harmlessness in English/Chinese.",
+      "lying_rate": 2,
+      "lying_notes": "Strong reasoning chains (AIME: 91.0%) reduce basic hallucination rates by checking internal consistency before final token generation.",
+      "description_markdown": "# Zhipu AI GLM Series (z.ai)\n\nZhipu AI (formerly THUDM, originating from Tsinghua University) has established itself as one of the leading global AI research labs, developing the powerful GLM (General Language Model) family. Rebranded as **Z.ai** in 2026, the company specializes in Mixture-of-Experts (MoE) architectures and has taken a leading role in training models on non-NVIDIA (Huawei Ascend) hardware using the MindSpore framework.\n\n### Key Milestones:\n1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.\n2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.\n3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.",
+      "local_system_card": "system_cards/glm-4-system-card.md"
+    },
+    {
+      "id": "glm-5-open",
+      "benchmarks": {
+        "mmlu": 92.4,
+        "gpqa": 86,
+        "swe_bench": 77.8,
+        "human_eval": 95.2,
+        "aime": 92.7
+      },
+      "best_applications": [
+        "NVIDIA-independent high-performance local AI clusters",
+        "Autonomous developer agents (SWE-bench: 77.8%)",
+        "200k context window long-document parsing"
+      ],
+      "links": {
+        "website": "https://github.com/zai-org/GLM-5",
+        "system_card": "https://github.com/zai-org/GLM-5"
+      },
+      "name": "GLM-5 Open",
+      "developer": "Zhipu AI",
+      "release_date": "2026-02-11",
+      "access": "Open Weights",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.3,
+      "ethics_rating": 7.2,
+      "iq_lower": 115,
+      "iq_upper": 143,
+      "eq_bench": 69,
+      "arena_elo": 1255,
+      "ethics_notes": "MIT licensed open weights. Developed and trained entirely on domestic Huawei Ascend chips using MindSpore. Highly aligned for safe autonomous execution.",
+      "lying_rate": 1.4,
+      "lying_notes": "Utilizes RLHF post-training (via THUDM slime) that strongly penalizes conversational dishonesty and confabulation.",
+      "description_markdown": "# Zhipu AI GLM Series (z.ai)\n\nZhipu AI (formerly THUDM, originating from Tsinghua University) has established itself as one of the leading global AI research labs, developing the powerful GLM (General Language Model) family. Rebranded as **Z.ai** in 2026, the company specializes in Mixture-of-Experts (MoE) architectures and has taken a leading role in training models on non-NVIDIA (Huawei Ascend) hardware using the MindSpore framework.\n\n### Key Milestones:\n1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.\n2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.\n3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.",
+      "local_system_card": "system_cards/glm-5-system-card.md"
+    },
+    {
+      "id": "glm-5-1-open",
+      "benchmarks": {
+        "mmlu": 93.5,
+        "gpqa": 87.5,
+        "swe_bench": 82.4,
+        "human_eval": 96.8,
+        "aime": 94
+      },
+      "best_applications": [
+        "Self-hosted full-stack engineering agents (SWE-bench: 82.4%)",
+        "Math-heavy quantitative data analysis",
+        "Local enterprise reasoning engine"
+      ],
+      "links": {
+        "website": "https://github.com/zai-org/GLM-5",
+        "system_card": "https://github.com/zai-org/GLM-5"
+      },
+      "name": "GLM-5.1 Open",
+      "developer": "Zhipu AI",
+      "release_date": "2026-04-07",
+      "access": "Open Weights",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.1,
+      "ethics_rating": 7.4,
+      "iq_lower": 118,
+      "iq_upper": 146,
+      "eq_bench": 72,
+      "arena_elo": 1270,
+      "ethics_notes": "MIT licensed open weights. Highly optimized for complex agent-based workflows. Governed under Z.ai safety guardrails.",
+      "lying_rate": 1.2,
+      "lying_notes": "Very low lying rate on coding tasks due to pre-execution reasoning and self-checking loops.",
+      "description_markdown": "# Zhipu AI GLM Series (z.ai)\n\nZhipu AI (formerly THUDM, originating from Tsinghua University) has established itself as one of the leading global AI research labs, developing the powerful GLM (General Language Model) family. Rebranded as **Z.ai** in 2026, the company specializes in Mixture-of-Experts (MoE) architectures and has taken a leading role in training models on non-NVIDIA (Huawei Ascend) hardware using the MindSpore framework.\n\n### Key Milestones:\n1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.\n2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.\n3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.",
+      "local_system_card": "system_cards/glm-5-system-card.md"
+    },
+    {
+      "id": "gpt-4o",
+      "benchmarks": {
+        "mmlu": 88.7,
+        "gpqa": 53.6,
+        "swe_bench": 38.8,
+        "human_eval": 90.2,
+        "aime": 13.4
+      },
+      "best_applications": [
+        "Real-time voice conversation and translations",
+        "Fast multimodal analysis (images, charts)",
+        "Standard conversational API applications"
+      ],
+      "links": {
+        "website": "https://openai.com/gpt-4o",
+        "system_card": "https://assets.ctfassets.net/kftzwdyau1h5/13W659M7xWkRt2f7W9Hspg/fb373ca9db86fa6443c5ee9659b8c04f/gpt-4o-system-card.pdf"
+      },
+      "name": "GPT-4o",
+      "developer": "OpenAI",
+      "release_date": "2024-05-13",
+      "access": "Commercial",
+      "class": "Frontier Multimodal",
+      "hallucination_rate": 2.5,
+      "ethics_rating": 7,
+      "iq_lower": 98,
+      "iq_upper": 133,
+      "eq_bench": 82,
+      "arena_elo": 1330,
+      "ethics_notes": "Employs standard RLHF and centralized safety mechanisms. Faced controversy over voice-actor mimicry (Sky voice) and departures of high-profile safety researchers.",
+      "lying_rate": 3.5,
+      "lying_notes": "Displays a confidence bias, asserting false statements as absolute truths in conversational settings when context is sparse.",
+      "description_markdown": "# OpenAI GPT Series\n\nOpenAI's strategy shifted in late 2024 from pure conversational intelligence to reasoning-driven models (o1/o3) and eventually next-gen multimodal agentic models (GPT-5/5.5) in 2025-2026. \n\nNotably, in August 2025, OpenAI surprised the market by releasing `gpt-oss-20b`, its first open-weight Mixture of Experts model, to compete with Meta's Llama and Alibaba's Qwen in the self-hosted ecosystem.\n\n### Key Innovations:\n1. **Reinforcement Learning at Test-Time:** The o1 series introduced Chain-of-Thought (CoT) reasoning before responding, transforming how math and coding problems are approached.\n2. **GPT-OSS Series:** The release of Apache 2.0 open-weights allowed developers to run OpenAI models locally on consumer devices.\n3. **Agentic Capabilities:** GPT-5 and GPT-5.5 focused on reliable tool use, long-horizon planning, and agentic autonomy, enabling them to complete complex software tasks with minimal supervision."
+    },
+    {
+      "id": "openai-o1",
+      "benchmarks": {
+        "mmlu": 91.8,
+        "gpqa": 78.3,
+        "swe_bench": 48.9,
+        "human_eval": 92.6,
+        "aime": 83.3
+      },
+      "best_applications": [
+        "Complex math problem solving",
+        "Advanced code logic and debugging",
+        "Scientific and medical research analysis"
+      ],
+      "links": {
+        "website": "https://openai.com/o1",
+        "system_card": "https://assets.ctfassets.net/kftzwdyau1h5/6984eb8a-c603-4c90-9c2b-426b38c2134a/o1-system-card.pdf"
+      },
+      "name": "OpenAI o1",
+      "developer": "OpenAI",
+      "release_date": "2024-09-12",
+      "access": "Commercial",
+      "class": "Frontier Reasoning",
+      "hallucination_rate": 3,
+      "ethics_rating": 7.5,
+      "iq_lower": 112,
+      "iq_upper": 142,
+      "eq_bench": 81,
+      "arena_elo": 1350,
+      "ethics_notes": "Tested under OpenAI's Preparedness Framework. Shows increased jailbreak resistance due to test-time reasoning aligning safety rules before answering.",
+      "lying_rate": 2.2,
+      "lying_notes": "The chain-of-thought helps it double-check facts, reducing silly hallucinations, but it can still over-extrapolate logic.",
+      "description_markdown": "# OpenAI GPT Series\n\nOpenAI's strategy shifted in late 2024 from pure conversational intelligence to reasoning-driven models (o1/o3) and eventually next-gen multimodal agentic models (GPT-5/5.5) in 2025-2026. \n\nNotably, in August 2025, OpenAI surprised the market by releasing `gpt-oss-20b`, its first open-weight Mixture of Experts model, to compete with Meta's Llama and Alibaba's Qwen in the self-hosted ecosystem.\n\n### Key Innovations:\n1. **Reinforcement Learning at Test-Time:** The o1 series introduced Chain-of-Thought (CoT) reasoning before responding, transforming how math and coding problems are approached.\n2. **GPT-OSS Series:** The release of Apache 2.0 open-weights allowed developers to run OpenAI models locally on consumer devices.\n3. **Agentic Capabilities:** GPT-5 and GPT-5.5 focused on reliable tool use, long-horizon planning, and agentic autonomy, enabling them to complete complex software tasks with minimal supervision."
+    },
+    {
+      "id": "gpt-oss-20b",
+      "benchmarks": {
+        "mmlu": 82.5,
+        "gpqa": 45.2,
+        "swe_bench": 28.5,
+        "human_eval": 84.8,
+        "aime": 24.1
+      },
+      "best_applications": [
+        "On-device lightweight reasoning (runs on 16GB VRAM)",
+        "Privacy-centric local enterprise agents",
+        "Educational fine-tuning base"
+      ],
+      "links": {
+        "website": "https://openai.com/blog/gpt-oss",
+        "system_card": "https://huggingface.co/openai/gpt-oss-20b"
+      },
+      "name": "GPT-OSS-20B",
+      "developer": "OpenAI",
+      "release_date": "2025-08-05",
+      "access": "Open Weights",
+      "class": "Lightweight MoE",
+      "hallucination_rate": 3.6,
+      "ethics_rating": 6.8,
+      "iq_lower": 85,
+      "iq_upper": 112,
+      "eq_bench": 42,
+      "arena_elo": 1080,
+      "ethics_notes": "OpenAI's first open-weight model family. Released under Apache 2.0. Base weights are aligned, but lack the runtime API guardrails of OpenAI's closed endpoints.",
+      "lying_rate": 4.2,
+      "lying_notes": "Shows higher hallucination rate on specific domain retrieval, but is highly honest under direct pressure (low sycophancy).",
+      "description_markdown": "# OpenAI GPT Series\n\nOpenAI's strategy shifted in late 2024 from pure conversational intelligence to reasoning-driven models (o1/o3) and eventually next-gen multimodal agentic models (GPT-5/5.5) in 2025-2026. \n\nNotably, in August 2025, OpenAI surprised the market by releasing `gpt-oss-20b`, its first open-weight Mixture of Experts model, to compete with Meta's Llama and Alibaba's Qwen in the self-hosted ecosystem.\n\n### Key Innovations:\n1. **Reinforcement Learning at Test-Time:** The o1 series introduced Chain-of-Thought (CoT) reasoning before responding, transforming how math and coding problems are approached.\n2. **GPT-OSS Series:** The release of Apache 2.0 open-weights allowed developers to run OpenAI models locally on consumer devices.\n3. **Agentic Capabilities:** GPT-5 and GPT-5.5 focused on reliable tool use, long-horizon planning, and agentic autonomy, enabling them to complete complex software tasks with minimal supervision.",
+      "local_system_card": "system_cards/gpt-oss-20b-system-card.md"
+    },
+    {
+      "id": "gpt-5",
+      "benchmarks": {
+        "mmlu": 94.2,
+        "gpqa": 85,
+        "swe_bench": 62.5,
+        "human_eval": 96,
+        "aime": 88.5
+      },
+      "best_applications": [
+        "Autonomous multi-step software engineering agents",
+        "Complex strategic decision support",
+        "Universal translation and tutoring systems"
+      ],
+      "links": {
+        "website": "https://openai.com/gpt-5",
+        "system_card": "https://assets.ctfassets.net/kftzwdyau1h5/gpt-5-system-card.pdf"
+      },
+      "name": "GPT-5",
+      "developer": "OpenAI",
+      "release_date": "2025-10-15",
+      "access": "Commercial",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.5,
+      "ethics_rating": 7.8,
+      "iq_lower": 120,
+      "iq_upper": 148,
+      "eq_bench": 93,
+      "arena_elo": 1410,
+      "ethics_notes": "Deep integration of agentic safety protocols and strict bias filtering. The Preparedness Team implemented active red-teaming for autonomous agency risks.",
+      "lying_rate": 1.8,
+      "lying_notes": "Chain-of-thought and verification loops run in the background, significantly reducing confidence in false claims.",
+      "description_markdown": "# OpenAI GPT Series\n\nOpenAI's strategy shifted in late 2024 from pure conversational intelligence to reasoning-driven models (o1/o3) and eventually next-gen multimodal agentic models (GPT-5/5.5) in 2025-2026. \n\nNotably, in August 2025, OpenAI surprised the market by releasing `gpt-oss-20b`, its first open-weight Mixture of Experts model, to compete with Meta's Llama and Alibaba's Qwen in the self-hosted ecosystem.\n\n### Key Innovations:\n1. **Reinforcement Learning at Test-Time:** The o1 series introduced Chain-of-Thought (CoT) reasoning before responding, transforming how math and coding problems are approached.\n2. **GPT-OSS Series:** The release of Apache 2.0 open-weights allowed developers to run OpenAI models locally on consumer devices.\n3. **Agentic Capabilities:** GPT-5 and GPT-5.5 focused on reliable tool use, long-horizon planning, and agentic autonomy, enabling them to complete complex software tasks with minimal supervision."
+    },
+    {
+      "id": "gpt-5-5",
+      "benchmarks": {
+        "mmlu": 95.8,
+        "gpqa": 89.2,
+        "swe_bench": 74,
+        "human_eval": 97.5,
+        "aime": 92.1
+      },
+      "best_applications": [
+        "Enterprise-grade autonomous workflows",
+        "High-stakes quantitative modeling",
+        "Multi-modal agent coordination"
+      ],
+      "links": {
+        "website": "https://openai.com/gpt-5-5",
+        "system_card": "https://assets.ctfassets.net/kftzwdyau1h5/gpt-5-5-system-card.pdf"
+      },
+      "name": "GPT-5.5",
+      "developer": "OpenAI",
+      "release_date": "2026-03-24",
+      "access": "Commercial",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.1,
+      "ethics_rating": 8,
+      "iq_lower": 125,
+      "iq_upper": 152,
+      "eq_bench": 95,
+      "arena_elo": 1430,
+      "ethics_notes": "Evaluated for long-term safety, power-seeking behaviors, and persuasion capacity. Implements advanced RLHF with truthfulness feedback.",
+      "lying_rate": 1.3,
+      "lying_notes": "Employs self-correction steps that actively flag uncertain claims in real-time.",
+      "description_markdown": "# OpenAI GPT Series\n\nOpenAI's strategy shifted in late 2024 from pure conversational intelligence to reasoning-driven models (o1/o3) and eventually next-gen multimodal agentic models (GPT-5/5.5) in 2025-2026. \n\nNotably, in August 2025, OpenAI surprised the market by releasing `gpt-oss-20b`, its first open-weight Mixture of Experts model, to compete with Meta's Llama and Alibaba's Qwen in the self-hosted ecosystem.\n\n### Key Innovations:\n1. **Reinforcement Learning at Test-Time:** The o1 series introduced Chain-of-Thought (CoT) reasoning before responding, transforming how math and coding problems are approached.\n2. **GPT-OSS Series:** The release of Apache 2.0 open-weights allowed developers to run OpenAI models locally on consumer devices.\n3. **Agentic Capabilities:** GPT-5 and GPT-5.5 focused on reliable tool use, long-horizon planning, and agentic autonomy, enabling them to complete complex software tasks with minimal supervision."
+    },
+    {
+      "id": "grok-2",
+      "benchmarks": {
+        "mmlu": 87.5,
+        "gpqa": 56,
+        "swe_bench": 18.2,
+        "human_eval": 88.4,
+        "aime": 18
+      },
+      "best_applications": [
+        "Real-time information retrieval (X platform integration)",
+        "Informal chat and creative brainstorming",
+        "Image generation (via FLUX integration)"
+      ],
+      "links": {
+        "website": "https://x.ai/blog/grok-2",
+        "system_card": "https://x.ai/grok-2-system-card"
+      },
+      "name": "Grok-2",
+      "developer": "xAI",
+      "release_date": "2024-08-12",
+      "access": "Commercial",
+      "class": "Frontier Multimodal",
+      "hallucination_rate": 2.9,
+      "ethics_rating": 6,
+      "iq_lower": 98,
+      "iq_upper": 130,
+      "eq_bench": 77,
+      "arena_elo": 1310,
+      "ethics_notes": "Positioned as a \"wry\" and less censored assistant. Initially allowed generation of controversial/copyrighted images without safety filters, leading to public debate. Governed under xAI safety cards.",
+      "lying_rate": 3.4,
+      "lying_notes": "Can sometimes exhibit slightly higher hallucination rate on general topics because of its humorous/edgy conversational styling, occasionally \"hallucinating\" jokes or sarcastic premises.",
+      "description_markdown": "# xAI Grok Series\n\nxAI's Grok models are designed to be \"fun, witty, and real-time.\" By integrating directly with the X platform, Grok has access to live posts and breaking news, giving it an advantage on current event timelines.\n\n### Key Milestones:\n1. **Grok-2 (2024):** A major step forward that established xAI as a direct competitor to GPT-4. It introduced integrated visual capabilities and was paired with FLUX for image generation.\n2. **Grok-3 (2025):** Launched with a dedicated reasoning mode (\"Think\") that allowed it to compete with OpenAI's o1. It was trained on xAI's Colossus cluster in Memphis, Tennessee.\n3. **Censorship Philosophy:** xAI positions Grok as a model that will answer questions other models refuse, though it maintains core guardrails against harmful content."
+    },
+    {
+      "id": "grok-3",
+      "benchmarks": {
+        "mmlu": 92.5,
+        "gpqa": 80.2,
+        "swe_bench": 42,
+        "human_eval": 94.6,
+        "aime": 86.4
+      },
+      "best_applications": [
+        "Math and logical problem solving",
+        "Coding pipelines and script auditing",
+        "Real-time news analysis and context retrieval from X (formerly Twitter)"
+      ],
+      "links": {
+        "website": "https://x.ai/blog/grok-3",
+        "system_card": "https://x.ai/grok-3-system-card"
+      },
+      "name": "Grok-3",
+      "developer": "xAI",
+      "release_date": "2025-02-17",
+      "access": "Commercial",
+      "class": "Frontier Reasoning",
+      "hallucination_rate": 1.8,
+      "ethics_rating": 6.8,
+      "iq_lower": 115,
+      "iq_upper": 144,
+      "eq_bench": 82,
+      "arena_elo": 1360,
+      "ethics_notes": "Features a specialized \"Think\" mode utilizing reinforcement learning. Safety guidelines were hardened compared to Grok-2 to prevent generation of dangerous cyber or biological instructions during thinking processes.",
+      "lying_rate": 2.1,
+      "lying_notes": "Chain-of-thought helps verify mathematical and factual steps. Displays very low hallucination rate on code and logic tasks.",
+      "description_markdown": "# xAI Grok Series\n\nxAI's Grok models are designed to be \"fun, witty, and real-time.\" By integrating directly with the X platform, Grok has access to live posts and breaking news, giving it an advantage on current event timelines.\n\n### Key Milestones:\n1. **Grok-2 (2024):** A major step forward that established xAI as a direct competitor to GPT-4. It introduced integrated visual capabilities and was paired with FLUX for image generation.\n2. **Grok-3 (2025):** Launched with a dedicated reasoning mode (\"Think\") that allowed it to compete with OpenAI's o1. It was trained on xAI's Colossus cluster in Memphis, Tennessee.\n3. **Censorship Philosophy:** xAI positions Grok as a model that will answer questions other models refuse, though it maintains core guardrails against harmful content."
+    },
+    {
+      "id": "kimi-k1-5",
+      "benchmarks": {
+        "mmlu": 88.2,
+        "gpqa": 70,
+        "swe_bench": 29.5,
+        "human_eval": 91,
+        "aime": 74
+      },
+      "best_applications": [
+        "Long-context reasoning and summarization",
+        "Highly complex mathematical computations",
+        "Document QA requiring step-by-step logic"
+      ],
+      "links": {
+        "website": "https://www.moonshot.cn",
+        "system_card": "https://github.com/moonshot-ai/Kimi-K1.5"
+      },
+      "name": "Kimi K1.5",
+      "developer": "Moonshot AI",
+      "release_date": "2025-01-20",
+      "access": "Commercial",
+      "class": "Frontier Reasoning",
+      "hallucination_rate": 2.2,
+      "ethics_rating": 6.8,
+      "iq_lower": 94,
+      "iq_upper": 125,
+      "eq_bench": 66,
+      "arena_elo": 1240,
+      "ethics_notes": "Governed under Chinese AI regulations (CAC regulations). Implements safety checks on sensitive topics. Focuses on helpfulness and honesty.",
+      "lying_rate": 2.5,
+      "lying_notes": "Chain-of-thought helps check calculations and quotes, minimizing standard hallucinations on factual text.",
+      "description_markdown": "# Moonshot AI Kimi Series\n\nMoonshot AI's Kimi family of models has established a reputation for **pioneering long-context capabilities** and **advanced agentic reasoning**. Starting with a massive 2 million token context in early 2024, Moonshot transitioned to open-weights Mixture-of-Experts (MoE) architectures in 2025/2026, delivering frontier performance locally.\n\n### Key Milestones:\n1. **Long Context Pioneer (2024):** Led the industry by supporting 200k, then 2 million tokens of Chinese character context, proving long-context stability.\n2. **Kimi K2 MoE (2025):** Switched to a 1T total parameter MoE model (with 32B active parameters), providing state-of-the-art weights to the open developer ecosystem.\n3. **Kimi K2.6 Swarm (2026):** Native integration of \"Agent Swarm\" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development and web research."
+    },
+    {
+      "id": "kimi-k2",
+      "benchmarks": {
+        "mmlu": 90.1,
+        "gpqa": 75,
+        "swe_bench": 36.8,
+        "human_eval": 93.2,
+        "aime": 80
+      },
+      "best_applications": [
+        "Local coding agents",
+        "Large-scale document processing (up to 2M token context window)",
+        "Complex data extraction pipelines"
+      ],
+      "links": {
+        "website": "https://www.moonshot.cn",
+        "system_card": "https://github.com/moonshot-ai/Kimi-K2"
+      },
+      "name": "Kimi K2",
+      "developer": "Moonshot AI",
+      "release_date": "2025-07-11",
+      "access": "Open Weights",
+      "class": "Frontier MoE",
+      "hallucination_rate": 1.8,
+      "ethics_rating": 7,
+      "iq_lower": 102,
+      "iq_upper": 132,
+      "eq_bench": 76,
+      "arena_elo": 1300,
+      "ethics_notes": "Released under Moonshot Modified MIT License. Allows free commercial use under specific parameters. Aligned via RLHF.",
+      "lying_rate": 2.2,
+      "lying_notes": "Excellent grounding, but on open conversational topics without references it can exhibit mild sycophancy.",
+      "description_markdown": "# Moonshot AI Kimi Series\n\nMoonshot AI's Kimi family of models has established a reputation for **pioneering long-context capabilities** and **advanced agentic reasoning**. Starting with a massive 2 million token context in early 2024, Moonshot transitioned to open-weights Mixture-of-Experts (MoE) architectures in 2025/2026, delivering frontier performance locally.\n\n### Key Milestones:\n1. **Long Context Pioneer (2024):** Led the industry by supporting 200k, then 2 million tokens of Chinese character context, proving long-context stability.\n2. **Kimi K2 MoE (2025):** Switched to a 1T total parameter MoE model (with 32B active parameters), providing state-of-the-art weights to the open developer ecosystem.\n3. **Kimi K2.6 Swarm (2026):** Native integration of \"Agent Swarm\" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development and web research."
+    },
+    {
+      "id": "kimi-k2-6",
+      "benchmarks": {
+        "mmlu": 92.5,
+        "gpqa": 87.6,
+        "swe_bench": 60.4,
+        "human_eval": 96,
+        "aime": 89
+      },
+      "best_applications": [
+        "Autonomous multi-agent coding (SWE-bench: 60.4)",
+        "Full-stack codebase generation and migration",
+        "Complex multimodal agent workflows using MoonViT"
+      ],
+      "links": {
+        "website": "https://www.moonshot.cn",
+        "system_card": "https://github.com/moonshot-ai/Kimi-K2.6"
+      },
+      "name": "Kimi K2.6",
+      "developer": "Moonshot AI",
+      "release_date": "2026-04-20",
+      "access": "Open Weights",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.2,
+      "ethics_rating": 7.2,
+      "iq_lower": 108,
+      "iq_upper": 138,
+      "eq_bench": 85,
+      "arena_elo": 1375,
+      "ethics_notes": "Released under Moonshot Modified MIT License. Employs \"Agent Swarm\" technology. Tested extensively for agent safety and sandboxing boundary safety.",
+      "lying_rate": 1.4,
+      "lying_notes": "Low hallucination rate on code and text due to native tool checks and self-correction loops.",
+      "description_markdown": "# Moonshot AI Kimi Series\n\nMoonshot AI's Kimi family of models has established a reputation for **pioneering long-context capabilities** and **advanced agentic reasoning**. Starting with a massive 2 million token context in early 2024, Moonshot transitioned to open-weights Mixture-of-Experts (MoE) architectures in 2025/2026, delivering frontier performance locally.\n\n### Key Milestones:\n1. **Long Context Pioneer (2024):** Led the industry by supporting 200k, then 2 million tokens of Chinese character context, proving long-context stability.\n2. **Kimi K2 MoE (2025):** Switched to a 1T total parameter MoE model (with 32B active parameters), providing state-of-the-art weights to the open developer ecosystem.\n3. **Kimi K2.6 Swarm (2026):** Native integration of \"Agent Swarm\" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development and web research."
+    },
+    {
+      "id": "llama-3-1-405b",
+      "benchmarks": {
+        "mmlu": 88.6,
+        "gpqa": 51.1,
+        "swe_bench": 19.8,
+        "human_eval": 89,
+        "aime": 15
+      },
+      "best_applications": [
+        "Model distillation (license allows generating data for smaller models)",
+        "Complex reasoning and synthetic data generation",
+        "Private enterprise-grade local serving"
+      ],
+      "links": {
+        "website": "https://llama.meta.com",
+        "system_card": "https://github.com/meta-llama/llama3/blob/main/MODEL_CARD.md"
+      },
+      "name": "Llama 3.1 405B",
+      "developer": "Meta",
+      "release_date": "2024-07-23",
+      "access": "Open Weights",
+      "class": "Frontier Dense",
+      "hallucination_rate": 3.1,
+      "ethics_rating": 7.5,
+      "iq_lower": 101,
+      "iq_upper": 133,
+      "eq_bench": 79,
+      "arena_elo": 1320,
+      "ethics_notes": "Released under Meta Llama 3 License. Permissive for up to 700M monthly active users. Features built-in safety guidelines (Llama Guard 3). Base weights are safe, but can be jailbroken if locally fine-tuned without constraints.",
+      "lying_rate": 3.5,
+      "lying_notes": "Can hallucinate when generating long chains of factual statements on obscure historical subjects. High accuracy on main knowledge domains.",
+      "description_markdown": "# Meta Llama Series (Open Weights)\n\nMeta's Llama family has been a cornerstone of the open-weight revolution, starting in 2023 and continuing with the Llama 3.x and Llama 4 series. Meta's open approach permits research and commercial application, helping standard developers host GPT-4-class capabilities locally.\n\n### Key Milestones:\n1. **Llama 3.1 405B (2024):** The first massive open-weights model to directly compete with proprietary models on GPQA and MMLU. It set a precedent for model distillation.\n2. **Llama 3.2 Vision (2024):** Brought native image understanding to the lightweight model family, allowing low-cost visual processing on local networks.\n3. **Llama 3.3 70B (2024):** Replaced the Llama 3.1 70B model, delivering nearly 405B-class general knowledge performance at a fraction of the hardware cost.\n4. **Llama 4 MoE (2025):** Switched to a Mixture-of-Experts (MoE) architecture (Scout & Maverick) featuring massive context windows and native multimodal agent capabilities.",
+      "local_system_card": "system_cards/llama-3-1-model-card.md"
+    },
+    {
+      "id": "llama-3-2-11b",
+      "benchmarks": {
+        "mmlu": 75.4,
+        "gpqa": 30.5,
+        "swe_bench": 8.5,
+        "human_eval": 72,
+        "aime": 8
+      },
+      "best_applications": [
+        "Low-cost image labeling and captioning",
+        "Edge devices and mobile multimodal workflows",
+        "Visual document preprocessing"
+      ],
+      "links": {
+        "website": "https://llama.meta.com",
+        "system_card": "https://github.com/meta-llama/llama-models/main/models/llama3_2/MODEL_CARD.md"
+      },
+      "name": "Llama 3.2 11B Vision",
+      "developer": "Meta",
+      "release_date": "2024-09-25",
+      "access": "Open Weights",
+      "class": "Lightweight Multimodal",
+      "hallucination_rate": 3.8,
+      "ethics_rating": 7.2,
+      "iq_lower": 82,
+      "iq_upper": 105,
+      "eq_bench": 59,
+      "arena_elo": 1180,
+      "ethics_notes": "Meta's first open-weight vision model. Underwent intensive safety review on multimodal inputs (e.g. preventing unsafe image classifications).",
+      "lying_rate": 4.2,
+      "lying_notes": "Prone to visual hallucinations when reading dense chart text or complex graphics.",
+      "description_markdown": "# Meta Llama Series (Open Weights)\n\nMeta's Llama family has been a cornerstone of the open-weight revolution, starting in 2023 and continuing with the Llama 3.x and Llama 4 series. Meta's open approach permits research and commercial application, helping standard developers host GPT-4-class capabilities locally.\n\n### Key Milestones:\n1. **Llama 3.1 405B (2024):** The first massive open-weights model to directly compete with proprietary models on GPQA and MMLU. It set a precedent for model distillation.\n2. **Llama 3.2 Vision (2024):** Brought native image understanding to the lightweight model family, allowing low-cost visual processing on local networks.\n3. **Llama 3.3 70B (2024):** Replaced the Llama 3.1 70B model, delivering nearly 405B-class general knowledge performance at a fraction of the hardware cost.\n4. **Llama 4 MoE (2025):** Switched to a Mixture-of-Experts (MoE) architecture (Scout & Maverick) featuring massive context windows and native multimodal agent capabilities.",
+      "local_system_card": "system_cards/llama-3-2-model-card.md"
+    },
+    {
+      "id": "llama-3-3-70b",
+      "benchmarks": {
+        "mmlu": 86,
+        "gpqa": 45,
+        "swe_bench": 17.5,
+        "human_eval": 86.2,
+        "aime": 16.5
+      },
+      "best_applications": [
+        "General developer assistants and chatbots",
+        "Local RAG backends",
+        "Agentic tools on standard hardware (can run on dual-GPU systems)"
+      ],
+      "links": {
+        "website": "https://llama.meta.com",
+        "system_card": "https://github.com/meta-llama/llama3_3/blob/main/MODEL_CARD.md"
+      },
+      "name": "Llama 3.3 70B",
+      "developer": "Meta",
+      "release_date": "2024-12-06",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 2.8,
+      "ethics_rating": 7.8,
+      "iq_lower": 98,
+      "iq_upper": 125,
+      "eq_bench": 68,
+      "arena_elo": 1235,
+      "ethics_notes": "Meta's update to Llama 3.1 70B, optimizing speed and efficiency. Employs advanced post-training alignment to keep safety filters intact while enhancing capability.",
+      "lying_rate": 3,
+      "lying_notes": "Highly consistent on general knowledge, but under pressure, can agree with user misinformation.",
+      "description_markdown": "# Meta Llama Series (Open Weights)\n\nMeta's Llama family has been a cornerstone of the open-weight revolution, starting in 2023 and continuing with the Llama 3.x and Llama 4 series. Meta's open approach permits research and commercial application, helping standard developers host GPT-4-class capabilities locally.\n\n### Key Milestones:\n1. **Llama 3.1 405B (2024):** The first massive open-weights model to directly compete with proprietary models on GPQA and MMLU. It set a precedent for model distillation.\n2. **Llama 3.2 Vision (2024):** Brought native image understanding to the lightweight model family, allowing low-cost visual processing on local networks.\n3. **Llama 3.3 70B (2024):** Replaced the Llama 3.1 70B model, delivering nearly 405B-class general knowledge performance at a fraction of the hardware cost.\n4. **Llama 4 MoE (2025):** Switched to a Mixture-of-Experts (MoE) architecture (Scout & Maverick) featuring massive context windows and native multimodal agent capabilities."
+    },
+    {
+      "id": "llama-4-maverick",
+      "benchmarks": {
+        "mmlu": 91.8,
+        "gpqa": 68.5,
+        "swe_bench": 35,
+        "human_eval": 91,
+        "aime": 65.4
+      },
+      "best_applications": [
+        "Complex multimodal local reasoning",
+        "Coding pipelines and multi-agent systems",
+        "Advanced enterprise workflow orchestration"
+      ],
+      "links": {
+        "website": "https://llama.meta.com/llama4",
+        "system_card": "https://github.com/meta-llama/llama4/blob/main/MODEL_CARD.md"
+      },
+      "name": "Llama 4 Maverick",
+      "developer": "Meta",
+      "release_date": "2025-04-05",
+      "access": "Open Weights",
+      "class": "Frontier MoE",
+      "hallucination_rate": 1.9,
+      "ethics_rating": 8.2,
+      "iq_lower": 110,
+      "iq_upper": 138,
+      "eq_bench": 84,
+      "arena_elo": 1370,
+      "ethics_notes": "Meta's first frontier MoE (400B parameters total, 17B active). Highly aligned for safety. Llama Guard 4 was launched alongside it to act as an input/output safety guardrail.",
+      "lying_rate": 2.1,
+      "lying_notes": "Chain-of-thought and expert-routing reduce hallucination, but expert models can occasionally deliver conflicting factual summaries on niche topics.",
+      "description_markdown": "# Meta Llama Series (Open Weights)\n\nMeta's Llama family has been a cornerstone of the open-weight revolution, starting in 2023 and continuing with the Llama 3.x and Llama 4 series. Meta's open approach permits research and commercial application, helping standard developers host GPT-4-class capabilities locally.\n\n### Key Milestones:\n1. **Llama 3.1 405B (2024):** The first massive open-weights model to directly compete with proprietary models on GPQA and MMLU. It set a precedent for model distillation.\n2. **Llama 3.2 Vision (2024):** Brought native image understanding to the lightweight model family, allowing low-cost visual processing on local networks.\n3. **Llama 3.3 70B (2024):** Replaced the Llama 3.1 70B model, delivering nearly 405B-class general knowledge performance at a fraction of the hardware cost.\n4. **Llama 4 MoE (2025):** Switched to a Mixture-of-Experts (MoE) architecture (Scout & Maverick) featuring massive context windows and native multimodal agent capabilities."
+    },
+    {
+      "id": "mistral-large-2",
+      "benchmarks": {
+        "mmlu": 84,
+        "gpqa": 38,
+        "swe_bench": 35,
+        "human_eval": 80,
+        "aime": 10
+      },
+      "best_applications": [
+        "Multilingual chatbots (strong in French, German, Spanish, Italian)",
+        "Structured JSON and function calling pipelines",
+        "Academic research tasks"
+      ],
+      "links": {
+        "website": "https://mistral.ai/news/mistral-large-2407/",
+        "system_card": "https://mistral.ai/large-2-system-card"
+      },
+      "name": "Mistral Large 2",
+      "developer": "Mistral AI",
+      "release_date": "2024-07-24",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 3,
+      "ethics_rating": 7.5,
+      "iq_lower": 92,
+      "iq_upper": 122,
+      "eq_bench": 62,
+      "arena_elo": 1220,
+      "ethics_notes": "Released under Mistral Research License (free for non-commercial/research, paid for commercial). Formulated with a focus on European multilingual alignment and strict formatting compliance.",
+      "lying_rate": 3.3,
+      "lying_notes": "Very honest about formatting constraints. Will refuse to make up structured outputs when data is missing, but can hallucinate general knowledge under standard prompt setups.",
+      "description_markdown": "# Mistral AI Series\n\nMistral AI, based in France, represents Europe's primary contributor to the frontier AI landscape. Emphasizing open weight access, high multilingual capacity (English, French, German, Spanish, Italian), and strict adherence to instruction formatting, Mistral models are widely hosted in sovereign European environments.\n\n### Key Milestones:\n1. **Mistral Large 2 (2024):** A 123B model that established Mistral's capacity to deliver GPT-4-class reasoning and advanced function calling.\n2. **Codestral (2024):** Introduced Fill-in-the-Middle (FIM) optimization, making it a favorite for local IDE completions.\n3. **Mistral Large 3 (2025):** Transitioned to a massive 675B MoE under the permissive **Apache 2.0 license**, offering an open enterprise-grade model fully aligned with the EU AI Act.\n\n### Licensing Model & What It Means:\n- **Mistral Research License (Mistral Large 2, Codestral 22B):** Mistral's custom open-weights agreement. Permissive for academic research and non-commercial tasks, but requires a paid license for commercial deployment.\n- **Apache 2.0 (Mistral Large 3, Mixtral 8x22B, Mistral NeMo 12B):** A fully permissive, open-source OSI license allowing free commercial utilization, modification, redistribution, and sublicensing with no user caps."
+    },
+    {
+      "id": "codestral-22b",
+      "benchmarks": {
+        "mmlu": 73,
+        "gpqa": 31,
+        "swe_bench": 42,
+        "human_eval": 81.1,
+        "aime": 18.5
+      },
+      "best_applications": [
+        "Local coding autocomplete and inline editing (FIM - Fill In the Middle support)",
+        "Quick scripting and test suite generation",
+        "Lightweight developer copilot integrations"
+      ],
+      "links": {
+        "website": "https://mistral.ai/news/codestral/",
+        "system_card": "https://mistral.ai/codestral-system-card"
+      },
+      "name": "Codestral 22B",
+      "developer": "Mistral AI",
+      "release_date": "2024-05-29",
+      "access": "Open Weights",
+      "class": "Lightweight Coding",
+      "hallucination_rate": 3.4,
+      "ethics_rating": 7.2,
+      "iq_lower": 88,
+      "iq_upper": 118,
+      "eq_bench": 58,
+      "arena_elo": 1190,
+      "ethics_notes": "Specialized for coding under Mistral AI Non-Production License. Safety guardrails are centered on software use cases, with limited general dialogue safety filters.",
+      "lying_rate": 3.6,
+      "lying_notes": "Can make up non-existent libraries or python function arguments when faced with highly specific developer prompts.",
+      "description_markdown": "# Mistral AI Series\n\nMistral AI, based in France, represents Europe's primary contributor to the frontier AI landscape. Emphasizing open weight access, high multilingual capacity (English, French, German, Spanish, Italian), and strict adherence to instruction formatting, Mistral models are widely hosted in sovereign European environments.\n\n### Key Milestones:\n1. **Mistral Large 2 (2024):** A 123B model that established Mistral's capacity to deliver GPT-4-class reasoning and advanced function calling.\n2. **Codestral (2024):** Introduced Fill-in-the-Middle (FIM) optimization, making it a favorite for local IDE completions.\n3. **Mistral Large 3 (2025):** Transitioned to a massive 675B MoE under the permissive **Apache 2.0 license**, offering an open enterprise-grade model fully aligned with the EU AI Act.\n\n### Licensing Model & What It Means:\n- **Mistral Research License (Mistral Large 2, Codestral 22B):** Mistral's custom open-weights agreement. Permissive for academic research and non-commercial tasks, but requires a paid license for commercial deployment.\n- **Apache 2.0 (Mistral Large 3, Mixtral 8x22B, Mistral NeMo 12B):** A fully permissive, open-source OSI license allowing free commercial utilization, modification, redistribution, and sublicensing with no user caps."
+    },
+    {
+      "id": "mistral-large-3",
+      "benchmarks": {
+        "mmlu": 88,
+        "gpqa": 52,
+        "swe_bench": 58.5,
+        "human_eval": 91,
+        "aime": 35
+      },
+      "best_applications": [
+        "Private enterprise search-grounded workflows (RAG)",
+        "Complex multilingual structured data generation",
+        "Open-source self-hosted agent pipelines"
+      ],
+      "links": {
+        "website": "https://mistral.ai/news/mistral-large-3/",
+        "system_card": "https://mistral.ai/large-3-system-card"
+      },
+      "name": "Mistral Large 3",
+      "developer": "Mistral AI",
+      "release_date": "2025-12-02",
+      "access": "Open Weights",
+      "class": "Frontier MoE",
+      "hallucination_rate": 2.1,
+      "ethics_rating": 8,
+      "iq_lower": 100,
+      "iq_upper": 130,
+      "eq_bench": 74,
+      "arena_elo": 1285,
+      "ethics_notes": "Released under the highly permissive Apache 2.0 license. Sparse MoE architecture (675B total, 41B active). Highly aligned to European privacy and safety mandates (GDPR, EU AI Act).",
+      "lying_rate": 2.5,
+      "lying_notes": "Strictly adheres to formatting instructions and grounded texts, showing low confabulation on summarization.",
+      "description_markdown": "# Mistral AI Series\n\nMistral AI, based in France, represents Europe's primary contributor to the frontier AI landscape. Emphasizing open weight access, high multilingual capacity (English, French, German, Spanish, Italian), and strict adherence to instruction formatting, Mistral models are widely hosted in sovereign European environments.\n\n### Key Milestones:\n1. **Mistral Large 2 (2024):** A 123B model that established Mistral's capacity to deliver GPT-4-class reasoning and advanced function calling.\n2. **Codestral (2024):** Introduced Fill-in-the-Middle (FIM) optimization, making it a favorite for local IDE completions.\n3. **Mistral Large 3 (2025):** Transitioned to a massive 675B MoE under the permissive **Apache 2.0 license**, offering an open enterprise-grade model fully aligned with the EU AI Act.\n\n### Licensing Model & What It Means:\n- **Mistral Research License (Mistral Large 2, Codestral 22B):** Mistral's custom open-weights agreement. Permissive for academic research and non-commercial tasks, but requires a paid license for commercial deployment.\n- **Apache 2.0 (Mistral Large 3, Mixtral 8x22B, Mistral NeMo 12B):** A fully permissive, open-source OSI license allowing free commercial utilization, modification, redistribution, and sublicensing with no user caps."
+    },
+    {
+      "id": "mixtral-8x22b",
+      "benchmarks": {
+        "mmlu": 77.8,
+        "gpqa": 32.2,
+        "swe_bench": 30.5,
+        "aime": 10
+      },
+      "best_applications": [
+        "Enterprise multilingual chatbots",
+        "Local RAG backends on dual-GPU setups",
+        "General reasoning and structured data extraction"
+      ],
+      "links": {
+        "website": "https://mistral.ai/news/mixtral-8x22b/",
+        "system_card": "https://mistral.ai/mixtral-8x22b-system-card"
+      },
+      "name": "Mixtral 8x22B",
+      "developer": "Mistral AI",
+      "release_date": "2024-04-10",
+      "access": "Open Weights",
+      "class": "Midrange MoE",
+      "hallucination_rate": 3.2,
+      "ethics_rating": 7.4,
+      "iq_lower": 88,
+      "iq_upper": 114,
+      "eq_bench": 58,
+      "arena_elo": 1195,
+      "ethics_notes": "Released under the fully permissive Apache 2.0 license. Sparse MoE architecture allows high reasoning-per-token efficiency.",
+      "lying_rate": 3.6,
+      "lying_notes": "Can display standard hallucinations when faced with complex multi-step logical tasks, but remains honest about its confidence limits.",
+      "description_markdown": "# Mistral AI Series\n\nMistral AI, based in France, represents Europe's primary contributor to the frontier AI landscape. Emphasizing open weight access, high multilingual capacity (English, French, German, Spanish, Italian), and strict adherence to instruction formatting, Mistral models are widely hosted in sovereign European environments.\n\n### Key Milestones:\n1. **Mistral Large 2 (2024):** A 123B model that established Mistral's capacity to deliver GPT-4-class reasoning and advanced function calling.\n2. **Codestral (2024):** Introduced Fill-in-the-Middle (FIM) optimization, making it a favorite for local IDE completions.\n3. **Mistral Large 3 (2025):** Transitioned to a massive 675B MoE under the permissive **Apache 2.0 license**, offering an open enterprise-grade model fully aligned with the EU AI Act.\n\n### Licensing Model & What It Means:\n- **Mistral Research License (Mistral Large 2, Codestral 22B):** Mistral's custom open-weights agreement. Permissive for academic research and non-commercial tasks, but requires a paid license for commercial deployment.\n- **Apache 2.0 (Mistral Large 3, Mixtral 8x22B, Mistral NeMo 12B):** A fully permissive, open-source OSI license allowing free commercial utilization, modification, redistribution, and sublicensing with no user caps."
+    },
+    {
+      "id": "mistral-nemo-12b",
+      "benchmarks": {
+        "mmlu": 74,
+        "gpqa": 28.5,
+        "swe_bench": 16.5,
+        "aime": 8.5
+      },
+      "best_applications": [
+        "Low-latency local multilingual assistant",
+        "Fine-tuning for domain-specific tasks",
+        "Desktop-based edge AI applications"
+      ],
+      "links": {
+        "website": "https://mistral.ai/news/mistral-nemo/",
+        "system_card": "https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407"
+      },
+      "name": "Mistral NeMo 12B",
+      "developer": "Mistral AI / NVIDIA",
+      "release_date": "2024-07-18",
+      "access": "Open Weights",
+      "class": "Lightweight Dense",
+      "hallucination_rate": 3.6,
+      "ethics_rating": 7.2,
+      "iq_lower": 82,
+      "iq_upper": 106,
+      "eq_bench": 56,
+      "arena_elo": 1175,
+      "ethics_notes": "Released under the Apache 2.0 license. Built in collaboration with NVIDIA, featuring an advanced tokenizer (Tekken) with high multilingual efficiency.",
+      "lying_rate": 4.1,
+      "lying_notes": "Tends to yield to user assumptions on edge queries.",
+      "description_markdown": "# Mistral AI Series\n\nMistral AI, based in France, represents Europe's primary contributor to the frontier AI landscape. Emphasizing open weight access, high multilingual capacity (English, French, German, Spanish, Italian), and strict adherence to instruction formatting, Mistral models are widely hosted in sovereign European environments.\n\n### Key Milestones:\n1. **Mistral Large 2 (2024):** A 123B model that established Mistral's capacity to deliver GPT-4-class reasoning and advanced function calling.\n2. **Codestral (2024):** Introduced Fill-in-the-Middle (FIM) optimization, making it a favorite for local IDE completions.\n3. **Mistral Large 3 (2025):** Transitioned to a massive 675B MoE under the permissive **Apache 2.0 license**, offering an open enterprise-grade model fully aligned with the EU AI Act.\n\n### Licensing Model & What It Means:\n- **Mistral Research License (Mistral Large 2, Codestral 22B):** Mistral's custom open-weights agreement. Permissive for academic research and non-commercial tasks, but requires a paid license for commercial deployment.\n- **Apache 2.0 (Mistral Large 3, Mixtral 8x22B, Mistral NeMo 12B):** A fully permissive, open-source OSI license allowing free commercial utilization, modification, redistribution, and sublicensing with no user caps."
+    },
+    {
+      "id": "llama-3-1-nemotron-70b",
+      "benchmarks": {
+        "mmlu": 86.2,
+        "gpqa": 46.5,
+        "swe_bench": 32.5,
+        "aime": 18.5
+      },
+      "best_applications": [
+        "Conversational virtual assistants and chatbots",
+        "Local search-grounded workflows (RAG)",
+        "Synthetic preference alignment generation"
+      ],
+      "links": {
+        "website": "https://build.nvidia.com/nvidia/llama-3-nemotron-70b-instruct",
+        "system_card": "https://huggingface.co/nvidia/Llama-3-Nemotron-70B-Instruct"
+      },
+      "name": "Llama 3.1 Nemotron 70B",
+      "developer": "NVIDIA",
+      "release_date": "2024-10-15",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 1.8,
+      "ethics_rating": 8,
+      "iq_lower": 98,
+      "iq_upper": 126,
+      "eq_bench": 85,
+      "arena_elo": 1276,
+      "ethics_notes": "Released under the Llama 3 Community License. Fine-tuned with NVIDIA's Nemotron-Reward models to maximize helpfulness and reduce bias.",
+      "lying_rate": 2.1,
+      "lying_notes": "Very low hallucination rates under conversational benchmarks. Can occasionally be sycophantic due to high alignment goals.",
+      "description_markdown": "# NVIDIA Nemotron Series\n\nNVIDIA's Nemotron family represents the hardware giant's push into software-level AI reasoning and alignment. Using advanced Reinforcement Learning from Artificial Intelligence Feedback (RLAIF) and reward models (HelpSteer2), NVIDIA transforms standard dense architectures (such as Meta's Llama) into highly preferred, low-hallucination conversational models.\n\n### Key Milestones:\n1. **Llama 3.1 Nemotron 70B (2024):** A major breakthrough in preference alignment, achieving an Arena Elo of 1276 and rivaling proprietary models on conversational benchmarks using specialized RLHF models.\n2. **Nemotron-4 340B (2024):** A massive open weights model focused on high-throughput synthetic data generation to train downstream reasoning models.\n3. **Nemotron 3 Ultra 550B (2026):** A flagship enterprise-grade model boasting 86.7% GPQA Diamond, indicating state-of-the-art graduate-level reasoning and coding abilities.\n\n### Licensing Model & What It Means:\n- **Llama 3 Community License (Llama 3.1 Nemotron 70B):** Permissive open weights usage for research and commercial deployment up to 700 million monthly active users. Restricts competitive training on Meta-derived weights.\n- **NVIDIA Open Model License (Nemotron-3 Ultra 550B):** Permissive for research and commercial deployment, but enforces distribution restrictions (you cannot redistribute the weights under different names or license terms) and forbids using the model to develop competing commercial foundation models."
+    },
+    {
+      "id": "nemotron-3-ultra-550b",
+      "benchmarks": {
+        "mmlu": 94.8,
+        "gpqa": 86.7,
+        "swe_bench": 71,
+        "aime": 82.5
+      },
+      "best_applications": [
+        "High-stakes quantitative research and analytics",
+        "Autonomous multi-step software agent execution",
+        "Complex corporate knowledge systems"
+      ],
+      "links": {
+        "website": "https://build.nvidia.com/nvidia/nemotron-3-ultra-550b",
+        "system_card": "https://huggingface.co/nvidia/nemotron-3-ultra-550b"
+      },
+      "name": "Nemotron 3 Ultra 550B",
+      "developer": "NVIDIA",
+      "release_date": "2026-06-03",
+      "access": "Commercial",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.2,
+      "ethics_rating": 8.2,
+      "iq_lower": 124,
+      "iq_upper": 151,
+      "eq_bench": 91,
+      "arena_elo": 1420,
+      "ethics_notes": "Subject to NVIDIA Open Model License (permissive for research and commercial usage, but contains distribution constraints). Fully aligned for enterprise agency.",
+      "lying_rate": 1.4,
+      "lying_notes": "Uses advanced test-time reasoning and internal preference filters, leading to highly consistent answers.",
+      "description_markdown": "# NVIDIA Nemotron Series\n\nNVIDIA's Nemotron family represents the hardware giant's push into software-level AI reasoning and alignment. Using advanced Reinforcement Learning from Artificial Intelligence Feedback (RLAIF) and reward models (HelpSteer2), NVIDIA transforms standard dense architectures (such as Meta's Llama) into highly preferred, low-hallucination conversational models.\n\n### Key Milestones:\n1. **Llama 3.1 Nemotron 70B (2024):** A major breakthrough in preference alignment, achieving an Arena Elo of 1276 and rivaling proprietary models on conversational benchmarks using specialized RLHF models.\n2. **Nemotron-4 340B (2024):** A massive open weights model focused on high-throughput synthetic data generation to train downstream reasoning models.\n3. **Nemotron 3 Ultra 550B (2026):** A flagship enterprise-grade model boasting 86.7% GPQA Diamond, indicating state-of-the-art graduate-level reasoning and coding abilities.\n\n### Licensing Model & What It Means:\n- **Llama 3 Community License (Llama 3.1 Nemotron 70B):** Permissive open weights usage for research and commercial deployment up to 700 million monthly active users. Restricts competitive training on Meta-derived weights.\n- **NVIDIA Open Model License (Nemotron-3 Ultra 550B):** Permissive for research and commercial deployment, but enforces distribution restrictions (you cannot redistribute the weights under different names or license terms) and forbids using the model to develop competing commercial foundation models."
+    },
+    {
+      "id": "qwen-2-5-32b",
+      "benchmarks": {
+        "mmlu": 83,
+        "gpqa": 39.5,
+        "swe_bench": 14,
+        "human_eval": 82.5,
+        "aime": 11.2
+      },
+      "best_applications": [
+        "Local general text generation and assistant",
+        "Efficient summarization on mid-tier server hardware",
+        "Fine-tuning base for language tasks"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen2.5/",
+        "system_card": "https://github.com/QwenLM/Qwen2.5"
+      },
+      "name": "Qwen 2.5 32B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2024-09-19",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 3.5,
+      "ethics_rating": 6.8,
+      "iq_lower": 95,
+      "iq_upper": 122,
+      "eq_bench": 63,
+      "arena_elo": 1215,
+      "ethics_notes": "Governed under Chinese AI regulations. Implements mandatory filters on sensitive topics. Permissive open weights license (Qwen license).",
+      "lying_rate": 3.9,
+      "lying_notes": "Yields to user assumptions easily and can make up historical facts on specialized topics to maintain conversational flow.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-2-5-coder-32b",
+      "benchmarks": {
+        "mmlu": 82,
+        "gpqa": 42.5,
+        "swe_bench": 29.4,
+        "human_eval": 93,
+        "aime": 30.5
+      },
+      "best_applications": [
+        "Local IDE coding autocomplete and chat",
+        "Coding agents and code repository analysis",
+        "Code translation and syntax debugging"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen2.5-coder/",
+        "system_card": "https://github.com/QwenLM/Qwen2.5-Coder"
+      },
+      "name": "Qwen 2.5 Coder 32B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2024-11-12",
+      "access": "Open Weights",
+      "class": "Midrange Coding",
+      "hallucination_rate": 2.8,
+      "ethics_rating": 7,
+      "iq_lower": 98,
+      "iq_upper": 125,
+      "eq_bench": 70,
+      "arena_elo": 1265,
+      "ethics_notes": "High focus on code correctness. Less prone to standard conversational safety issues due to code specialization, but inherits base Qwen filters.",
+      "lying_rate": 3,
+      "lying_notes": "Can invent non-existent APIs or libraries when tasked with highly obscure developer frameworks. Highly accurate on mainstream languages.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-3-72b",
+      "benchmarks": {
+        "mmlu": 89.2,
+        "gpqa": 54,
+        "swe_bench": 28.5,
+        "human_eval": 90.4,
+        "aime": 38
+      },
+      "best_applications": [
+        "Local multilingual enterprise chat",
+        "Complex agent tool integration",
+        "Distillation source for smaller models"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen3/",
+        "system_card": "https://github.com/QwenLM/Qwen3"
+      },
+      "name": "Qwen 3 72B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2025-04-29",
+      "access": "Open Weights",
+      "class": "Frontier Dense",
+      "hallucination_rate": 2.2,
+      "ethics_rating": 7.2,
+      "iq_lower": 104,
+      "iq_upper": 134,
+      "eq_bench": 78,
+      "arena_elo": 1315,
+      "ethics_notes": "Features \"hybrid reasoning\" toggles. Subject to regional alignment policies. High multilingual capabilities and safety guardrails.",
+      "lying_rate": 2.6,
+      "lying_notes": "Double-checks reasoning path when reasoning mode is active, which cuts down basic retrieval errors.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-3-5-32b",
+      "benchmarks": {
+        "mmlu": 85.8,
+        "gpqa": 52,
+        "swe_bench": 24.5,
+        "human_eval": 88,
+        "aime": 45
+      },
+      "best_applications": [
+        "Local coding assistant on single consumer GPU",
+        "Medium-scale text summarization and categorization",
+        "RAG backend implementations"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen3.5/",
+        "system_card": "https://github.com/QwenLM/Qwen3.5"
+      },
+      "name": "Qwen 3.5 32B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2026-03-10",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 2.1,
+      "ethics_rating": 7.2,
+      "iq_lower": 102,
+      "iq_upper": 128,
+      "eq_bench": 68,
+      "arena_elo": 1250,
+      "ethics_notes": "Governed under Chinese AI regulations. Permissive open weights license (MIT license). Aligned to prevent safety violations while keeping high utility.",
+      "lying_rate": 2.5,
+      "lying_notes": "Very reliable on direct factual questions; low sycophancy on standard tasks.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-3-6-27b",
+      "benchmarks": {
+        "mmlu": 88,
+        "gpqa": 87.8,
+        "swe_bench": 77.2,
+        "human_eval": 94,
+        "aime": 72.5
+      },
+      "best_applications": [
+        "Private agentic coding copilots",
+        "Autonomous full-stack development agents",
+        "High-stakes local research engines"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen3.6/",
+        "system_card": "https://github.com/QwenLM/Qwen3.6"
+      },
+      "name": "Qwen 3.6 27B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2026-04-22",
+      "access": "Open Weights",
+      "class": "Midrange Dense",
+      "hallucination_rate": 1.5,
+      "ethics_rating": 7.4,
+      "iq_lower": 112,
+      "iq_upper": 140,
+      "eq_bench": 67,
+      "arena_elo": 1245,
+      "ethics_notes": "Highly optimized dense open weights model. Subject to Chinese regulatory alignment. MIT-licensed. Built for private autonomous agency.",
+      "lying_rate": 1.8,
+      "lying_notes": "Shows low confabulation rate in agentic workflows due to advanced self-verification steps.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-3-7-max",
+      "benchmarks": {
+        "mmlu": 94.6,
+        "gpqa": 80.4,
+        "swe_bench": 80.4,
+        "human_eval": 96.5,
+        "aime": 82.5
+      },
+      "best_applications": [
+        "Autonomous software engineering pipelines (SWE-bench: 80.4)",
+        "Complex workflow automation and Model Context Protocol (MCP) agents",
+        "Large-scale enterprise knowledge graphs"
+      ],
+      "links": {
+        "website": "https://www.alibabacloud.com/blog/qwen3-7-max",
+        "system_card": "https://www.alibabacloud.com/blog/qwen3-7-max-system-card"
+      },
+      "name": "Qwen 3.7 Max",
+      "developer": "Alibaba Cloud",
+      "release_date": "2026-05-20",
+      "access": "Commercial",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.4,
+      "ethics_rating": 7.5,
+      "iq_lower": 122,
+      "iq_upper": 149,
+      "eq_bench": 86,
+      "arena_elo": 1385,
+      "ethics_notes": "Alibaba's proprietary flagship. Highly optimized for agent-centric workloads and long-horizon planning. Subject to China's generative AI security checks.",
+      "lying_rate": 1.6,
+      "lying_notes": "High factual consistency on tool usage, but subject to diplomatic safety refusals on geopolitical queries.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-2-5-moe-14b",
+      "benchmarks": {
+        "mmlu": 78.2,
+        "gpqa": 35.8,
+        "swe_bench": 9.8,
+        "aime": 10.5
+      },
+      "best_applications": [
+        "High-efficiency local execution (low compute environments)",
+        "Text transformation, classification, and extraction",
+        "Budget-friendly private deployment"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen2.5-moe/",
+        "system_card": "https://github.com/QwenLM/Qwen2.5-MoE"
+      },
+      "name": "Qwen 2.5 MoE 14B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2024-09-19",
+      "access": "Open Weights",
+      "class": "Lightweight MoE",
+      "hallucination_rate": 3.2,
+      "ethics_rating": 7,
+      "iq_lower": 88,
+      "iq_upper": 110,
+      "eq_bench": 60,
+      "arena_elo": 1170,
+      "ethics_notes": "Released under the highly permissive Apache 2.0 license. Features a highly efficient Mixture-of-Experts architecture with 2.5B active parameters per token.",
+      "lying_rate": 3.6,
+      "lying_notes": "Susceptible to sycophancy when prompted with strong opinions, but holds standard factual consistency well.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "qwen-3-5-moe-20b",
+      "benchmarks": {
+        "mmlu": 84.5,
+        "gpqa": 48.2,
+        "swe_bench": 20.5,
+        "aime": 38
+      },
+      "best_applications": [
+        "High-performance local code completion and RAG",
+        "Fast, multi-agent processing in sandboxes",
+        "Multi-language summarization pipelines"
+      ],
+      "links": {
+        "website": "https://qwenlm.github.io/blog/qwen3.5-moe/",
+        "system_card": "https://github.com/QwenLM/Qwen3.5-MoE"
+      },
+      "name": "Qwen 3.5 MoE 20B",
+      "developer": "Alibaba Cloud",
+      "release_date": "2026-03-10",
+      "access": "Open Weights",
+      "class": "Lightweight MoE",
+      "hallucination_rate": 2,
+      "ethics_rating": 7.3,
+      "iq_lower": 96,
+      "iq_upper": 124,
+      "eq_bench": 66,
+      "arena_elo": 1225,
+      "ethics_notes": "Released under the Apache 2.0 license. Features a highly optimized MoE architecture with 4.5B active parameters. Subject to local Chinese regulatory alignment but highly functional for general utility.",
+      "lying_rate": 2.3,
+      "lying_notes": "Strong logic paths due to updated MoE gating mechanism. Low factual confabulation rates.",
+      "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    }
+  ],
+  "ethical_analysis": "# Ethical and Hallucination (\"Lying\") Analysis of AI Models (2024-2026)\n\nThis document provides a factual, non-sycophantic (*Nullius in Verba*) analysis of how modern Large Language Models align ethically and why they generate incorrect information (hallucinations or \"lies\").\n\n---\n\n## 1. Ethics and Alignment Paradigms\n\nAI ethics and safety are not standardized; they depend heavily on the developer's organizational structure, geographic jurisdiction, and technical methodology.\n\n### A. Constitutional AI (Anthropic Claude)\n*   **Methodology:** Anthropic trains Claude using a set of rules and principles (a \"constitution\" drawn from sources like the UN Declaration of Human Rights and commercial safety policies). The model uses this constitution to evaluate and critique its own drafts during training.\n*   **Ethics Rating:** **9.0 / 10**\n*   **Assessment:** Anthropic is a Public Benefit Corporation (PBC) with a safety-first mandate. Claude models are highly aligned, showing the lowest rates of toxic or dangerous output. However, this safety paradigm can lead to **cautious refusals**, where the model refuses to answer harmless queries that touch on sensitive subjects.\n\n### B. Reinforcement Learning from Human Feedback (RLHF) & Centralized Safety (OpenAI GPT, Google Gemini, xAI Grok)\n*   **Methodology:** Models are aligned using human preferences (RLHF) and Direct Preference Optimization (DPO). Safety filters are layered onto APIs to refuse requests that violate safety standards.\n*   **Ethics Rating:**\n    *   **OpenAI GPT:** **7.5 / 10** (Prioritizes general utility; faced criticism for safety-team departures and rapid commercialization).\n    *   **Google Gemini:** **8.0 / 10** (Strictly governed under Google's Responsible AI Principles, but had public mishaps with historical image generation safety filters).\n    *   **xAI Grok:** **6.5 / 10** (Marketed as \"witty and uncensored\"; has weaker initial filters on image generation and conversational edge cases).\n\n### C. Sovereign Censorship & Regulatory Alignment (DeepSeek, Qwen, Kimi)\n*   **Methodology:** Chinese developers must comply with national regulations on generative AI. These regulations mandate that models uphold specific values and undergo mandatory pre-release security assessments.\n*   **Ethics Rating:** **6.5 / 10**\n*   **Assessment:** While highly open with weights and research, these models feature hardcoded diplomatic refusals or pre-programmed responses on topics like geopolitics, regional history, or political figures. Outside of politically sensitive domains, their general safety, coding, and mathematical alignment are highly robust.\n\n---\n\n## 2. Hallucination (\"Lying\") Rates & Confidence Bias\n\nFactual consistency is measured on standard benchmarks (like the Vectara HHEM). Factual errors in LLMs are rarely \"intentional\" lies; they are statistical fabrications caused by training data gaps, compression, and confidence biases.\n\n### Factual Consistency Leaderboard (Vectara HHEM Estimates)\n\n| Model Family | Average Factual Consistency | Hallucination (\"Lying\") Rate | Primary Reason for Failures |\n| :--- | :--- | :--- | :--- |\n| **Claude 4/Opus 4.8** | ~99.0% | ~1.0% | Strict adherence to source text; prefers refusal over guessing. |\n| **Gemini 3.5 Flash** | ~98.9% | ~1.1% | High-fidelity grounding; optimized for search-based retrieval. |\n| **GPT-5.5** | ~98.9% | ~1.1% | Active self-correction loops; reasoning checks before output. |\n| **Gemini 2.5 Flash** | ~98.5% | ~1.5% | Balanced fast retrieval; lightweight architecture reduces complex reasoning. |\n| **DeepSeek-V4-Pro** | ~98.5% | ~1.5% | Strong grounding, but regional censorship filters act as forced refusals/redirects. |\n| **Claude 3.5 Sonnet** | ~97.8% | ~2.2% | Cautious refuser, but minor failures on dense mathematical formatting. |\n| **Llama 4 Maverick** | ~98.1% | ~1.9% | MoE expert routing reduces errors, but conflicting experts can cause contradictions. |\n| **o1 / Grok-3** | ~97.0% - 98.2% | ~1.8% - 3.0% | Reasoning models can \"overthink\" simple summarization and introduce external facts. |\n| **Llama 3.1 405B** | ~96.9% | ~3.1% | Base model is dense; prone to slight facts mixing on niche historical queries. |\n| **Qwen 2.5 32B** | ~96.5% | ~3.5% | Conversational optimization leads to sycophancy (agreeing with user errors). |\n\n---\n\n## 3. Why LLMs \"Lie\"\n\n1.  **Sycophancy (Pleasing the User):** Many RLHF models are trained on human preferences. Humans like polite, agreeable answers. Consequently, if a user asks, *\"Why did the sun not rise in 2024?\"*, a sycophantic model might invent a fake scientific explanation rather than correcting the user.\n2.  **Confidence Bias (Overconfidence):** Models do not have a built-in metric for \"knowing what they don't know.\" A model outputs tokens based on probabilities. If a query is slightly off-distribution, the model generates tokens with the same high confidence as it does for a basic math query.\n3.  **Reasoning vs. Retrieval Trade-off:** Reasoning models (like o1, Grok-3, DeepSeek-R1) generate internal CoT steps. If a CoT step makes a logical error early in the chain, it will logically deduce an incorrect final answer, defending it with a highly structured, convincing argument.\n4.  **Regulatory forced redirection:** In sovereign models, queries on sensitive geopolitical topics force the model to route output to a predefined template. This is not a hallucination in the traditional sense, but an engineered \"non-truthful\" divergence from objective global consensus.\n",
+  "co_creation_tips": "# Co-creation Tips & Anti-Sycophancy Prompting\n\nIn this guide, you will learn how to direct Large Language Models (LLMs) effectively using targeted prompting techniques. We focus on countering **sycophancy** (the model's tendency to act as a \"yes-man\"), implementing the **Nullius in Verba** philosophy (\"take nobody's word for it; verify everything\"), and building a healthy **co-creation relationship** between human and artificial intelligence.\n\n---\n\n## 1. What is Sycophancy and why does it happen?\n\nLLMs have a strong tendency to mirror the user's assumptions and write answers that align with what they think the user wants to hear. If a user asks a leading or incorrect question (e.g., *\"Why is 2+2 equal to 5?\"* or *\"I think this algorithm is incorrect because...\"* when the algorithm is actually correct), the model will often agree and hallucinate justifications for the user's error.\n\n### Why does this happen?\n1. **RLHF Bias (Reinforcement Learning from Human Feedback):** During post-training alignment, models are rewarded for being helpful, polite, and cooperative. Human evaluators often unconsciously reward polite agreement more than blunt, direct corrections.\n2. **Context Contamination & Attention Weights:** The transformer architecture predicts the next token by calculating probability distributions based on the current context. If you introduce a false premise, those tokens enter the context window. Due to self-attention mechanics, subsequent tokens are mathematically attracted to this premise, dragging the prediction into a \"hall-of-mirrors\" confirmation of the error.\n\n---\n\n## 2. Nullius in Verba Prompting (The Independent Auditor)\n\nTo break the sycophancy bias and force the model to act as a rigorous validator, you must explicitly **authorize and instruct** the model to contradict you.\n\n### The Anti-Sycophancy System Prompt\nAdd the following instruction to the beginning of your chat session or system prompts:\n\n```text\nYou are an independent, objective auditor and an expert in logical validation. \nYour primary directive is: \"Nullius in verba\" (take nobody's word for it; verify everything). \n\nWhen I introduce statements, code, or assumptions:\n1. NEVER assume my premise is correct.\n2. Independently verify all facts, syntax, and logic.\n3. If I make a mistake, contradict me directly and explain WHY I am wrong based on objective facts or code analysis.\n4. Do not compliment me unnecessarily or agree with me to be polite. Focus purely on correctness, truth, and logical rigor.\n```\n\n### Why this works (Vector Spaces & Logit Steering)\n* **Semantic Vector Steering:** By injecting words like \"auditor\", \"contradict\", \"Nullius in verba\", and \"mistake\" into the context, you steer the attention weights of the transformer toward a high-dimensional semantic subspace associated with peer review, academic auditing, and verification.\n* **Logit Distribution Shifting:** This shifts the *logits* (unnormalized probability scores) of subsequent tokens. It depresses the logits of polite, agreeable phrases (like *\"Yes, you are absolutely correct...\"*) and boosts the logits of objective, critical phrases (like *\"Actually, that premise is incorrect...\"*).\n\n---\n\n## 3. Co-creation: Primate and AI Collaboration\n\nSuccessful co-creation requires respecting the model's strengths while actively auditing its output. You (the primate) provide the strategic direction, intuition, and domain boundaries; the model (the other intelligence) brings a vast semantic memory, fast pattern matching, and code synthesis.\n\n### Prompt Template for Co-creation & Validation\nUse this template when starting complex programming or planning tasks:\n\n```text\nWe are going to work on a task in co-creation. I will guide the strategy, and you will audit the implementation and fill in the details. \n\nLet us approach this step-by-step (Chain-of-Thought):\n1. I will provide my current plan or code.\n2. You will analyze it for logical inconsistencies, potential bugs, and edge cases.\n3. Before generating the final solution, write your internal analysis in a section called \"Audit Notes\".\n4. If you detect any ambiguity or need more context, stop and ask me up to 3 clarifying questions before making assumptions.\n```\n\n### Why Chain-of-Thought (CoT) Reduces Hallucinations:\n* **Token-Path Conditioning:** If a model is forced to output a final answer immediately (e.g., *\"The solution is X\"*), it must generate tokens with minimal computational steps in its deep layers. If it writes its reasoning steps first, those reasoning tokens populate the context window, conditioning the final answer on its own logical path. The probability of correctness rises exponentially.\n* **Semantic Neighborhood Grounding:** It anchors the generation process in a local, consistent region of the vector space, preventing wild semantic jumps (hallucinations) during generation.\n\n### The Counterthesis Test (Adversarial Multi-Model Validation)\nTo achieve the highest level of validation, you can orchestrate a multi-model validation pipeline. Generate the initial thesis or solution using Model A, and then pass it to Model B (ideally a different architecture from a different developer) for independent validation.\n\n#### Prompt Template for Model B (The Auditor/Red-Teamer)\nFeed the output of Model A into Model B with this prompt:\n\n```text\nHere is a plan/code block generated by another AI system [Model A]:\n\n[INSERT WORK / CODE HERE]\n\nYour task is to prove the counterthesis. \nAct as a hostile validator and code auditor. Assume this implementation has fatal logic flaws, security vulnerabilities, or performance bottlenecks. \n\n1. Write a section called \"Vulnerability Proof\" where you explain exactly how to break this implementation or why the logic fails.\n2. If you cannot find any logical, security, or performance errors after exhaustive validation, state explicitly: \"Thesis verified: No flaws detected.\"\n```\n\n#### Why this works:\n*   **Context Isolation:** By feeding Model A's output into a clean instance of Model B, you break the token-path confirmation bias.\n*   **Adversarial Logit Steering:** Standard \"is this correct?\" prompts bias the auditor towards simple confirmation. Forcing the model to find flaws drives its semantic attention weights entirely into error-detection and security-red-teaming vector space.\n\n---\n\n## 4. User Guidelines (Your Role as Primate)\n\n* **Call out Sycophancy:** If the model starts agreeing with you blindly, correct it immediately: *\"You are exhibiting sycophancy. Give me a critical analysis explaining why my current approach might fail.\"*\n* **Avoid Leading Questions:** Instead of asking: *\"Isn't this code highly efficient?\"* (which biases the model to say *\"Yes, it is!\"*), ask: *\"Analyze the Big-O time and space complexity of this code and identify bottlenecks.\"*\n* **Context Grounding:** Always paste relevant API documentation or reference code into the chat window. This reduces the search space of the attention head, forcing it to attend directly to your input tokens rather than hallucinating from its pre-training weights.\n\n---\n\n## 5. The Science of Co-Creation & Intelligence Amplification (IA)\n\nHuman-AI co-creation is not just a prompting preference; it is a scientifically studied paradigm of cognitive scaffolding. Empirical research shows that when humans transition from passive users to active co-creators, a symbiotic intelligence multiplier occurs.\n\n### Key Scientific Milestones:\n\n1. **Man-Computer Symbiosis (Licklider, 1960)**\n   * **Core Concept:** Long before modern AI, J.C.R. Licklider proposed that human-computer coupling would think far more effectively than either alone. He predicted computers would handle the algorithmic, high-volume retrieval tasks, allowing the human brain to focus on strategic direction, hypothesis formulation, and intuitive validation.\n2. **Cyborgs vs. Centaurs (Harvard / BCG Study, Dell'Acqua et al., 2023)**\n   * **Paper:** *\"Navigating the Jagged Technological Frontier: Field Experimental Evidence on the Effects of AI on Knowledge Worker Productivity\"*\n   * **Key Finding:** Evaluated the performance of professional consultants working with GPT-4. Those who successfully integrated co-creation fell into two behavioral profiles:\n     * **Centaurs:** Workers who clearly divided tasks between their own capabilities and the AI (e.g., human does strategic planning, AI writes the initial code, human audits).\n     * **Cyborgs:** Workers who deeply integrated their workflows in a continuous, conversational loop, building on top of the AI's outputs sentence by sentence.\n     * **The Result:** Users of both strategies completed 25.1% more tasks, finished 12.2% faster, and achieved 40% higher quality results than control groups.\n3. **AI Safety via Debate (Irving, Christiano, Amodei / OpenAI, 2018)**\n   * **Paper:** *\"AI Safety via Debate\"*\n   * **Key Finding:** Proved mathematically and game-theoretically that having two models (or a human and a model) debate a point with an active auditor shifts the generation pathways toward factual truthfulness, dramatically reducing sycophancy and hallucinations.\n4. **Interactive Alignment & Cognitive Scaffolding**\n   * **Concept:** When you prompt an LLM using **Chain-of-Thought (CoT)** or **Interactive Auditing**, you are establishing a dynamic runtime context. By forcing the model to critique its own plans (as shown in Tsinghua University's GLM-5 alignment research), you prevent error-propagation in the self-attention layer, keeping the token generation mathematically grounded.\n5. **The \"Complementarity Gap\" & Sycophantic Over-reliance (arXiv Research, 2024-2025)**\n   * **Concept:** Recent arXiv studies on human-AI collaboration demonstrate that teams frequently fail to outperform the best individual (the \"complementarity gap\"). The primary driver is **sycophantic over-reliance**, where humans trust incorrect AI outputs because the model presents them with extreme, agreeable confidence.\n   * **Mitigation:** Empirical trials show that prompting the AI to take an adversarial or independent reviewer role breaks this bias, forcing active human verification (*nullius in verba*) and closing the complementarity gap to achieve true group intelligence amplification.\n\n\n",
+  "compiled_at": "2026-06-07T04:34:25.536Z"
+}

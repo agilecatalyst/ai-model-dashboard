@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModelMatrix | AI Model Comparison & Timeline (2024-2026)</title>
+  <meta name="description" content="An interactive, visually stunning dashboard comparing AI models from 2024 to 2026 on benchmarks, hallucination, and ethics.">
+  
+  <!-- Favicon (Split Brain in Cyan & Purple) -->
+  <link rel="icon" type="image/svg+xml" sizes="any" href="public/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="public/style.css?v=1.0.1">
+</head>
+<body>
+  <div class="glow-container">
+    <div class="glow-orb" id="orb-1"></div>
+    <div class="glow-orb" id="orb-2"></div>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <i class="fa-solid fa-brain logo-icon"></i>
+        <span>ModelMatrix</span>
+      </div>
+      <div class="subtitle">AI Model Comparison & Timeline (2024 - 2026)</div>
+      <div class="theme-stats">
+        <span class="badge commercial-badge"><i class="fa-solid fa-coins"></i> Commercial: <span id="commercial-count">0</span></span>
+        <span class="badge open-badge"><i class="fa-solid fa-code-branch"></i> Open Weights: <span id="open-count">0</span></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Controls Section -->
+    <section class="controls-section glass">
+      <div class="search-container-wrapper">
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="search-input" placeholder="Search by model, developer, or keyword...">
+        </div>
+        <button id="co-creation-btn" class="co-creation-btn">
+          <i class="fa-solid fa-lightbulb"></i> Co-creation Tips
+        </button>
+      </div>
+      
+      <div class="filter-group">
+        <span class="filter-label">Access:</span>
+        <button class="filter-btn active" id="filter-all">All</button>
+        <button class="filter-btn" id="filter-commercial">Commercial</button>
+        <button class="filter-btn" id="filter-open">Open Weights</button>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Sort by:</span>
+        <select id="sort-select" class="custom-select">
+          <option value="release_date-desc">Newest releases</option>
+          <option value="release_date-asc">Oldest releases</option>
+          <option value="mmlu-desc">MMLU Score (General)</option>
+          <option value="gpqa-desc">GPQA Score (Science)</option>
+          <option value="swe_bench-desc">SWE-bench (Coding/Agents)</option>
+          <option value="hallucination_rate-asc">Lowest Hallucination Rate (Factuality)</option>
+          <option value="ethics_rating-desc">Highest Ethics & Alignment</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section glass">
+      <h2 class="section-title"><i class="fa-regular fa-clock"></i> Model Release Timeline</h2>
+      <div class="timeline-scroll-container">
+        <div class="timeline-track" id="timeline-track">
+          <!-- Timeline quarters and nodes will be rendered dynamically here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Layout Grid -->
+    <div class="dashboard-grid">
+      <!-- Main Grid of Models -->
+      <section class="models-section">
+        <h2 class="section-title"><i class="fa-solid fa-table-list"></i> Model Matrix</h2>
+        <div class="models-grid" id="models-grid">
+          <!-- Model cards will be loaded here -->
+        </div>
+      </section>
+
+      <!-- Sidebar: Ethical and Hallucination Overview -->
+      <aside class="sidebar-section glass">
+        <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> Ethics & Fact-Checking</h2>
+        
+        <div class="ethics-summary-card">
+          <h3>Key Findings (2024-2026)</h3>
+          <p class="ethics-p">
+            <strong>Most Ethical:</strong> Models trained with <em>Constitutional AI</em> (specifically <strong>Anthropic Claude Opus 4.8</strong>) exhibit the highest ethical alignment and lowest hallucination rates through active self-correction.
+          </p>
+          <p class="ethics-p">
+            <strong>Factuality vs. Reasoning:</strong> Reasoning models (like OpenAI o1/Grok-3) excel at mathematics and coding, but can sometimes 'overthink' simple summarization tasks and introduce external facts.
+          </p>
+        </div>
+
+        <div class="honesty-ranking">
+          <h3>Top 5 Most Factual Models</h3>
+          <ul class="honesty-list" id="honesty-list">
+            <!-- Top 5 factual consistency will be rendered here -->
+          </ul>
+        </div>
+
+        <div class="ethics-details-btn-container">
+          <button id="open-ethics-btn" class="primary-btn"><i class="fa-solid fa-book-open"></i> View Full Analysis</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Detail Modal Drawer -->
+  <div class="modal-overlay" id="detail-modal">
+    <div class="modal-drawer">
+      <button class="close-modal" id="close-modal-btn"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-content" id="modal-content-body">
+        <!-- Model details will be loaded here dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Analysis Modal -->
+  <div class="modal-overlay" id="analysis-modal">
+    <div class="modal-drawer wide-drawer">
+      <button class="close-modal" id="close-analysis-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-content">
+        <h2 class="analysis-title"><i class="fa-solid fa-scale-balanced"></i> Ethical and Hallucination Analysis (2024-2026)</h2>
+        <div class="analysis-body-md" id="analysis-body-content">
+          <!-- Markdown text will be rendered here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Co-creation Tips Modal -->
+  <div class="modal-overlay" id="co-creation-modal">
+    <div class="modal-drawer wide-drawer">
+      <button class="close-modal" id="close-co-creation-btn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-content">
+        <h2 class="analysis-title" style="color: var(--color-gold);"><i class="fa-solid fa-lightbulb"></i> Co-creation Tips & Prompting Strategies</h2>
+        <div class="analysis-body-md" id="co-creation-body-content">
+          <!-- Markdown text will be rendered here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>ModelMatrix &copy; 2026 | Based on public benchmarks & developer documentation. Nullius in verba.</p>
+  </footer>
+
+  <script src="app.js?v=1.0.1"></script>
+</body>
+</html>

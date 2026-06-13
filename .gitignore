@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+dist/.DS_Store
+scripts/.DS_Store
+data/.DS_Store
+system_cards/.DS_Store

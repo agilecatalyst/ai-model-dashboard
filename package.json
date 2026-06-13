@@ -1,0 +1,13 @@
+{
+  "name": "ai-model-dashboard",
+  "version": "1.0.0",
+  "description": "Interactive dashboard comparing AI models from 2024 to 2026",
+  "type": "module",
+  "scripts": {
+    "compile": "node scripts/compile-data.js",
+    "download-cards": "node scripts/download-system-cards.js",
+    "serve": "npx -y http-server -p 8080 ."
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
