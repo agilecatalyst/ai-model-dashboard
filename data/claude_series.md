@@ -115,6 +115,64 @@ models:
     links:
       website: https://www.anthropic.com/news/claude-opus-4-8
       system_card: https://www.anthropic.com/claude/system-card-opus-4-8
+
+  - id: claude-fable-5
+    name: Claude Fable 5
+    developer: Anthropic
+    release_date: 2026-06-09
+    access: Commercial
+    class: Next-Gen Frontier
+    benchmarks:
+      mmlu: 97.4
+      gpqa: 93.0
+      swe_bench: 71.5
+      human_eval: 99.0
+      aime: 96.0
+    hallucination_rate: 0.9
+    ethics_rating: 9.3
+    iq_lower: 130
+    iq_upper: 156
+    eq_bench: 96
+    arena_elo: 1438
+    ethics_notes: Built using constitutional Fable-alignment. High compliance with policy instructions, making it the standard for enterprise deployments.
+    lying_rate: 0.7
+    lying_notes: Highly advanced internal self-policing; prefers direct refusal to fabrication under ambiguous context.
+    best_applications:
+      - High-stakes corporate automation and decision engines
+      - Safe agentic operations in production environments
+      - Highly compliant customer interaction services
+    links:
+      website: https://www.anthropic.com/news/claude-fable-5
+      system_card: https://www.anthropic.com/claude/system-card-fable-5
+
+  - id: claude-mythos-5
+    name: Claude Mythos 5
+    developer: Anthropic
+    release_date: 2026-06-09
+    access: Commercial (Limited)
+    class: Next-Gen Frontier
+    benchmarks:
+      mmlu: 97.2
+      gpqa: 92.5
+      swe_bench: 72.4
+      human_eval: 98.8
+      aime: 95.8
+    hallucination_rate: 1.1
+    ethics_rating: 8.2
+    iq_lower: 128
+    iq_upper: 155
+    eq_bench: 94
+    arena_elo: 1435
+    ethics_notes: Offered in limited preview with relaxed constraints. Designed for raw research and complex logical exploration without standard conversational filters.
+    lying_rate: 0.9
+    lying_notes: Lacks the extensive conversational refusals of Fable 5, meaning it will answer edge cases but maintain similar factual reasoning consistency.
+    best_applications:
+      - Creative writing with complex narrative rules
+      - Uncensored alignment research
+      - Advanced quantitative logic
+    links:
+      website: https://www.anthropic.com/news/claude-mythos-5
+      system_card: https://www.anthropic.com/claude/system-card-mythos-5
 ---
 
 # Anthropic Claude Series
@@ -125,4 +183,5 @@ Anthropic's Claude series has consistently prioritized **safety, factual consist
 1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.
 2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.
 3. **Claude 3.7 Hybrid Reasoning:** Toggling "extended thinking" allowed users to balance token speed against deep analytical reasoning.
-4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.
+4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.
+5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance.

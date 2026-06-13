@@ -4,7 +4,7 @@
   "description": "Interactive dashboard comparing AI models from 2024 to 2026",
   "type": "module",
   "scripts": {
-    "compile": "node scripts/compile-data.js",
+    "compile": "node scripts/compile-data.js && python3 scripts/generate-models-md.py",
     "download-cards": "node scripts/download-system-cards.js",
     "serve": "npx -y http-server -p 8080 ."
   },

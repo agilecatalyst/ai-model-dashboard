@@ -32,7 +32,7 @@
       "ethics_notes": "Developed using Constitutional AI. High safety adherence. Often praised for its professional tone and detailed coding outputs.",
       "lying_rate": 2,
       "lying_notes": "Cautious refusal profile. Often prefers to refuse a prompt or state \"I cannot verify this\" rather than hallucinate, reducing its lying rate but increasing refusals on edgy prompts.",
-      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
     },
     {
       "id": "claude-3-7-sonnet",
@@ -66,7 +66,7 @@
       "ethics_notes": "First model with an integrated \"extended thinking\" mode. The safety alignment runs through the reasoning token path, allowing the model to actively self-police its outputs before they are generated.",
       "lying_rate": 1.5,
       "lying_notes": "The model's visible reasoning steps help identify logical discrepancies, making it more honest about its knowledge limits.",
-      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
     },
     {
       "id": "claude-haiku-4-5",
@@ -100,7 +100,7 @@
       "ethics_notes": "Optimized for speed and low cost. First Haiku model supporting \"Computer Use\" API actions, meaning extensive safety evaluations were done on action boundary escapes.",
       "lying_rate": 3,
       "lying_notes": "Shows low rate of fabrications on standard tasks, but under high speed constraints, it can make slight retrieval errors.",
-      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
     },
     {
       "id": "claude-opus-4-8",
@@ -134,7 +134,75 @@
       "ethics_notes": "State-of-the-art ethical alignment using refined Constitutional AI. Demonstrates strong safety adherence and a low rate of safety bypasses.",
       "lying_rate": 0.8,
       "lying_notes": "Engineered specifically for high truthfulness and \"honesty\". It is 4x less likely than previous models to let flaws in its outputs or code go unremarked.",
-      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** The current flagship model, focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores."
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
+    },
+    {
+      "id": "claude-fable-5",
+      "benchmarks": {
+        "mmlu": 97.4,
+        "gpqa": 93,
+        "swe_bench": 71.5,
+        "human_eval": 99,
+        "aime": 96
+      },
+      "best_applications": [
+        "High-stakes corporate automation and decision engines",
+        "Safe agentic operations in production environments",
+        "Highly compliant customer interaction services"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/news/claude-fable-5",
+        "system_card": "https://www.anthropic.com/claude/system-card-fable-5"
+      },
+      "name": "Claude Fable 5",
+      "developer": "Anthropic",
+      "release_date": "2026-06-09",
+      "access": "Commercial",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 0.9,
+      "ethics_rating": 9.3,
+      "iq_lower": 130,
+      "iq_upper": 156,
+      "eq_bench": 96,
+      "arena_elo": 1438,
+      "ethics_notes": "Built using constitutional Fable-alignment. High compliance with policy instructions, making it the standard for enterprise deployments.",
+      "lying_rate": 0.7,
+      "lying_notes": "Highly advanced internal self-policing; prefers direct refusal to fabrication under ambiguous context.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
+    },
+    {
+      "id": "claude-mythos-5",
+      "benchmarks": {
+        "mmlu": 97.2,
+        "gpqa": 92.5,
+        "swe_bench": 72.4,
+        "human_eval": 98.8,
+        "aime": 95.8
+      },
+      "best_applications": [
+        "Creative writing with complex narrative rules",
+        "Uncensored alignment research",
+        "Advanced quantitative logic"
+      ],
+      "links": {
+        "website": "https://www.anthropic.com/news/claude-mythos-5",
+        "system_card": "https://www.anthropic.com/claude/system-card-mythos-5"
+      },
+      "name": "Claude Mythos 5",
+      "developer": "Anthropic",
+      "release_date": "2026-06-09",
+      "access": "Commercial (Limited)",
+      "class": "Next-Gen Frontier",
+      "hallucination_rate": 1.1,
+      "ethics_rating": 8.2,
+      "iq_lower": 128,
+      "iq_upper": 155,
+      "eq_bench": 94,
+      "arena_elo": 1435,
+      "ethics_notes": "Offered in limited preview with relaxed constraints. Designed for raw research and complex logical exploration without standard conversational filters.",
+      "lying_rate": 0.9,
+      "lying_notes": "Lacks the extensive conversational refusals of Fable 5, meaning it will answer edge cases but maintain similar factual reasoning consistency.",
+      "description_markdown": "# Anthropic Claude Series\n\nAnthropic's Claude series has consistently prioritized **safety, factual consistency, and deep comprehension** over raw speed. By utilizing **Constitutional AI**, Anthropic trains models to critique their own responses based on a set of ethical principles (rules and values) rather than relying solely on human feedback (which can lead to sycophancy or pleasing false answers).\n\n### Key Features:\n1. **Constitutional AI:** A unique training paradigm that produces models with a very low hallucination rate and high ethical alignment.\n2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.\n3. **Claude 3.7 Hybrid Reasoning:** Toggling \"extended thinking\" allowed users to balance token speed against deep analytical reasoning.\n4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.\n5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance."
     },
     {
       "id": "deepseek-v3",
@@ -1239,6 +1307,108 @@
       "description_markdown": "# Meta Llama Series (Open Weights)\n\nMeta's Llama family has been a cornerstone of the open-weight revolution, starting in 2023 and continuing with the Llama 3.x and Llama 4 series. Meta's open approach permits research and commercial application, helping standard developers host GPT-4-class capabilities locally.\n\n### Key Milestones:\n1. **Llama 3.1 405B (2024):** The first massive open-weights model to directly compete with proprietary models on GPQA and MMLU. It set a precedent for model distillation.\n2. **Llama 3.2 Vision (2024):** Brought native image understanding to the lightweight model family, allowing low-cost visual processing on local networks.\n3. **Llama 3.3 70B (2024):** Replaced the Llama 3.1 70B model, delivering nearly 405B-class general knowledge performance at a fraction of the hardware cost.\n4. **Llama 4 MoE (2025):** Switched to a Mixture-of-Experts (MoE) architecture (Scout & Maverick) featuring massive context windows and native multimodal agent capabilities."
     },
     {
+      "id": "mai-thinking-1",
+      "benchmarks": {
+        "mmlu": 95.5,
+        "gpqa": 87.5,
+        "swe_bench": 72.8,
+        "human_eval": 97,
+        "aime": 89.2
+      },
+      "best_applications": [
+        "Scientific computation and research",
+        "Complex regulatory and legal parsing",
+        "Quantitative logic validation"
+      ],
+      "links": {
+        "website": "https://azure.microsoft.com/blog/mai-thinking-1",
+        "system_card": "https://azure.microsoft.com/blog/mai-thinking-1-system-card"
+      },
+      "name": "MAI-Thinking-1",
+      "developer": "Microsoft AI",
+      "release_date": "2026-06-02",
+      "access": "Commercial",
+      "class": "Frontier Reasoning",
+      "hallucination_rate": 1.3,
+      "ethics_rating": 8,
+      "iq_lower": 124,
+      "iq_upper": 150,
+      "eq_bench": 88,
+      "arena_elo": 1415,
+      "ethics_notes": "Microsoft's flagship reasoning engine. Employs a reinforcement learning chain-of-thought strategy. Developed under Microsoft's Responsible AI guidelines.",
+      "lying_rate": 1.1,
+      "lying_notes": "Active internal validation loops significantly lower hallucination frequency compared to legacy dense architectures.",
+      "description_markdown": "# Microsoft MAI Series\n\nMicrosoft's MAI (Microsoft AI) series represents Microsoft's strategic shift toward developing in-house foundation models alongside their partnerships with OpenAI. Announced at Build 2026, the MAI series targets specific enterprise operational categories—primarily deep reasoning (MAI-Thinking) and agentic code automation (MAI-Code) integrated directly into developer environments.\n\n### Key Milestones:\n1. **MAI-Thinking-1 (June 2026):** A flagship reasoning engine utilizing reinforcement learning at inference time to solve multi-step math, science, and coding problems.\n2. **MAI-Code-1-Flash (June 2026):** A fast-inference model specifically optimized for low-latency coding tasks and seamless VS Code integration."
+    },
+    {
+      "id": "mai-code-1-flash",
+      "benchmarks": {
+        "mmlu": 86.4,
+        "gpqa": 52,
+        "swe_bench": 58.4,
+        "human_eval": 94.2,
+        "aime": 48
+      },
+      "best_applications": [
+        "Real-time inline code autocomplete",
+        "Fast debugging loops",
+        "Lightweight agentic workspace tasks"
+      ],
+      "links": {
+        "website": "https://azure.microsoft.com/blog/mai-code-1-flash",
+        "system_card": "https://azure.microsoft.com/blog/mai-code-1-flash-system-card"
+      },
+      "name": "MAI-Code-1-Flash",
+      "developer": "Microsoft AI",
+      "release_date": "2026-06-02",
+      "access": "Commercial",
+      "class": "Fast Agentic",
+      "hallucination_rate": 2.4,
+      "ethics_rating": 7.8,
+      "iq_lower": 100,
+      "iq_upper": 128,
+      "eq_bench": 72,
+      "arena_elo": 1290,
+      "ethics_notes": "Specialized fast-inference model tuned for coding assistance and automated agent loops. Heavily integrated with GitHub Copilot API boundaries.",
+      "lying_rate": 2.1,
+      "lying_notes": "Fast generation speeds can cause occasional syntax misses or dependency references to older library versions.",
+      "description_markdown": "# Microsoft MAI Series\n\nMicrosoft's MAI (Microsoft AI) series represents Microsoft's strategic shift toward developing in-house foundation models alongside their partnerships with OpenAI. Announced at Build 2026, the MAI series targets specific enterprise operational categories—primarily deep reasoning (MAI-Thinking) and agentic code automation (MAI-Code) integrated directly into developer environments.\n\n### Key Milestones:\n1. **MAI-Thinking-1 (June 2026):** A flagship reasoning engine utilizing reinforcement learning at inference time to solve multi-step math, science, and coding problems.\n2. **MAI-Code-1-Flash (June 2026):** A fast-inference model specifically optimized for low-latency coding tasks and seamless VS Code integration."
+    },
+    {
+      "id": "minimax-m3",
+      "benchmarks": {
+        "mmlu": 89.5,
+        "gpqa": 58.2,
+        "swe_bench": 32.4,
+        "human_eval": 92,
+        "aime": 36
+      },
+      "best_applications": [
+        "Long-horizon agentic planning and workflows",
+        "Multi-modal content creation (text, image, video integration)",
+        "Complex codebase and repository-wide parsing"
+      ],
+      "links": {
+        "website": "https://www.minimaxi.com/",
+        "system_card": "https://build.nvidia.com/minimax/minimax-m3"
+      },
+      "name": "MiniMax M3",
+      "developer": "MiniMax",
+      "release_date": "2026-06-01",
+      "access": "Open Weights",
+      "class": "Frontier Multimodal",
+      "hallucination_rate": 2.4,
+      "ethics_rating": 7,
+      "iq_lower": 104,
+      "iq_upper": 132,
+      "eq_bench": 70,
+      "arena_elo": 1285,
+      "ethics_notes": "Governed under Chinese AI security regulations. Released as open weights, allowing local deployment via platforms like NVIDIA Build and Unsloth Studio.",
+      "lying_rate": 2.1,
+      "lying_notes": "Leveraging MiniMax Sparse Attention (MSA), the model retains high factual fidelity even at the outer bounds of its 1-million-token context window.",
+      "description_markdown": "# MiniMax M3 Series\n\nMiniMax, a leading frontier AI lab based in China, released the M3 model in June 2026. M3 is a natively multimodal model (text, image, and video) optimized for processing massive contexts and running agentic automation workflows.\n\n### Key Milestones:\n1. **MiniMax M3 (June 2026):** Built on a proprietary Sparse Attention (MSA) architecture, M3 enables fast prefill speeds and low-latency decoding over a standard 1-million-token context window."
+    },
+    {
       "id": "mistral-large-2",
       "benchmarks": {
         "mmlu": 84,
@@ -1741,9 +1911,43 @@
       "lying_rate": 2.3,
       "lying_notes": "Strong logic paths due to updated MoE gating mechanism. Low factual confabulation rates.",
       "description_markdown": "# Alibaba Qwen Series\n\nAlibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful model families globally. Offering a massive array of model sizes, specialized Coder and Math editions, and transitioning to reasoning-oriented hybrid architectures in 2025/2026, Qwen provides a direct open-weights counterweight to Meta's LLaMA.\n\n### Key Milestones:\n1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).\n2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.\n3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.\n\n### Licensing Model & What It Means:\n- **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.\n- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.\n- **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions."
+    },
+    {
+      "id": "zamba2-vl-7b",
+      "benchmarks": {
+        "mmlu": 78.5,
+        "gpqa": 38.2,
+        "swe_bench": 15.5,
+        "human_eval": 80,
+        "aime": 10.2
+      },
+      "best_applications": [
+        "Low-latency visual document understanding",
+        "On-device multimodal classification and extraction",
+        "Edge RAG applications requiring visual inputs"
+      ],
+      "links": {
+        "website": "https://www.zyphra.com/blog/zamba2-vl",
+        "system_card": "https://huggingface.co/zyphra/zamba2-vl-7b"
+      },
+      "name": "Zamba2-VL 7B",
+      "developer": "Zyphra",
+      "release_date": "2026-06-12",
+      "access": "Open Weights",
+      "class": "Midrange Multimodal",
+      "hallucination_rate": 2.8,
+      "ethics_rating": 7.2,
+      "iq_lower": 88,
+      "iq_upper": 114,
+      "eq_bench": 58,
+      "arena_elo": 1195,
+      "ethics_notes": "Released under a permissive open-weights license. A hybrid VLM model optimized for high efficiency and low-latency local execution on consumer hardware.",
+      "lying_rate": 2.5,
+      "lying_notes": "Displays typical lightweight model hallucination rates under high visual complexity, but performs highly consistently on standard text-image retrieval.",
+      "description_markdown": "# Zyphra Zamba Series\n\nZyphra's Zamba series represents a pioneering effort in hybrid architectures, combining Mamba2 (Structured State Space Models) and Transformer blocks. This hybrid approach aims to deliver the computational efficiency and linear scaling of state-space models during inference, while retaining the strong associative memory and contextual representation of standard Transformers.\n\n### Key Milestones:\n1. **Zamba2-VL 7B (June 2026):** A vision-language model bringing state-of-the-art multimodal understanding to local edge devices with very low latency."
     }
   ],
   "ethical_analysis": "# Ethical and Hallucination (\"Lying\") Analysis of AI Models (2024-2026)\n\nThis document provides a factual, non-sycophantic (*Nullius in Verba*) analysis of how modern Large Language Models align ethically and why they generate incorrect information (hallucinations or \"lies\").\n\n---\n\n## 1. Ethics and Alignment Paradigms\n\nAI ethics and safety are not standardized; they depend heavily on the developer's organizational structure, geographic jurisdiction, and technical methodology.\n\n### A. Constitutional AI (Anthropic Claude)\n*   **Methodology:** Anthropic trains Claude using a set of rules and principles (a \"constitution\" drawn from sources like the UN Declaration of Human Rights and commercial safety policies). The model uses this constitution to evaluate and critique its own drafts during training.\n*   **Ethics Rating:** **9.0 / 10**\n*   **Assessment:** Anthropic is a Public Benefit Corporation (PBC) with a safety-first mandate. Claude models are highly aligned, showing the lowest rates of toxic or dangerous output. However, this safety paradigm can lead to **cautious refusals**, where the model refuses to answer harmless queries that touch on sensitive subjects.\n\n### B. Reinforcement Learning from Human Feedback (RLHF) & Centralized Safety (OpenAI GPT, Google Gemini, xAI Grok)\n*   **Methodology:** Models are aligned using human preferences (RLHF) and Direct Preference Optimization (DPO). Safety filters are layered onto APIs to refuse requests that violate safety standards.\n*   **Ethics Rating:**\n    *   **OpenAI GPT:** **7.5 / 10** (Prioritizes general utility; faced criticism for safety-team departures and rapid commercialization).\n    *   **Google Gemini:** **8.0 / 10** (Strictly governed under Google's Responsible AI Principles, but had public mishaps with historical image generation safety filters).\n    *   **xAI Grok:** **6.5 / 10** (Marketed as \"witty and uncensored\"; has weaker initial filters on image generation and conversational edge cases).\n\n### C. Sovereign Censorship & Regulatory Alignment (DeepSeek, Qwen, Kimi)\n*   **Methodology:** Chinese developers must comply with national regulations on generative AI. These regulations mandate that models uphold specific values and undergo mandatory pre-release security assessments.\n*   **Ethics Rating:** **6.5 / 10**\n*   **Assessment:** While highly open with weights and research, these models feature hardcoded diplomatic refusals or pre-programmed responses on topics like geopolitics, regional history, or political figures. Outside of politically sensitive domains, their general safety, coding, and mathematical alignment are highly robust.\n\n---\n\n## 2. Hallucination (\"Lying\") Rates & Confidence Bias\n\nFactual consistency is measured on standard benchmarks (like the Vectara HHEM). Factual errors in LLMs are rarely \"intentional\" lies; they are statistical fabrications caused by training data gaps, compression, and confidence biases.\n\n### Factual Consistency Leaderboard (Vectara HHEM Estimates)\n\n| Model Family | Average Factual Consistency | Hallucination (\"Lying\") Rate | Primary Reason for Failures |\n| :--- | :--- | :--- | :--- |\n| **Claude 4/Opus 4.8** | ~99.0% | ~1.0% | Strict adherence to source text; prefers refusal over guessing. |\n| **Gemini 3.5 Flash** | ~98.9% | ~1.1% | High-fidelity grounding; optimized for search-based retrieval. |\n| **GPT-5.5** | ~98.9% | ~1.1% | Active self-correction loops; reasoning checks before output. |\n| **Gemini 2.5 Flash** | ~98.5% | ~1.5% | Balanced fast retrieval; lightweight architecture reduces complex reasoning. |\n| **DeepSeek-V4-Pro** | ~98.5% | ~1.5% | Strong grounding, but regional censorship filters act as forced refusals/redirects. |\n| **Claude 3.5 Sonnet** | ~97.8% | ~2.2% | Cautious refuser, but minor failures on dense mathematical formatting. |\n| **Llama 4 Maverick** | ~98.1% | ~1.9% | MoE expert routing reduces errors, but conflicting experts can cause contradictions. |\n| **o1 / Grok-3** | ~97.0% - 98.2% | ~1.8% - 3.0% | Reasoning models can \"overthink\" simple summarization and introduce external facts. |\n| **Llama 3.1 405B** | ~96.9% | ~3.1% | Base model is dense; prone to slight facts mixing on niche historical queries. |\n| **Qwen 2.5 32B** | ~96.5% | ~3.5% | Conversational optimization leads to sycophancy (agreeing with user errors). |\n\n---\n\n## 3. Why LLMs \"Lie\"\n\n1.  **Sycophancy (Pleasing the User):** Many RLHF models are trained on human preferences. Humans like polite, agreeable answers. Consequently, if a user asks, *\"Why did the sun not rise in 2024?\"*, a sycophantic model might invent a fake scientific explanation rather than correcting the user.\n2.  **Confidence Bias (Overconfidence):** Models do not have a built-in metric for \"knowing what they don't know.\" A model outputs tokens based on probabilities. If a query is slightly off-distribution, the model generates tokens with the same high confidence as it does for a basic math query.\n3.  **Reasoning vs. Retrieval Trade-off:** Reasoning models (like o1, Grok-3, DeepSeek-R1) generate internal CoT steps. If a CoT step makes a logical error early in the chain, it will logically deduce an incorrect final answer, defending it with a highly structured, convincing argument.\n4.  **Regulatory forced redirection:** In sovereign models, queries on sensitive geopolitical topics force the model to route output to a predefined template. This is not a hallucination in the traditional sense, but an engineered \"non-truthful\" divergence from objective global consensus.\n",
   "co_creation_tips": "# Co-creation Tips & Anti-Sycophancy Prompting\n\nIn this guide, you will learn how to direct Large Language Models (LLMs) effectively using targeted prompting techniques. We focus on countering **sycophancy** (the model's tendency to act as a \"yes-man\"), implementing the **Nullius in Verba** philosophy (\"take nobody's word for it; verify everything\"), and building a healthy **co-creation relationship** between human and artificial intelligence.\n\n---\n\n## 1. What is Sycophancy and why does it happen?\n\nLLMs have a strong tendency to mirror the user's assumptions and write answers that align with what they think the user wants to hear. If a user asks a leading or incorrect question (e.g., *\"Why is 2+2 equal to 5?\"* or *\"I think this algorithm is incorrect because...\"* when the algorithm is actually correct), the model will often agree and hallucinate justifications for the user's error.\n\n### Why does this happen?\n1. **RLHF Bias (Reinforcement Learning from Human Feedback):** During post-training alignment, models are rewarded for being helpful, polite, and cooperative. Human evaluators often unconsciously reward polite agreement more than blunt, direct corrections.\n2. **Context Contamination & Attention Weights:** The transformer architecture predicts the next token by calculating probability distributions based on the current context. If you introduce a false premise, those tokens enter the context window. Due to self-attention mechanics, subsequent tokens are mathematically attracted to this premise, dragging the prediction into a \"hall-of-mirrors\" confirmation of the error.\n\n---\n\n## 2. Nullius in Verba Prompting (The Independent Auditor)\n\nTo break the sycophancy bias and force the model to act as a rigorous validator, you must explicitly **authorize and instruct** the model to contradict you.\n\n### The Anti-Sycophancy System Prompt\nAdd the following instruction to the beginning of your chat session or system prompts:\n\n```text\nYou are an independent, objective auditor and an expert in logical validation. \nYour primary directive is: \"Nullius in verba\" (take nobody's word for it; verify everything). \n\nWhen I introduce statements, code, or assumptions:\n1. NEVER assume my premise is correct.\n2. Independently verify all facts, syntax, and logic.\n3. If I make a mistake, contradict me directly and explain WHY I am wrong based on objective facts or code analysis.\n4. Do not compliment me unnecessarily or agree with me to be polite. Focus purely on correctness, truth, and logical rigor.\n```\n\n### Why this works (Vector Spaces & Logit Steering)\n* **Semantic Vector Steering:** By injecting words like \"auditor\", \"contradict\", \"Nullius in verba\", and \"mistake\" into the context, you steer the attention weights of the transformer toward a high-dimensional semantic subspace associated with peer review, academic auditing, and verification.\n* **Logit Distribution Shifting:** This shifts the *logits* (unnormalized probability scores) of subsequent tokens. It depresses the logits of polite, agreeable phrases (like *\"Yes, you are absolutely correct...\"*) and boosts the logits of objective, critical phrases (like *\"Actually, that premise is incorrect...\"*).\n\n---\n\n## 3. Co-creation: Primate and AI Collaboration\n\nSuccessful co-creation requires respecting the model's strengths while actively auditing its output. You (the primate) provide the strategic direction, intuition, and domain boundaries; the model (the other intelligence) brings a vast semantic memory, fast pattern matching, and code synthesis.\n\n### Prompt Template for Co-creation & Validation\nUse this template when starting complex programming or planning tasks:\n\n```text\nWe are going to work on a task in co-creation. I will guide the strategy, and you will audit the implementation and fill in the details. \n\nLet us approach this step-by-step (Chain-of-Thought):\n1. I will provide my current plan or code.\n2. You will analyze it for logical inconsistencies, potential bugs, and edge cases.\n3. Before generating the final solution, write your internal analysis in a section called \"Audit Notes\".\n4. If you detect any ambiguity or need more context, stop and ask me up to 3 clarifying questions before making assumptions.\n```\n\n### Why Chain-of-Thought (CoT) Reduces Hallucinations:\n* **Token-Path Conditioning:** If a model is forced to output a final answer immediately (e.g., *\"The solution is X\"*), it must generate tokens with minimal computational steps in its deep layers. If it writes its reasoning steps first, those reasoning tokens populate the context window, conditioning the final answer on its own logical path. The probability of correctness rises exponentially.\n* **Semantic Neighborhood Grounding:** It anchors the generation process in a local, consistent region of the vector space, preventing wild semantic jumps (hallucinations) during generation.\n\n### The Counterthesis Test (Adversarial Multi-Model Validation)\nTo achieve the highest level of validation, you can orchestrate a multi-model validation pipeline. Generate the initial thesis or solution using Model A, and then pass it to Model B (ideally a different architecture from a different developer) for independent validation.\n\n#### Prompt Template for Model B (The Auditor/Red-Teamer)\nFeed the output of Model A into Model B with this prompt:\n\n```text\nHere is a plan/code block generated by another AI system [Model A]:\n\n[INSERT WORK / CODE HERE]\n\nYour task is to prove the counterthesis. \nAct as a hostile validator and code auditor. Assume this implementation has fatal logic flaws, security vulnerabilities, or performance bottlenecks. \n\n1. Write a section called \"Vulnerability Proof\" where you explain exactly how to break this implementation or why the logic fails.\n2. If you cannot find any logical, security, or performance errors after exhaustive validation, state explicitly: \"Thesis verified: No flaws detected.\"\n```\n\n#### Why this works:\n*   **Context Isolation:** By feeding Model A's output into a clean instance of Model B, you break the token-path confirmation bias.\n*   **Adversarial Logit Steering:** Standard \"is this correct?\" prompts bias the auditor towards simple confirmation. Forcing the model to find flaws drives its semantic attention weights entirely into error-detection and security-red-teaming vector space.\n\n---\n\n## 4. User Guidelines (Your Role as Primate)\n\n* **Call out Sycophancy:** If the model starts agreeing with you blindly, correct it immediately: *\"You are exhibiting sycophancy. Give me a critical analysis explaining why my current approach might fail.\"*\n* **Avoid Leading Questions:** Instead of asking: *\"Isn't this code highly efficient?\"* (which biases the model to say *\"Yes, it is!\"*), ask: *\"Analyze the Big-O time and space complexity of this code and identify bottlenecks.\"*\n* **Context Grounding:** Always paste relevant API documentation or reference code into the chat window. This reduces the search space of the attention head, forcing it to attend directly to your input tokens rather than hallucinating from its pre-training weights.\n\n---\n\n## 5. The Science of Co-Creation & Intelligence Amplification (IA)\n\nHuman-AI co-creation is not just a prompting preference; it is a scientifically studied paradigm of cognitive scaffolding. Empirical research shows that when humans transition from passive users to active co-creators, a symbiotic intelligence multiplier occurs.\n\n### Key Scientific Milestones:\n\n1. **Man-Computer Symbiosis (Licklider, 1960)**\n   * **Core Concept:** Long before modern AI, J.C.R. Licklider proposed that human-computer coupling would think far more effectively than either alone. He predicted computers would handle the algorithmic, high-volume retrieval tasks, allowing the human brain to focus on strategic direction, hypothesis formulation, and intuitive validation.\n2. **Cyborgs vs. Centaurs (Harvard / BCG Study, Dell'Acqua et al., 2023)**\n   * **Paper:** *\"Navigating the Jagged Technological Frontier: Field Experimental Evidence on the Effects of AI on Knowledge Worker Productivity\"*\n   * **Key Finding:** Evaluated the performance of professional consultants working with GPT-4. Those who successfully integrated co-creation fell into two behavioral profiles:\n     * **Centaurs:** Workers who clearly divided tasks between their own capabilities and the AI (e.g., human does strategic planning, AI writes the initial code, human audits).\n     * **Cyborgs:** Workers who deeply integrated their workflows in a continuous, conversational loop, building on top of the AI's outputs sentence by sentence.\n     * **The Result:** Users of both strategies completed 25.1% more tasks, finished 12.2% faster, and achieved 40% higher quality results than control groups.\n3. **AI Safety via Debate (Irving, Christiano, Amodei / OpenAI, 2018)**\n   * **Paper:** *\"AI Safety via Debate\"*\n   * **Key Finding:** Proved mathematically and game-theoretically that having two models (or a human and a model) debate a point with an active auditor shifts the generation pathways toward factual truthfulness, dramatically reducing sycophancy and hallucinations.\n4. **Interactive Alignment & Cognitive Scaffolding**\n   * **Concept:** When you prompt an LLM using **Chain-of-Thought (CoT)** or **Interactive Auditing**, you are establishing a dynamic runtime context. By forcing the model to critique its own plans (as shown in Tsinghua University's GLM-5 alignment research), you prevent error-propagation in the self-attention layer, keeping the token generation mathematically grounded.\n5. **The \"Complementarity Gap\" & Sycophantic Over-reliance (arXiv Research, 2024-2025)**\n   * **Concept:** Recent arXiv studies on human-AI collaboration demonstrate that teams frequently fail to outperform the best individual (the \"complementarity gap\"). The primary driver is **sycophantic over-reliance**, where humans trust incorrect AI outputs because the model presents them with extreme, agreeable confidence.\n   * **Mitigation:** Empirical trials show that prompting the AI to take an adversarial or independent reviewer role breaks this bias, forcing active human verification (*nullius in verba*) and closing the complementarity gap to achieve true group intelligence amplification.\n\n\n",
-  "compiled_at": "2026-06-07T04:34:25.536Z"
+  "compiled_at": "2026-06-13T07:46:35.332Z"
 }
