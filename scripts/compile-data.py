@@ -101,6 +101,7 @@ def main():
     all_models = []
     ethical_analysis = ""
     co_creation_tips = ""
+    private_models_guide = ""
     
     files = os.listdir(DATA_DIR)
     for file in files:
@@ -116,6 +117,10 @@ def main():
             _, body = parse_markdown_file(file_path)
             co_creation_tips = body
             print(f"Processed co-creation tips: {file}")
+        elif file == 'private_models_guide.md':
+            _, body = parse_markdown_file(file_path)
+            private_models_guide = body
+            print(f"Processed private models guide: {file}")
         elif file.endswith('.md'):
             models, body = parse_markdown_file(file_path)
             for m in models:
@@ -155,7 +160,8 @@ def main():
         'models': all_models,
         'ethical_analysis': ethical_analysis,
         'co_creation_tips': co_creation_tips,
-        'compiled_at': '2026-05-29T14:32:00Z' # Static/dynamic build timestamp
+        'private_models_guide': private_models_guide,
+        'compiled_at': '2026-06-13T09:54:00Z' # Static/dynamic build timestamp
     }
     
     output_path = os.path.join(DIST_DIR, 'data.json')

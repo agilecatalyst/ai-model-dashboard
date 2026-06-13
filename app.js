@@ -5,6 +5,7 @@ let appState = {
   filteredModels: [],
   ethicalAnalysis: '',
   coCreationTips: '',
+  privateModelsGuide: '',
   activeFilter: 'all', // 'all', 'commercial', 'open'
   activeSort: 'release_date-desc',
   searchQuery: ''
@@ -131,6 +132,7 @@ async function loadData() {
     appState.filteredModels = [...data.models];
     appState.ethicalAnalysis = data.ethical_analysis;
     appState.coCreationTips = data.co_creation_tips;
+    appState.privateModelsGuide = data.private_models_guide;
     
     // Update theme counts
     const commercial = appState.models.filter(m => m.access.toLowerCase() === 'commercial').length;
@@ -367,6 +369,19 @@ function renderHonestyRanking() {
   });
 }
 
+function isQualifiedPrivateModel(model) {
+  if (model.access.toLowerCase() !== 'open weights') return false;
+  
+  // Memory check: filter out models that are too large (e.g. 70B, 130B, 550B, or deepseek-v3/v4 MoEs)
+  const id = model.id.toLowerCase();
+  const isTooLarge = id.includes('70b') || id.includes('130b') || id.includes('550b') || id.includes('ultra') || id.includes('deepseek-v3') || id.includes('deepseek-v4');
+  if (isTooLarge) return false;
+  
+  // Performance check: SWE-bench score >= 29% (minstens +/- 30%)
+  const swe = model.benchmarks.swe_bench || 0;
+  return swe >= 29;
+}
+
 function openDetailModal(modelId) {
   const model = appState.models.find(m => m.id === modelId);
   if (!model) return;
@@ -440,6 +455,17 @@ function openDetailModal(modelId) {
         <span class="radial-label">AIME (Mathematical Logic)</span>
       </div>
     </div>
+    ${isQualifiedPrivateModel(model) ? `
+      <div class="local-qualification-banner">
+        <div class="local-qualification-banner-header">
+          <i class="fa-solid fa-user-shield"></i> Gekwalificeerd voor lokaal gebruik (Max 32GB RAM)
+        </div>
+        <p class="local-qualification-banner-text">
+          Dit model voldoet aan de eisen voor lokale uitrol (max. 32GB RAM en SWE-bench >= 30%). Het is uitstekend geschikt voor private codeer- en agentic use cases.
+          <a href="#" class="warning-link" id="private-models-link-trigger" style="color: var(--color-open); margin-left: 0.25rem; font-weight: 600;">Bekijk de Private Models Richtlijnen</a>.
+        </p>
+      </div>
+    ` : ''}
 
     <h2 class="detail-section-title"><i class="fa-solid fa-brain"></i> Cognitive Range (A-IQ)</h2>
     <div class="iq-section-container">
@@ -563,6 +589,18 @@ function openDetailModal(modelId) {
       document.getElementById('co-creation-modal').classList.add('active');
     });
   }
+
+  const privateModelsTrigger = document.getElementById('private-models-link-trigger');
+  if (privateModelsTrigger) {
+    privateModelsTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Close detail modal
+      document.getElementById('detail-modal').classList.remove('active');
+      // Open private models modal
+      document.getElementById('private-models-body-content').innerHTML = parseMarkdownBlocks(appState.privateModelsGuide);
+      document.getElementById('private-models-modal').classList.add('active');
+    });
+  }
 }
 
 // Helpers
@@ -628,6 +666,32 @@ function initModalHandlers() {
     coCreationModal.addEventListener('click', (e) => {
       if (e.target === coCreationModal) {
         coCreationModal.classList.remove('active');
+      }
+    });
+  }
+
+  // Private Models Modal
+  const privateModelsModal = document.getElementById('private-models-modal');
+  const openPrivateModelsBtn = document.getElementById('private-models-btn');
+  const closePrivateModelsBtn = document.getElementById('close-private-models-btn');
+
+  if (openPrivateModelsBtn) {
+    openPrivateModelsBtn.addEventListener('click', () => {
+      document.getElementById('private-models-body-content').innerHTML = parseMarkdownBlocks(appState.privateModelsGuide);
+      privateModelsModal.classList.add('active');
+    });
+  }
+
+  if (closePrivateModelsBtn) {
+    closePrivateModelsBtn.addEventListener('click', () => {
+      privateModelsModal.classList.remove('active');
+    });
+  }
+
+  if (privateModelsModal) {
+    privateModelsModal.addEventListener('click', (e) => {
+      if (e.target === privateModelsModal) {
+        privateModelsModal.classList.remove('active');
       }
     });
   }

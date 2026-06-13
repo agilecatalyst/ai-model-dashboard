@@ -111,6 +111,7 @@ function run() {
   const allModels = [];
   let ethicalAnalysis = '';
   let coCreationTips = '';
+  let privateModelsGuide = '';
 
   for (const file of files) {
     const filePath = path.join(DATA_DIR, file);
@@ -122,6 +123,10 @@ function run() {
       const { body } = parseMarkdownFile(filePath);
       coCreationTips = body;
       console.log(`Processed co-creation tips file: ${file}`);
+    } else if (file === 'private_models_guide.md') {
+      const { body } = parseMarkdownFile(filePath);
+      privateModelsGuide = body;
+      console.log(`Processed private models guide file: ${file}`);
     } else if (file.endsWith('.md')) {
       const { frontmatter, body } = parseMarkdownFile(filePath);
       if (frontmatter.models) {
@@ -178,6 +183,7 @@ function run() {
     models: allModels,
     ethical_analysis: ethicalAnalysis,
     co_creation_tips: coCreationTips,
+    private_models_guide: privateModelsGuide,
     compiled_at: new Date().toISOString()
   };
 
