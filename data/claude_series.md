@@ -1,5 +1,34 @@
 ---
 models:
+  - id: claude-3-opus
+    name: Claude 3 Opus
+    developer: Anthropic
+    release_date: 2024-03-04
+    access: Commercial
+    class: Frontier Heavyweight
+    benchmarks:
+      mmlu: 86.8
+      gpqa: 50.4
+      swe_bench: 21.0
+      human_eval: 84.9
+      aime: 18.9
+    hallucination_rate: 3.5
+    ethics_rating: 8.2
+    iq_lower: 100
+    iq_upper: 130
+    eq_bench: 78
+    arena_elo: 1255
+    ethics_notes: Trained using Constitutional AI. High safety profile and conversational helpfulness.
+    lying_rate: 2.8
+    lying_notes: Conversational training makes it polite but sometimes prone to sycophancy or admitting false errors to please the user.
+    best_applications:
+      - Complex reasoning and research planning
+      - Multi-step software synthesis and analysis
+      - Detailed writing and translation
+    links:
+      website: https://www.anthropic.com/news/claude-3-family
+      system_card: https://www.anthropic.com/claude/system-card
+
   - id: claude-3-5-sonnet
     name: Claude 3.5 Sonnet
     developer: Anthropic
@@ -86,6 +115,64 @@ models:
     links:
       website: https://www.anthropic.com/news/claude-haiku-4-5
       system_card: https://www.anthropic.com/claude/system-card-haiku-4-5
+
+  - id: claude-4-5-sonnet
+    name: Claude 4.5 Sonnet
+    developer: Anthropic
+    release_date: 2025-11-20
+    access: Commercial
+    class: Frontier Hybrid Reasoning
+    benchmarks:
+      mmlu: 93.8
+      gpqa: 81.2
+      swe_bench: 64.0
+      human_eval: 95.8
+      aime: 82.0
+    hallucination_rate: 1.4
+    ethics_rating: 8.9
+    iq_lower: 118
+    iq_upper: 146
+    eq_bench: 91
+    arena_elo: 1408
+    ethics_notes: Uses constitutional reasoning vectors to verify output validity before generation completes.
+    lying_rate: 1.2
+    lying_notes: Very low rate of fabrications on reasoning tasks.
+    best_applications:
+      - Advanced software development and compliance auditing
+      - Secure multi-step regulatory validation
+      - Precision coding autocomplete
+    links:
+      website: https://www.anthropic.com/news/claude-4-5-sonnet
+      system_card: https://www.anthropic.com/claude/system-card-4-5
+
+  - id: claude-4-5-opus
+    name: Claude 4.5 Opus
+    developer: Anthropic
+    release_date: 2025-12-18
+    access: Commercial
+    class: Frontier Heavyweight
+    benchmarks:
+      mmlu: 95.1
+      gpqa: 86.8
+      swe_bench: 66.8
+      human_eval: 97.2
+      aime: 88.0
+    hallucination_rate: 1.2
+    ethics_rating: 9.1
+    iq_lower: 124
+    iq_upper: 151
+    eq_bench: 93
+    arena_elo: 1415
+    ethics_notes: Outfitted with state of the art safety controls and enhanced self-verification loops.
+    lying_rate: 0.9
+    lying_notes: High adherence to factual data, explicitly self-corrects during live execution.
+    best_applications:
+      - Enterprise multi-agent orchestration
+      - Safe code-generation agents in production
+      - Quantitative finance and logic synthesis
+    links:
+      website: https://www.anthropic.com/news/claude-4-5-opus
+      system_card: https://www.anthropic.com/claude/system-card-4-5
 
   - id: claude-opus-4-8
     name: Claude Opus 4.8

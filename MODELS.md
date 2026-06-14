@@ -2,7 +2,7 @@
 
 Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in de database. Het fungeert als een handige referentiekaart voor zowel ontwikkelaars als AI-agents.
 
-**Totaal aantal modellen:** 57
+**Totaal aantal modellen:** 60
 
 ## Model Matrix Tabel
 
@@ -28,7 +28,9 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Qwen 3.5 32B** | Alibaba Cloud | 2026-03-10 | Open Weights | Midrange Dense | 85.8% | 52% | 24.5% | 2.1% |
 | **Qwen 3.5 MoE 20B** | Alibaba Cloud | 2026-03-10 | Open Weights | Lightweight MoE | 84.5% | 48.2% | 20.5% | 2% |
 | **GLM-5 Open** | Zhipu AI | 2026-02-11 | Open Weights | Next-Gen Frontier | 92.4% | 86% | 77.8% | 1.3% |
+| **Claude 4.5 Opus** | Anthropic | 2025-12-18 | Commercial | Frontier Heavyweight | 95.1% | 86.8% | 66.8% | 1.2% |
 | **Mistral Large 3** | Mistral AI | 2025-12-02 | Open Weights | Frontier MoE | 88% | 52% | 58.5% | 2.1% |
+| **Claude 4.5 Sonnet** | Anthropic | 2025-11-20 | Commercial | Frontier Hybrid Reasoning | 93.8% | 81.2% | 64% | 1.4% |
 | **Claude Haiku 4.5** | Anthropic | 2025-10-15 | Commercial | Fast Agentic | 84.2% | 49.8% | 28.5% | 2.8% |
 | **GPT-5** | OpenAI | 2025-10-15 | Commercial | Next-Gen Frontier | 94.2% | 85% | 62.5% | 1.5% |
 | **Gemini 2.5 Flash Lite** | Google | 2025-09-18 | Commercial | Fast Multimodal | 85.2% | 58% | 29.2% | 1.5% |
@@ -65,6 +67,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Gemini 1.5 Pro** | Google | 2024-05-14 | Commercial | Frontier Multimodal | 85.9% | 46.2% | 19.5% | 2% |
 | **GPT-4o** | OpenAI | 2024-05-13 | Commercial | Frontier Multimodal | 88.7% | 53.6% | 38.8% | 2.5% |
 | **Mixtral 8x22B** | Mistral AI | 2024-04-10 | Open Weights | Midrange MoE | 77.8% | 32.2% | 30.5% | 3.2% |
+| **Claude 3 Opus** | Anthropic | 2024-03-04 | Commercial | Frontier Heavyweight | 86.8% | 50.4% | 21% | 3.5% |
 
 ## Model Families Overzicht
 
@@ -78,9 +81,12 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Qwen 3.6 27B** (2026-04-22) - *Midrange Dense*: Highly optimized dense open weights model. Subject to Chinese regulatory alignment. MIT-licensed. Built for private autonomous agency.
 - **Qwen 3.7 Max** (2026-05-20) - *Next-Gen Frontier*: Alibaba's proprietary flagship. Highly optimized for agent-centric workloads and long-horizon planning. Subject to China's generative AI security checks.
 
-### Anthropic (6 modellen)
+### Anthropic (9 modellen)
+- **Claude 3 Opus** (2024-03-04) - *Frontier Heavyweight*: Trained using Constitutional AI. High safety profile and conversational helpfulness.
 - **Claude 3.5 Sonnet** (2024-06-20) - *Frontier Balanced*: Developed using Constitutional AI. High safety adherence. Often praised for its professional tone and detailed coding outputs.
 - **Claude 3.7 Sonnet** (2025-02-24) - *Frontier Hybrid Reasoning*: First model with an integrated "extended thinking" mode. The safety alignment runs through the reasoning token path, allowing the model to actively self-police its outputs before they are generated.
+- **Claude 4.5 Opus** (2025-12-18) - *Frontier Heavyweight*: Outfitted with state of the art safety controls and enhanced self-verification loops.
+- **Claude 4.5 Sonnet** (2025-11-20) - *Frontier Hybrid Reasoning*: Uses constitutional reasoning vectors to verify output validity before generation completes.
 - **Claude Fable 5** (2026-06-09) - *Next-Gen Frontier*: Built using constitutional Fable-alignment. High compliance with policy instructions, making it the standard for enterprise deployments.
 - **Claude Haiku 4.5** (2025-10-15) - *Fast Agentic*: Optimized for speed and low cost. First Haiku model supporting "Computer Use" API actions, meaning extensive safety evaluations were done on action boundary escapes.
 - **Claude Mythos 5** (2026-06-09) - *Next-Gen Frontier*: Offered in limited preview with relaxed constraints. Designed for raw research and complex logical exploration without standard conversational filters.
