@@ -35,6 +35,18 @@ ModelMatrix is een statische single-page webapplicatie (SPA) gebouwd met een zer
 - **Koppeling in Dashboard:** 
   - Als een model in de matrix voldoet aan de eisen van een lokaal model (Open Weights, max 32GB RAM en SWE-bench >= 30%), moet er een speciale banner in zijn detailmodal worden getoond met een directe link naar de Private Models richtlijnen.
 
+### 2.4 Performance Evolution Chart
+- **Interactieve Trendgrafiek:** Voeg een sectie of weergavemodus toe die de prestaties van modellen over tijd toont (X-as: Release Date, Y-as: Benchmark score).
+- **Y-as Selectie:** Gebruikers kunnen via een dropdown of segmented control kiezen welke benchmark op de Y-as getoond wordt (MMLU, GPQA of SWE-bench).
+- **Modellencategorieën:** Modellen moeten visueel onderscheidbaar zijn in de grafiek op basis van hun type:
+  - *Commercial / Closed Source:* Gekenmerkt met een specifieke kleur (bijv. paars).
+  - *Open Weights:* Gekenmerkt met een specifieke kleur (bijv. cyaan).
+  - *Local / Private Models:* Modellen die voldoen aan de private models eisen (Open Weights, max 32GB RAM, SWE-bench >= 30%) moeten een duidelijke extra markering/badge of unieke kleur krijgen om ze direct herkenbaar te maken.
+- **Modelfiltering & Toggles:** 
+  - Er moet een filtermenu of dropdown zijn waarmee gebruikers specifieke model-families (bijv. Claude, GPT, Llama, Qwen) of individuele modellen aan/uit kunnen vinken in de grafiek om visuele drukte te beheersen.
+  - Snel-toggles om in één klik alle "Commercial", "Open Weights" of "Local Qualified" modellen te selecteren of te de-selecteren.
+- **Interactiviteit:** Hoveren over een datapunt (model) toont een tooltip met de exacte specificaties (Modelnaam, release datum, score) en klikken op het datapunt opent direct het detailmodal van dat model.
+
 ---
 
 ## 3. Niet-Functionele Eisen

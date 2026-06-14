@@ -8,8 +8,13 @@ let appState = {
   privateModelsGuide: '',
   activeFilter: 'all', // 'all', 'commercial', 'open'
   activeSort: 'release_date-desc',
-  searchQuery: ''
+  searchQuery: '',
+  activeView: 'grid', // 'grid' or 'trends'
+  selectedBenchmark: 'gpqa',
+  showTrendlines: true,
+  disabledFamilies: new Set()
 };
+
 
 // Markdown Parser functions
 function parseInlineMarkdown(text) {
@@ -697,6 +702,498 @@ function initModalHandlers() {
   }
 }
 
+// Trend Chart Helpers and Rendering
+function getModelFamily(model) {
+  const id = model.id.toLowerCase();
+  if (id.startsWith('claude')) return 'Claude';
+  if (id.startsWith('gemini')) return 'Gemini';
+  if (id.startsWith('gemma')) return 'Gemma';
+  if (id.startsWith('gpt') || id.startsWith('openai')) return 'GPT';
+  if (id.startsWith('grok')) return 'Grok';
+  if (id.startsWith('kimi')) return 'Kimi';
+  if (id.startsWith('llama')) return 'Llama';
+  if (id.startsWith('glm') || id.startsWith('chatglm')) return 'GLM';
+  if (id.startsWith('mistral') || id.startsWith('codestral')) return 'Mistral';
+  if (id.startsWith('qwen')) return 'Qwen';
+  if (id.startsWith('nemotron')) return 'Nemotron';
+  if (id.startsWith('minimax')) return 'MiniMax';
+  if (id.startsWith('zamba')) return 'Zamba';
+  return 'Other';
+}
+
+function isOpenFamily(fam) {
+  return ['Llama', 'Gemma', 'Qwen', 'Mistral', 'Nemotron', 'Zyphra', 'Zamba', 'MiniMax'].includes(fam);
+}
+
+function createSVGElement(tag, attrs) {
+  const el = document.createElementNS('http://www.w3.org/2000/svg', tag);
+  for (const k in attrs) {
+    el.setAttribute(k, attrs[k]);
+  }
+  return el;
+}
+
+let trendsInitialized = false;
+function initTrendsView() {
+  if (trendsInitialized) return;
+  trendsInitialized = true;
+
+  // Generate checkboxes
+  const container = document.getElementById('series-checkboxes-container');
+  if (!container) return;
+  container.innerHTML = '';
+
+  // Get unique families
+  const families = [...new Set(appState.models.map(getModelFamily))].sort();
+
+  families.forEach(fam => {
+    const row = document.createElement('div');
+    row.className = 'series-checkbox-row';
+    row.setAttribute('data-family', fam);
+
+    const famModels = appState.models.filter(m => getModelFamily(m) === fam);
+    const hasLocal = famModels.some(isQualifiedPrivateModel);
+
+    row.innerHTML = `
+      <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; user-select: none; flex: 1; margin: 0;">
+        <input type="checkbox" class="family-checkbox" value="${fam}" checked style="cursor: pointer;">
+        <span style="font-weight: 500;">${fam}</span>
+      </label>
+      ${hasLocal ? `<span class="type-indicator open" style="font-size: 0.65rem; padding: 0.1rem 0.3rem; transform: scale(0.9);">Local</span>` : ''}
+    `;
+
+    row.addEventListener('mouseenter', () => highlightFamily(fam));
+    row.addEventListener('mouseleave', () => clearFamilyHighlight());
+
+    const cb = row.querySelector('.family-checkbox');
+    cb.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        appState.disabledFamilies.delete(fam);
+      } else {
+        appState.disabledFamilies.add(fam);
+      }
+      renderTrendsChart();
+    });
+
+    container.appendChild(row);
+  });
+
+  // Y-Axis select
+  const ySelect = document.getElementById('y-axis-select');
+  if (ySelect) {
+    ySelect.value = appState.selectedBenchmark;
+    ySelect.addEventListener('change', (e) => {
+      appState.selectedBenchmark = e.target.value;
+      renderTrendsChart();
+    });
+  }
+
+  // Trendlines toggle
+  const trendToggle = document.getElementById('toggle-trendlines');
+  if (trendToggle) {
+    trendToggle.checked = appState.showTrendlines;
+    trendToggle.addEventListener('change', (e) => {
+      appState.showTrendlines = e.target.checked;
+      renderTrendsChart();
+    });
+  }
+
+  // Quick toggles: Toggle All
+  const toggleAllBtn = document.getElementById('toggle-all-series');
+  if (toggleAllBtn) {
+    toggleAllBtn.addEventListener('click', () => {
+      const checkboxes = container.querySelectorAll('.family-checkbox');
+      const allChecked = [...checkboxes].every(cb => cb.checked);
+      
+      checkboxes.forEach(cb => {
+        cb.checked = !allChecked;
+        const fam = cb.value;
+        if (!allChecked) {
+          appState.disabledFamilies.delete(fam);
+        } else {
+          appState.disabledFamilies.add(fam);
+        }
+      });
+      toggleAllBtn.textContent = allChecked ? "Selecteer Alles" : "Selecteer Niets";
+      renderTrendsChart();
+    });
+  }
+
+  // Category quick checkboxes
+  const cbCommercial = document.getElementById('filter-cb-commercial');
+  const cbOpen = document.getElementById('filter-cb-open');
+  const cbLocal = document.getElementById('filter-cb-local');
+
+  const handleQuickFilters = () => {
+    renderTrendsChart();
+  };
+
+  if (cbCommercial) cbCommercial.addEventListener('change', handleQuickFilters);
+  if (cbOpen) cbOpen.addEventListener('change', handleQuickFilters);
+  if (cbLocal) cbLocal.addEventListener('change', handleQuickFilters);
+}
+
+function renderTrendsChart() {
+  const svg = document.getElementById('trends-svg');
+  const tooltip = document.getElementById('chart-tooltip');
+  if (!svg) return;
+
+  svg.innerHTML = '';
+
+  const yField = appState.selectedBenchmark;
+  const minTime = new Date('2024-01-01').getTime();
+  const maxTime = new Date('2026-06-30').getTime();
+  const timeRange = maxTime - minTime;
+
+  const width = 900;
+  const height = 520;
+  const leftPadding = 65;
+  const rightPadding = 40;
+  const topPadding = 40;
+  const bottomPadding = 60;
+  const plotWidth = width - leftPadding - rightPadding;
+  const plotHeight = height - topPadding - bottomPadding;
+
+  // Draw Horizontal Gridlines (Percentages)
+  const gridLevels = [0, 20, 40, 60, 80, 100];
+  gridLevels.forEach(lvl => {
+    const y = topPadding + plotHeight * (1 - lvl / 100);
+    // Grid Line
+    svg.appendChild(createSVGElement('line', {
+      x1: leftPadding,
+      y1: y,
+      x2: width - rightPadding,
+      y2: y,
+      class: 'grid-line'
+    }));
+    // Label
+    const label = createSVGElement('text', {
+      x: leftPadding - 10,
+      y: y + 4,
+      class: 'axis-label',
+      'text-anchor': 'end'
+    });
+    label.textContent = `${lvl}%`;
+    svg.appendChild(label);
+  });
+
+  // Draw Vertical Gridlines (Quarters & Midpoints)
+  const divisions = [
+    { label: 'H1 2024', labelTime: new Date('2024-04-01').getTime(), lineTime: new Date('2024-07-01').getTime() },
+    { label: 'H2 2024', labelTime: new Date('2024-10-01').getTime(), lineTime: new Date('2025-01-01').getTime() },
+    { label: 'H1 2025', labelTime: new Date('2025-04-01').getTime(), lineTime: new Date('2025-07-01').getTime() },
+    { label: 'H2 2025', labelTime: new Date('2025-10-01').getTime(), lineTime: new Date('2026-01-01').getTime() },
+    { label: 'H1 2026', labelTime: new Date('2026-04-01').getTime(), lineTime: null }
+  ];
+
+  divisions.forEach(div => {
+    // Label Quarter
+    const labelX = leftPadding + plotWidth * ((div.labelTime - minTime) / timeRange);
+    const labelText = createSVGElement('text', {
+      x: labelX,
+      y: height - bottomPadding + 22,
+      class: 'axis-label',
+      'text-anchor': 'middle'
+    });
+    labelText.textContent = div.label;
+    svg.appendChild(labelText);
+
+    // Quarter Boundary Line
+    if (div.lineTime) {
+      const lineX = leftPadding + plotWidth * ((div.lineTime - minTime) / timeRange);
+      svg.appendChild(createSVGElement('line', {
+        x1: lineX,
+        y1: topPadding,
+        x2: lineX,
+        y2: height - bottomPadding,
+        class: 'grid-line'
+      }));
+    }
+  });
+
+  // Draw Axes lines
+  svg.appendChild(createSVGElement('line', {
+    x1: leftPadding,
+    y1: topPadding,
+    x2: leftPadding,
+    y2: height - bottomPadding,
+    class: 'axis-line'
+  }));
+  svg.appendChild(createSVGElement('line', {
+    x1: leftPadding,
+    y1: height - bottomPadding,
+    x2: width - rightPadding,
+    y2: height - bottomPadding,
+    class: 'axis-line'
+  }));
+
+  // Axis Y-Title
+  const yTitle = createSVGElement('text', {
+    x: 18,
+    y: topPadding + plotHeight / 2,
+    class: 'axis-title',
+    'text-anchor': 'middle',
+    transform: `rotate(-90 18 ${topPadding + plotHeight / 2})`
+  });
+  yTitle.textContent = yField === 'mmlu' ? 'MMLU Score (Algemeen %)' : (yField === 'gpqa' ? 'GPQA Score (Wetenschappelijke logica %)' : 'SWE-bench Score (Coding %)');
+  svg.appendChild(yTitle);
+
+  // Axis X-Title
+  const xTitle = createSVGElement('text', {
+    x: leftPadding + plotWidth / 2,
+    y: height - 12,
+    class: 'axis-title',
+    'text-anchor': 'middle'
+  });
+  xTitle.textContent = 'Model Release Tijdlijn (2024 - 2026)';
+  svg.appendChild(xTitle);
+
+  // Filter models
+  const showCommercial = document.getElementById('filter-cb-commercial')?.checked ?? true;
+  const showOpen = document.getElementById('filter-cb-open')?.checked ?? true;
+  const showLocal = document.getElementById('filter-cb-local')?.checked ?? true;
+
+  const displayModels = appState.models.filter(m => {
+    const isComm = m.access.toLowerCase() === 'commercial';
+    const isLocal = isQualifiedPrivateModel(m);
+    const isOpen = m.access.toLowerCase() === 'open weights' && !isLocal;
+    
+    if (isComm && !showCommercial) return false;
+    if (isOpen && !showOpen) return false;
+    if (isLocal && !showLocal) return false;
+
+    const fam = getModelFamily(m);
+    if (appState.disabledFamilies.has(fam)) return false;
+    if (m.benchmarks[yField] === undefined || m.benchmarks[yField] === null) return false;
+
+    return true;
+  });
+
+  // Group by family to draw lines
+  const familyGroups = {};
+  displayModels.forEach(m => {
+    const fam = getModelFamily(m);
+    familyGroups[fam] = familyGroups[fam] || [];
+    familyGroups[fam].push(m);
+  });
+
+  // Draw family connecting lines
+  for (const fam in familyGroups) {
+    const group = familyGroups[fam];
+    if (group.length < 2) continue;
+    group.sort((a, b) => new Date(a.release_date) - new Date(b.release_date));
+
+    let pathD = '';
+    group.forEach((m, idx) => {
+      const time = new Date(m.release_date).getTime();
+      const x = leftPadding + plotWidth * ((time - minTime) / timeRange);
+      const y = topPadding + plotHeight * (1 - m.benchmarks[yField] / 100);
+      pathD += (idx === 0 ? 'M' : 'L') + ` ${x} ${y}`;
+    });
+
+    const isOp = isOpenFamily(fam);
+    svg.appendChild(createSVGElement('path', {
+      d: pathD,
+      class: `chart-line family-${fam.toLowerCase()}`,
+      fill: 'none',
+      stroke: isOp ? 'var(--color-open)' : 'var(--color-commercial)',
+      'data-family': fam
+    }));
+  }
+
+  // Draw Category Averages (Trendlines)
+  if (appState.showTrendlines) {
+    const halfYears = [
+      { start: '2024-01-01', end: '2024-06-30', mid: '2024-04-01' },
+      { start: '2024-07-01', end: '2024-12-31', mid: '2024-10-01' },
+      { start: '2025-01-01', end: '2025-06-30', mid: '2025-04-01' },
+      { start: '2025-07-01', end: '2025-12-31', mid: '2025-10-01' },
+      { start: '2026-01-01', end: '2026-06-30', mid: '2026-04-01' }
+    ];
+
+    const commPathData = [];
+    const openPathData = [];
+
+    halfYears.forEach(hy => {
+      const startTime = new Date(hy.start).getTime();
+      const endTime = new Date(hy.end).getTime();
+      const midTimeVal = new Date(hy.mid).getTime();
+
+      const periodModels = appState.models.filter(m => {
+        const t = new Date(m.release_date).getTime();
+        return t >= startTime && t <= endTime && m.benchmarks[yField] !== undefined;
+      });
+
+      const comms = periodModels.filter(m => m.access.toLowerCase() === 'commercial');
+      const opens = periodModels.filter(m => m.access.toLowerCase() === 'open weights');
+
+      const commAvg = comms.length ? comms.reduce((sum, m) => sum + m.benchmarks[yField], 0) / comms.length : null;
+      const openAvg = opens.length ? opens.reduce((sum, m) => sum + m.benchmarks[yField], 0) / opens.length : null;
+
+      const x = leftPadding + plotWidth * ((midTimeVal - minTime) / timeRange);
+
+      if (commAvg !== null) {
+        const y = topPadding + plotHeight * (1 - commAvg / 100);
+        commPathData.push({ x, y });
+      }
+      if (openAvg !== null) {
+        const y = topPadding + plotHeight * (1 - openAvg / 100);
+        openPathData.push({ x, y });
+      }
+    });
+
+    if (commPathData.length > 1) {
+      const dStr = commPathData.map((p, idx) => (idx === 0 ? 'M' : 'L') + ` ${p.x} ${p.y}`).join(' ');
+      svg.appendChild(createSVGElement('path', {
+        d: dStr,
+        class: 'trendline commercial',
+        fill: 'none'
+      }));
+    }
+    if (openPathData.length > 1) {
+      const dStr = openPathData.map((p, idx) => (idx === 0 ? 'M' : 'L') + ` ${p.x} ${p.y}`).join(' ');
+      svg.appendChild(createSVGElement('path', {
+        d: dStr,
+        class: 'trendline open',
+        fill: 'none'
+      }));
+    }
+  }
+
+  // Draw Model Nodes (Circles)
+  displayModels.forEach(m => {
+    const time = new Date(m.release_date).getTime();
+    const x = leftPadding + plotWidth * ((time - minTime) / timeRange);
+    const score = m.benchmarks[yField];
+    const y = topPadding + plotHeight * (1 - score / 100);
+
+    const isComm = m.access.toLowerCase() === 'commercial';
+    const isLocal = isQualifiedPrivateModel(m);
+    const nodeClass = isComm ? 'commercial' : (isLocal ? 'local' : 'open');
+    const fam = getModelFamily(m);
+
+    const node = createSVGElement('circle', {
+      cx: x,
+      cy: y,
+      r: 6,
+      class: `chart-node ${nodeClass}`,
+      'data-family': fam
+    });
+
+    node.addEventListener('mouseenter', () => {
+      // Don't trigger hover details if a modal is already open
+      if (document.querySelector('.modal-overlay.active')) return;
+
+      // Show tooltip
+      tooltip.style.opacity = 1;
+      tooltip.innerHTML = `
+        <div style="font-weight: 700; color: white; margin-bottom: 0.25rem;">${m.name}</div>
+        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 0.4rem;">by ${m.developer} (${m.class})</div>
+        <div style="display: flex; justify-content: space-between; gap: 1rem; border-top: 1px dashed var(--glass-border); padding-top: 0.4rem;">
+          <span style="color: var(--text-secondary);">Score:</span>
+          <strong style="color: var(--color-open);">${score}%</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; gap: 1rem; font-size: 0.75rem; margin-top: 0.2rem;">
+          <span style="color: var(--text-secondary);">Released:</span>
+          <span>${formatDate(m.release_date)}</span>
+        </div>
+      `;
+      // Center tooltip over node
+      tooltip.style.left = (x - tooltip.offsetWidth / 2) + 'px';
+      tooltip.style.top = (y - tooltip.offsetHeight - 15) + 'px';
+
+      highlightFamily(fam);
+    });
+
+    node.addEventListener('mouseleave', () => {
+      tooltip.style.opacity = 0;
+      clearFamilyHighlight();
+    });
+
+    node.addEventListener('click', () => {
+      tooltip.style.opacity = 0;
+      openDetailModal(m.id);
+    });
+
+    svg.appendChild(node);
+  });
+}
+
+function highlightFamily(famName) {
+  if (document.querySelector('.modal-overlay.active')) return;
+
+  // Dim other paths and nodes
+  const paths = document.querySelectorAll('.chart-line');
+  paths.forEach(p => {
+    const match = p.getAttribute('data-family') === famName;
+    p.style.opacity = match ? '0.85' : '0.04';
+    if (match) p.classList.add('active');
+  });
+
+  const nodes = document.querySelectorAll('.chart-node');
+  nodes.forEach(n => {
+    const match = n.getAttribute('data-family') === famName;
+    n.style.opacity = match ? '1' : '0.15';
+    if (match) n.classList.add('active');
+  });
+
+  // Dim trendlines
+  const trendlines = document.querySelectorAll('.trendline');
+  trendlines.forEach(t => t.style.opacity = '0.08');
+
+  // Highlight corresponding checkbox row
+  const row = document.querySelector(`.series-checkbox-row[data-family="${famName}"]`);
+  if (row) row.classList.add('hovered');
+}
+
+function clearFamilyHighlight() {
+  // Restore all opacities
+  const paths = document.querySelectorAll('.chart-line');
+  paths.forEach(p => {
+    p.style.opacity = '';
+    p.classList.remove('active');
+  });
+
+  const nodes = document.querySelectorAll('.chart-node');
+  nodes.forEach(n => {
+    n.style.opacity = '';
+    n.classList.remove('active');
+  });
+
+  const trendlines = document.querySelectorAll('.trendline');
+  trendlines.forEach(t => t.style.opacity = '');
+
+  const row = document.querySelector(`.series-checkbox-row.hovered`);
+  if (row) row.classList.remove('hovered');
+}
+
+function initViewSwitcher() {
+  const tabGrid = document.getElementById('tab-grid');
+  const tabTrends = document.getElementById('tab-trends');
+  const gridView = document.getElementById('grid-view');
+  const trendsView = document.getElementById('trends-view');
+
+  if (tabGrid && tabTrends && gridView && trendsView) {
+    tabGrid.addEventListener('click', () => {
+      tabGrid.classList.add('active');
+      tabTrends.classList.remove('active');
+      gridView.style.display = 'block';
+      trendsView.style.display = 'none';
+      appState.activeView = 'grid';
+    });
+
+    tabTrends.addEventListener('click', () => {
+      tabTrends.classList.add('active');
+      tabGrid.classList.remove('active');
+      gridView.style.display = 'none';
+      trendsView.style.display = 'block';
+      appState.activeView = 'trends';
+      initTrendsView();
+      renderTrendsChart();
+    });
+  }
+}
+
 // Controls Events Handlers
 function initControls() {
   const searchInput = document.getElementById('search-input');
@@ -735,6 +1232,7 @@ function init() {
   loadData();
   initModalHandlers();
   initControls();
+  initViewSwitcher();
 }
 
 if (document.readyState === 'loading') {
@@ -742,3 +1240,4 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+

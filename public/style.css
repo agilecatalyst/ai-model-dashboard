@@ -1248,3 +1248,282 @@ footer {
   color: #ffb142;
   text-shadow: 0 0 8px rgba(255, 177, 66, 0.3);
 }
+
+/* View Switcher Tabs */
+.view-tabs-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.view-tab-btn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.view-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.view-tab-btn.active {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #4facfe 100%);
+  color: white;
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(108, 92, 231, 0.35);
+}
+
+/* Trends View Layout */
+.trends-controls {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.trends-control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trends-layout-grid {
+  display: grid;
+  grid-template-columns: 2.89fr 1.11fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .trends-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-container-card {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 550px;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* SVG Chart Elements */
+.grid-line {
+  stroke: rgba(255, 255, 255, 0.04);
+  stroke-width: 1;
+}
+
+.axis-line {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 1.5;
+}
+
+.axis-label {
+  fill: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  user-select: none;
+}
+
+.axis-title {
+  fill: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  user-select: none;
+}
+
+/* Datapoints / Nodes */
+.chart-node {
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), r 0.25s;
+}
+
+.chart-node.active,
+.chart-node:hover {
+  r: 9;
+}
+
+.chart-node.commercial {
+  fill: var(--color-commercial);
+  stroke: rgba(171, 71, 188, 0.3);
+  stroke-width: 3;
+}
+
+.chart-node.open {
+  fill: var(--color-open);
+  stroke: rgba(0, 172, 193, 0.3);
+  stroke-width: 3;
+}
+
+.chart-node.local {
+  fill: #2ed573; /* Neon Green */
+  stroke: rgba(46, 213, 115, 0.4);
+  stroke-width: 4;
+}
+
+/* Connect Lines & Trendlines */
+.chart-line {
+  fill: none;
+  stroke-width: 1.5;
+  stroke-dasharray: 1;
+  opacity: 0.25;
+  transition: opacity 0.3s, stroke-width 0.3s;
+}
+
+.chart-line.active {
+  stroke-width: 2.5;
+  stroke-dasharray: none;
+  opacity: 0.85;
+}
+
+.trendline {
+  fill: none;
+  stroke-width: 3;
+  opacity: 0.6;
+  stroke-dasharray: 6, 4;
+  transition: opacity 0.3s;
+}
+
+.trendline.commercial {
+  stroke: #ff4757;
+}
+
+.trendline.open {
+  stroke: #2ed573;
+}
+
+/* Interactive Chart Tooltip */
+.chart-tooltip {
+  background: rgba(10, 12, 16, 0.95);
+  border: 1px solid var(--color-accent);
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  width: max-content;
+  max-width: 240px;
+  line-height: 1.4;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  pointer-events: none;
+}
+
+/* Trends Sidebar Legend */
+.trends-sidebar {
+  padding: 1.5rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.panel-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--glass-border);
+  padding-bottom: 0.25rem;
+}
+
+.legend-toggle-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+  transition: var(--transition);
+}
+
+.legend-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.quick-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.legend-color-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-color-dot.commercial { background-color: var(--color-commercial); }
+.legend-color-dot.open { background-color: var(--color-open); }
+.legend-color-dot.local { background-color: #2ed573; }
+
+.series-checkboxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--glass-border) transparent;
+}
+
+.series-checkboxes-container::-webkit-scrollbar {
+  width: 4px;
+}
+.series-checkboxes-container::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+}
+
+.series-checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.series-checkbox-row:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.series-checkbox-row.hovered {
+  background: rgba(108, 92, 231, 0.1);
+  border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
