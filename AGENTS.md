@@ -69,3 +69,13 @@ Om de kwaliteit van de co-creatie te bewaken en te voorkomen dat we vervallen in
 1.  **De Paradox van Automatisering (Bainbridge, 1983):** Hoe geavanceerder het geautomatiseerde systeem, hoe crucialer (en mentaal belastender) de menselijke superviserende rol wordt.
 2.  **Cognitive Load & AI Supervision (Empirische studies 2025/2026):** Onderzoek toont aan dat het filteren van zeldzame hallucinaties in LLM-outputs leidt tot verhoogde mentale uitputting en beslissermoeheid.
 3.  **Thinking, Fast and Slow (Kahneman, 2011):** Systeem 2-denken (bewuste logica, twijfel en verificatie) is biologisch begrensd en verbruikt grote hoeveelheden metabolische energie vergeleken met Systeem 1 (automatische piloot).
+
+---
+
+## 5. Lessons Learned & Retrospectives (Tango Logboek)
+
+### Retrospective - 14 juni 2026 (Performance Trends Dashboard)
+*   **State-declaratie Discipline:** Nieuwe UI-states (zoals `disabledFamilies` of `selectedBenchmark` in `appState`) moeten altijd direct bij de initialisatie bovenaan `app.js` gedeclareerd en getypeerd worden om runtime `TypeErrors` bij de eerste render te vermijden.
+*   **SVG Transform-origin Valkuil:** Schalen van SVG cirkels/elementen met JS `style.transform = 'scale(1.2)'` leidt tot positieverschuivingen en trillend hover-gedrag (jitter/static) omdat SVG-elementen schalen vanaf het nulpunt (0,0) van het canvas. Dit lossen we op door declaratief een CSS-klasse te toggelen die de geometrische straal (`r`) van het SVG-element vergroot.
+*   **Proactieve Cache-Busting:** Bij grote wijzigingen aan CSS- en JS-bestanden moet in `index.html` direct de query-versie (`?v=1.0.x`) worden opgehoogd om te voorkomen dat de client verouderde of gecachte bestanden inlaadt.
+
