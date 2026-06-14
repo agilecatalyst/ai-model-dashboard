@@ -76,3 +76,7 @@ SWE-bench meet het vermogen van een model om echte GitHub-issues in complexe rep
 1. **Sandboxing (Isolatie):** Laat een lokale agent code altijd uitvoeren in een afgeschermde container (zoals Docker) om te voorkomen dat foutieve scripts of commando's schade aanrichten aan de host-machine.
 2. **Kies QAT boven PTQ:** Quantization-Aware Trained modellen (zoals de `Gemma 4 QAT` serie) behouden hun logische prestaties veel beter bij lage bit-precisie (bijv. 4-bit of 8-bit) dan traditioneel naderhand gecomprimeerde modellen.
 3. **Open CoT Archivering:** Bewaar de Chain-of-Thought logs van je lokale modelsysteem bij elke automatische commit om een 100% transparant audit-trail op te bouwen.
+4. **LoRA Fine-Tuning & Customization (Nieuw):**
+   * *NVIDIA/Workstations:* Gebruik **Unsloth** (Python) voor QLoRA-training. Dit verlaagt de benodigde VRAM met 60% en laat je getrainde adapters direct mergen tot een GGUF-bestand.
+   * *Apple Silicon (Mac):* Gebruik **MLX-LM** (Apple's native framework) om on-device LoRA-tuning te draaien met optimaal gebruik van het Unified Memory van je Mac-chip.
+   * *Inference Pipeline:* Exporteer je gefinetunde model naar GGUF en laad het direct in LM Studio of Ollama om je eigen custom coding-agent lokaal te serveren.
