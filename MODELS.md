@@ -2,7 +2,7 @@
 
 Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in de database. Het fungeert als een handige referentiekaart voor zowel ontwikkelaars als AI-agents.
 
-**Totaal aantal modellen:** 60
+**Totaal aantal modellen:** 62
 
 ## Model Matrix Tabel
 
@@ -11,6 +11,8 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Zamba2-VL 7B** | Zyphra | 2026-06-12 | Open Weights | Midrange Multimodal | 78.5% | 38.2% | 15.5% | 2.8% |
 | **Claude Fable 5** | Anthropic | 2026-06-09 | Commercial | Next-Gen Frontier | 97.4% | 93% | 71.5% | 0.9% |
 | **Claude Mythos 5** | Anthropic | 2026-06-09 | Commercial (Limited) | Next-Gen Frontier | 97.2% | 92.5% | 72.4% | 1.1% |
+| **Gemma 4 12B QAT** | Google DeepMind | 2026-06-08 | Open Weights | Lightweight Dense QAT | 85.2% | 52.5% | 32.4% | 2.1% |
+| **Gemma 4 31B QAT** | Google DeepMind | 2026-06-08 | Open Weights | Frontier Dense QAT | 89.6% | 66% | 45.2% | 1.8% |
 | **Nemotron 3 Ultra 550B** | NVIDIA | 2026-06-03 | Commercial | Next-Gen Frontier | 94.8% | 86.7% | 71% | 1.2% |
 | **MAI-Thinking-1** | Microsoft AI | 2026-06-02 | Commercial | Frontier Reasoning | 95.5% | 87.5% | 72.8% | 1.3% |
 | **MAI-Code-1-Flash** | Microsoft AI | 2026-06-02 | Commercial | Fast Agentic | 86.4% | 52% | 58.4% | 2.4% |
@@ -103,13 +105,15 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Gemini 2.5 Flash Lite** (2025-09-18) - *Fast Multimodal*: Highlighted on the Vectara HHEM leaderboard for its low hallucination rate (~3.3% on complex document summarization). Safety checks are optimized for edge workflows.
 - **Gemini 3.5 Flash** (2026-05-19) - *Next-Gen Balanced*: Google I/O 2026 flagship announcement. Integrates advanced MCP (Model Context Protocol) safety guidelines. Red-teamed for autonomous computer control.
 
-### Google DeepMind (6 modellen)
+### Google DeepMind (8 modellen)
 - **Gemma 2 27B** (2024-06-27) - *Lightweight Dense*: Google open model license. Restricts malicious use. Adheres to Google's safety thresholds. Refusal profile can sometimes be overly cautious.
 - **Gemma 3 12B** (2025-03-12) - *Lightweight Multimodal*: Google Gemma Terms of Use license (free commercial use under 500M monthly active users, competitive training restricted). Built with multilingual visual capabilities.
 - **Gemma 3 27B** (2025-03-12) - *Lightweight Multimodal*: Google open model license. Features native multimodal support (vision-language) and supports over 140 languages. Safety-aligned across languages.
 - **Gemma 3 4B** (2025-03-12) - *Edge Multimodal*: Google Gemma Terms of Use license (free commercial use under 500M monthly active users, competitive training restricted). Features native vision/text multilingual support.
 - **Gemma 4 12B** (2026-04-02) - *Lightweight Dense*: Released under the fully permissive Apache 2.0 open-source license. Developed with Google's latest Gemini 3 model research, optimized for reasoning.
+- **Gemma 4 12B QAT** (2026-06-08) - *Lightweight Dense QAT*: Released under the Apache 2.0 license. Optimized using native Quantization-Aware Training (QAT) to preserve coding and reasoning capabilities on 4-bit precision.
 - **Gemma 4 31B Dense** (2026-04-02) - *Frontier Dense*: Released under the highly permissive Apache 2.0 license. Developed using the same research as the Gemini 3 series. Highly aligned for safety, privacy, and sovereignty.
+- **Gemma 4 31B QAT** (2026-06-08) - *Frontier Dense QAT*: Released under the Apache 2.0 license. Pre-aligned with 4-bit weight layout during training, enabling full frontier reasoning within 32GB RAM constraints.
 
 ### Meta (4 modellen)
 - **Llama 3.1 405B** (2024-07-23) - *Frontier Dense*: Released under Meta Llama 3 License. Permissive for up to 700M monthly active users. Features built-in safety guidelines (Llama Guard 3). Base weights are safe, but can be jailbroken if locally fine-tuned without constraints.

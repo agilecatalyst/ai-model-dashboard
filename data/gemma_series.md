@@ -170,6 +170,64 @@ models:
     links:
       website: https://ai.google.dev/gemma/gemma4
       system_card: https://huggingface.co/google/gemma-4-12b
+
+  - id: gemma-4-12b-qat
+    name: Gemma 4 12B QAT
+    developer: Google DeepMind
+    release_date: 2026-06-08
+    access: Open Weights
+    class: Lightweight Dense QAT
+    benchmarks:
+      mmlu: 85.2
+      gpqa: 52.5
+      swe_bench: 32.4
+      human_eval: 82.5
+      aime: 62.0
+    hallucination_rate: 2.1
+    ethics_rating: 8.2
+    iq_lower: 100
+    iq_upper: 125
+    eq_bench: 67
+    arena_elo: 1230
+    ethics_notes: Released under the Apache 2.0 license. Optimized using native Quantization-Aware Training (QAT) to preserve coding and reasoning capabilities on 4-bit precision.
+    lying_rate: 2.3
+    lying_notes: Low sycophancy, but low bitwidth quantization can trigger minor token retrieval edge cases.
+    best_applications:
+      - Local code completion and lightweight agents
+      - Low-latency edge computing
+      - Private document analysis on standard notebooks
+    links:
+      website: https://ai.google.dev/gemma/gemma4
+      system_card: https://huggingface.co/google/gemma-4-12b-qat
+
+  - id: gemma-4-31b-qat
+    name: Gemma 4 31B QAT
+    developer: Google DeepMind
+    release_date: 2026-06-08
+    access: Open Weights
+    class: Frontier Dense QAT
+    benchmarks:
+      mmlu: 89.6
+      gpqa: 66.0
+      swe_bench: 45.2
+      human_eval: 88.4
+      aime: 74.0
+    hallucination_rate: 1.8
+    ethics_rating: 8.4
+    iq_lower: 110
+    iq_upper: 138
+    eq_bench: 71
+    arena_elo: 1265
+    ethics_notes: Released under the Apache 2.0 license. Pre-aligned with 4-bit weight layout during training, enabling full frontier reasoning within 32GB RAM constraints.
+    lying_rate: 2.0
+    lying_notes: Demonstrates robust logical self-correction. High compliance with constraints under low bit-depth.
+    best_applications:
+      - Local software engineering agents and pipelines
+      - Private corporate knowledge engines
+      - Compliance auditing on standard workstations
+    links:
+      website: https://ai.google.dev/gemma/gemma4
+      system_card: https://huggingface.co/google/gemma-4-31b-qat
 ---
 
 # Google Gemma Series (Open Weights)

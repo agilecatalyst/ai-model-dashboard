@@ -34,6 +34,14 @@ Lokaal draaien is niet alleen een technische keuze, maar vaak een compliance-ver
 
 ---
 
+## 👁️ Explainable AI (XAI) & CoT Auditability
+
+Een uniek voordeel van lokale open-weights reasoning-modellen (zoals een lokale Gemma 4 of Qwen Coder) ten opzichte van closed API's (zoals OpenAI o1):
+*   **Volledige Transparantie:** Commerciële cloudproviders verbergen de interne redeneerstappen (*Chain-of-Thought* of CoT-tokens) om reverse-engineering te voorkomen. Voor audits in gereguleerde sectoren is dit een blinde vlek.
+*   **CoT-Logging:** Lokaal draaien geeft 100% toegang tot de ruwe redeneertokens. Je kunt de volledige log van hoe een agent tot een code-ontwerp of besluit is gekomen opslaan voor compliance-doeleinden.
+
+---
+
 ## 💻 Hardware-eisen (Max 32 GB RAM)
 
 Om lokale modellen toegankelijk te houden voor standaard ontwikkelaars, hanteren we een grens van **maximaal 32 GB RAM/VRAM** (bijvoorbeeld een MacBook met 32GB Unified Memory of een PC met een 24GB VRAM GPU + systeembuffer).
@@ -56,5 +64,15 @@ SWE-bench meet het vermogen van een model om echte GitHub-issues in complexe rep
 *   **Qwen 3.6 27B** (SWE-bench: **77.2%**) - *Uitzonderlijke lokale agent-prestaties.*
 *   **Gemma 4 31B Dense** (SWE-bench: **56.5%**) - *Uitstekend redeneervermogen en Apache 2.0 licentie.*
 *   **Gemma 4 12B** (SWE-bench: **46.5%**) - *Lichtgewicht, snel en uiterst capabel op 16GB/32GB systemen.*
+*   **Gemma 4 31B QAT** (SWE-bench: **45.2%**) - *QAT-geoptimaliseerd voor 4-bit, draait comfortabel binnen 32GB RAM.*
 *   **Codestral 22b** (SWE-bench: **32.8%**) - *Tuned voor codeer-efficiëntie.*
+*   **Gemma 4 12B QAT** (SWE-bench: **32.4%**) - *QAT-geoptimaliseerd voor 4-bit, uiterst snel op 16GB systemen.*
 *   **Qwen 2.5 Coder 32B** (SWE-bench: **29.4%**) - *De benchmark-standaard voor on-device IDE-aanvulling.*
+
+---
+
+## 🛠️ Ontwikkelaar Best Practices voor Lokale Agents
+
+1. **Sandboxing (Isolatie):** Laat een lokale agent code altijd uitvoeren in een afgeschermde container (zoals Docker) om te voorkomen dat foutieve scripts of commando's schade aanrichten aan de host-machine.
+2. **Kies QAT boven PTQ:** Quantization-Aware Trained modellen (zoals de `Gemma 4 QAT` serie) behouden hun logische prestaties veel beter bij lage bit-precisie (bijv. 4-bit of 8-bit) dan traditioneel naderhand gecomprimeerde modellen.
+3. **Open CoT Archivering:** Bewaar de Chain-of-Thought logs van je lokale modelsysteem bij elke automatische commit om een 100% transparant audit-trail op te bouwen.
