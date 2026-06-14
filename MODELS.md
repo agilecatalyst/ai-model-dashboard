@@ -21,7 +21,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Qwen 3.7 Max** | Alibaba Cloud | 2026-05-20 | Commercial | Next-Gen Frontier | 94.6% | 80.4% | 80.4% | 1.4% |
 | **Gemini 3.5 Flash** | Google | 2026-05-19 | Commercial | Next-Gen Balanced | 90.5% | 71.2% | 39% | 1.1% |
 | **DeepSeek-V4-Pro** | DeepSeek | 2026-04-24 | Open Weights | Next-Gen Frontier | 94% | 82.5% | 44.5% | 1.5% |
-| **Qwen 3.6 27B** | Alibaba Cloud | 2026-04-22 | Open Weights | Midrange Dense | 88% | 57.8% | 47.2% | 1.5% |
+| **Qwen 3.6 27B** | Alibaba Cloud | 2026-04-22 | Open Weights | Midrange Dense | 88% | 87.8% | 77.2% | 1.5% |
 | **Kimi K2.6** | Moonshot AI | 2026-04-20 | Open Weights | Next-Gen Frontier | 92.5% | 87.6% | 60.4% | 1.2% |
 | **GLM-5.1 Open** | Zhipu AI | 2026-04-07 | Open Weights | Next-Gen Frontier | 93.5% | 87.5% | 82.4% | 1.1% |
 | **Gemma 4 31B Dense** | Google DeepMind | 2026-04-02 | Open Weights | Frontier Dense | 92.4% | 84.3% | 56.5% | 1.6% |

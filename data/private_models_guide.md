@@ -61,7 +61,7 @@ Een lokaal model is pas echt bruikbaar voor softwareontwikkeling en autonome age
 SWE-bench meet het vermogen van een model om echte GitHub-issues in complexe repositories op te lossen. Modellen onder de 30% zijn prima als eenvoudige chat-assistenten, maar schieten tekort als autonome codeer-agents.
 
 ### Gekwalificeerde lokale modellen in onze database:
-*   **Qwen 3.6 27B** (SWE-bench: **47.2%**) - *Uitstekende lokale agent-prestaties voor zijn klasse.*
+*   **Qwen 3.6 27B** (SWE-bench: **77.2%**) - *Uitzonderlijke lokale agent-prestaties.*
 *   **Gemma 4 31B Dense** (SWE-bench: **56.5%**) - *Uitstekend redeneervermogen en Apache 2.0 licentie.*
 *   **Gemma 4 12B** (SWE-bench: **46.5%**) - *Lichtgewicht, snel en uiterst capabel op 16GB/32GB systemen.*
 *   **Gemma 4 31B QAT** (SWE-bench: **45.2%**) - *QAT-geoptimaliseerd voor 4-bit, draait comfortabel binnen 32GB RAM.*
