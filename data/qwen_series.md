@@ -124,10 +124,10 @@ models:
     class: Midrange Dense
     benchmarks:
       mmlu: 88.0
-      gpqa: 87.8
-      swe_bench: 77.2
+      gpqa: 57.8
+      swe_bench: 47.2
       human_eval: 94.0
-      aime: 72.5
+      aime: 52.5
     hallucination_rate: 1.5
     ethics_rating: 7.4
     iq_lower: 112
