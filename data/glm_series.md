@@ -144,6 +144,46 @@ models:
     links:
       website: https://github.com/zai-org/GLM-5
       system_card: https://github.com/zai-org/GLM-5
+
+  - id: glm-5-2-open
+    name: GLM-5.2 Open
+    developer: Zhipu AI
+    release_date: 2026-06-15
+    access: Open Weights
+    class: Next-Gen Frontier
+    benchmarks:
+      mmlu: 94.8
+      gpqa: 89.2
+      swe_bench: 85.5
+      human_eval: 97.5
+      aime: 95.8
+    hallucination_rate: 0.9
+    ethics_rating: 7.6
+    iq_lower: 121
+    iq_upper: 149
+    eq_bench: 75
+    arena_elo: 1395
+    ethics_notes: Flagship MIT-licensed open weights MoE trained on Huawei Ascend 920 hardware clusters. Enhanced sandboxed safety and zero-shot tool safety.
+    lying_rate: 1.0
+    lying_notes: Advanced dual-pass reasoning verification minimizes confabulation across both code generation and mathematical deduction.
+    best_applications:
+      - SOTA self-hosted engineering swarms (SWE-bench: 85.5%)
+      - Hardware-independent enterprise AI infrastructure (Huawei MindSpore native)
+      - Long-horizon multi-step analytical reasoning
+    links:
+      website: https://github.com/zai-org/GLM-5
+      system_card: https://github.com/zai-org/GLM-5
+    citations:
+      - source: "Zhipu AI (Z.ai) Tech Report / Scale AI"
+        metric: "swe_bench_pro"
+        value: 62.1
+        url: "https://zhipuai.cn/blog/glm-5.2"
+        verified_date: "2026-06-15"
+      - source: "Artificial Analysis"
+        metric: "swe_bench_verified"
+        value: 85.5
+        url: "https://artificialanalysis.ai/models/glm-5-2"
+        verified_date: "2026-06-15"
 ---
 
 # Zhipu AI GLM Series (z.ai)
@@ -153,4 +193,5 @@ Zhipu AI (formerly THUDM, originating from Tsinghua University) has established 
 ### Key Milestones:
 1. **GLM-4 / 4-Plus (2024):** Marked Zhipu's arrival in the frontier multimodal space, providing highly efficient API endpoints matching early GPT-4 performance.
 2. **GLM-4.5 Open (2025):** The first massive open weight MoE model from Zhipu to utilize MIT licensing, offering a powerful counterweight to Meta's Llama in coding and math.
-3. **GLM-5 Series (2026):** Reached a landmark milestone in agentic engineering, achieving 77.8% on SWE-bench Verified. The GLM-5 series was trained entirely on **Huawei Ascend** chips, demonstrating complete hardware independence.
+3. **GLM-5 / 5.2 Series (2026):** Reached landmark milestones in agentic engineering, achieving 85.5% on SWE-bench Verified. The GLM-5 series is trained entirely on **Huawei Ascend** chips, demonstrating total hardware independence from NVIDIA.
+

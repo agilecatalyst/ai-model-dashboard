@@ -57,6 +57,17 @@ models:
     links:
       website: https://www.anthropic.com/claude/3-5-sonnet
       system_card: https://www.anthropic.com/claude/system-card
+    citations:
+      - source: "Anthropic System Card"
+        metric: "swe_bench"
+        value: 49.0
+        url: "https://www.anthropic.com/claude/system-card"
+        verified_date: "2024-06-20"
+      - source: "LMSYS Chatbot Arena"
+        metric: "arena_elo"
+        value: 1345
+        url: "https://chat.lmsys.org"
+        verified_date: "2024-06-20"
 
   - id: claude-3-7-sonnet
     name: Claude 3.7 Sonnet
@@ -237,7 +248,7 @@ models:
     developer: Anthropic
     release_date: 2026-06-09
     access: Commercial (Limited)
-    class: Next-Gen Frontier
+    class: Next-Gen Opus Frontier
     benchmarks:
       mmlu: 97.2
       gpqa: 92.5
@@ -250,13 +261,13 @@ models:
     iq_upper: 155
     eq_bench: 94
     arena_elo: 1435
-    ethics_notes: Offered in limited preview with relaxed constraints. Designed for raw research and complex logical exploration without standard conversational filters.
+    ethics_notes: Anthropic's flagship Opus-tier frontier research model (Project Glasswing). Offered in limited preview with relaxed conversational refusals for advanced cybersecurity, complex code auditing, and quantitative logic.
     lying_rate: 0.9
-    lying_notes: Lacks the extensive conversational refusals of Fable 5, meaning it will answer edge cases but maintain similar factual reasoning consistency.
+    lying_notes: Lacks the extensive conversational refusals of Fable 5, allowing unrestricted edge-case analysis while maintaining high factual reasoning consistency.
     best_applications:
-      - Creative writing with complex narrative rules
-      - Uncensored alignment research
-      - Advanced quantitative logic
+      - Advanced cybersecurity vulnerability research (Project Glasswing)
+      - Complex software auditing and high-stakes agentic operations
+      - Uncensored alignment research and advanced quantitative logic
     links:
       website: https://www.anthropic.com/news/claude-mythos-5
       system_card: https://www.anthropic.com/claude/system-card-mythos-5
@@ -271,4 +282,5 @@ Anthropic's Claude series has consistently prioritized **safety, factual consist
 2. **Computer Use:** Starting with Claude 3.5 Sonnet and expanded in Haiku 4.5, Anthropic was the first to offer native APIs for direct keyboard, mouse, and screen control by the model.
 3. **Claude 3.7 Hybrid Reasoning:** Toggling "extended thinking" allowed users to balance token speed against deep analytical reasoning.
 4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.
-5. **Claude Fable 5 & Mythos 5 (June 2026):** Representing Anthropic's dual-tier strategy, Fable 5 offers strict constitutional alignment for enterprises, while Mythos 5 provides research teams with an uncensored look at raw reasoning performance.
+5. **Claude Fable 5 & Mythos 5 (June 2026):** Anthropic's Opus 5-generation frontier models. Fable 5 provides enterprise-grade Constitutional AI safety, while Mythos 5 serves as the flagship Opus-tier research model for Project Glasswing with relaxed conversational refusals for critical software security audits.
+

@@ -199,6 +199,17 @@ models:
     links:
       website: https://ai.google.dev/gemma/gemma4
       system_card: https://huggingface.co/google/gemma-4-12b-qat
+    citations:
+      - source: "Google DeepMind Blog"
+        metric: "swe_bench"
+        value: 32.4
+        url: "https://ai.google.dev/gemma/gemma4"
+        verified_date: "2026-06-08"
+      - source: "Google Technical Report"
+        metric: "mmlu"
+        value: 85.2
+        url: "https://huggingface.co/google/gemma-4-12b-qat"
+        verified_date: "2026-06-08"
 
   - id: gemma-4-31b-qat
     name: Gemma 4 31B QAT
@@ -228,6 +239,17 @@ models:
     links:
       website: https://ai.google.dev/gemma/gemma4
       system_card: https://huggingface.co/google/gemma-4-31b-qat
+    citations:
+      - source: "Google DeepMind Blog"
+        metric: "swe_bench"
+        value: 45.2
+        url: "https://ai.google.dev/gemma/gemma4"
+        verified_date: "2026-06-08"
+      - source: "Google Technical Report"
+        metric: "mmlu"
+        value: 89.6
+        url: "https://huggingface.co/google/gemma-4-31b-qat"
+        verified_date: "2026-06-08"
 ---
 
 # Google Gemma Series (Open Weights)

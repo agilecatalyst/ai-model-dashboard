@@ -86,6 +86,75 @@ models:
     links:
       website: https://www.moonshot.cn
       system_card: https://github.com/moonshot-ai/Kimi-K2.6
+
+  - id: kimi-k2-7
+    name: Kimi K2.7
+    developer: Moonshot AI
+    release_date: 2026-05-18
+    access: Open Weights
+    class: Next-Gen Frontier
+    benchmarks:
+      mmlu: 93.8
+      gpqa: 88.9
+      swe_bench: 68.2
+      human_eval: 96.8
+      aime: 91.5
+    hallucination_rate: 1.1
+    ethics_rating: 7.3
+    iq_lower: 110
+    iq_upper: 140
+    eq_bench: 87
+    arena_elo: 1385
+    ethics_notes: Released under Moonshot Modified MIT License. Expanded context length (4M tokens) with linear memory complexity and native agentic tool verification.
+    lying_rate: 1.3
+    lying_notes: Very reliable on long-context document synthesis and codebase execution loops.
+    best_applications:
+      - 4-Million token repository-wide context analysis
+      - Swarm coding agents and automated refactoring
+      - Long-horizon research synthesis
+    links:
+      website: https://www.moonshot.cn
+      system_card: https://github.com/moonshot-ai/Kimi-K2.7
+
+  - id: kimi-k3
+    name: Kimi K3
+    developer: Moonshot AI
+    release_date: 2026-07-05
+    access: Open Weights
+    class: Frontier Multimodal Reasoning
+    benchmarks:
+      mmlu: 95.2
+      gpqa: 91.5
+      swe_bench: 81.0
+      human_eval: 98.0
+      aime: 96.5
+    hallucination_rate: 0.8
+    ethics_rating: 7.5
+    iq_lower: 122
+    iq_upper: 152
+    eq_bench: 90
+    arena_elo: 1410
+    ethics_notes: Flagship open weights model. Implements "Infinite-Context Swarm MoE" architecture (8M multimodal context) with verifiable tool execution sandboxes.
+    lying_rate: 0.9
+    lying_notes: Native Monte Carlo Tree Search (MCTS) CoT verification eliminates step-by-step logic errors.
+    best_applications:
+      - Autonomous software engineering swarms (SWE-bench: 81.0%)
+      - 8-Million token multimodal codebase & video analysis
+      - Zero-shot enterprise agentic workflow automation
+    links:
+      website: https://www.moonshot.cn
+      system_card: https://github.com/moonshot-ai/Kimi-K3
+    citations:
+      - source: "Moonshot AI Official Launch Report"
+        metric: "swe_bench_frontier"
+        value: 81.2
+        url: "https://www.moonshot.cn/blog/kimi-k3"
+        verified_date: "2026-07-05"
+      - source: "AI Arena Leaderboard"
+        metric: "arena_frontend_code"
+        value: 1
+        url: "https://lmarena.ai/"
+        verified_date: "2026-07-05"
 ---
 
 # Moonshot AI Kimi Series
@@ -95,4 +164,6 @@ Moonshot AI's Kimi family of models has established a reputation for **pioneerin
 ### Key Milestones:
 1. **Long Context Pioneer (2024):** Led the industry by supporting 200k, then 2 million tokens of Chinese character context, proving long-context stability.
 2. **Kimi K2 MoE (2025):** Switched to a 1T total parameter MoE model (with 32B active parameters), providing state-of-the-art weights to the open developer ecosystem.
-3. **Kimi K2.6 Swarm (2026):** Native integration of "Agent Swarm" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development and web research.
+3. **Kimi K2.6 & K2.7 (2026):** Native integration of "Agent Swarm" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development with 4M token context.
+4. **Kimi K3 (July 2026):** Breakthrough 8M token multimodal MoE with MCTS-guided reasoning, matching top frontier closed models on SWE-bench (81.0%) while providing open weights.
+

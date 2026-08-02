@@ -50,7 +50,7 @@ Bij het doorvoeren van taken in deze codebase selecteren of adviseren we modelle
 | Taakcategorie | Aanbevolen Model | Rationale / Kernbenchmark |
 | :--- | :--- | :--- |
 | **Complexe Logica / Wiskunde** | **DeepSeek-R1 / OpenAI o1** | Test-time reasoning en Chain-of-Thought minimaliseren logische fouten (AIME > 90%). |
-| **Autonome Code-Agents** | **Qwen 3.7 Max / Claude Opus 4.8** | Beste prestaties op SWE-bench Verified (resp. 80.4% / 69.2%). |
+| **Autonome Code-Agents** | **Qwen 3.7 Max / Claude Opus 4.8 / Mythos 5** | Beste prestaties op SWE-bench Verified & Pro (resp. 80.4% / 69.2% / 72.4%). |
 | **Edge / Lichte Lokale Taken** | **Gemma 4 31B / gpt-oss-20b** | Permissieve licenties (Apache 2.0) en hoge efficiëntie voor lokale hardware met 16GB VRAM. |
 | **Long-Context RAG** | **Gemini 3.5 Flash** | 2 miljoen token context window gecombineerd met een zeer lage hallucinatieratio (~1.1%). |
 | **Sovereign/Private Dev** | **Mistral Large 3** | Apache 2.0 licentie, sterke meertalige ondersteuning, volledig in lijn met de EU AI Act. |

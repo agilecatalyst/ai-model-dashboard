@@ -28,6 +28,17 @@ models:
     links:
       website: https://openai.com/gpt-4o
       system_card: https://assets.ctfassets.net/kftzwdyau1h5/13W659M7xWkRt2f7W9Hspg/fb373ca9db86fa6443c5ee9659b8c04f/gpt-4o-system-card.pdf
+    citations:
+      - source: "OpenAI System Card"
+        metric: "swe_bench"
+        value: 38.8
+        url: "https://assets.ctfassets.net/kftzwdyau1h5/13W659M7xWkRt2f7W9Hspg/fb373ca9db86fa6443c5ee9659b8c04f/gpt-4o-system-card.pdf"
+        verified_date: "2024-05-13"
+      - source: "LMSYS Chatbot Arena"
+        metric: "arena_elo"
+        value: 1330
+        url: "https://chat.lmsys.org"
+        verified_date: "2024-05-13"
 
   - id: openai-o1
     name: OpenAI o1

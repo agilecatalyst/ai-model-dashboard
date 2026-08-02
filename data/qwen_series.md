@@ -144,6 +144,22 @@ models:
     links:
       website: https://qwenlm.github.io/blog/qwen3.6/
       system_card: https://github.com/QwenLM/Qwen3.6
+    citations:
+      - source: "Epoch AI"
+        metric: "swe_bench"
+        value: 77.2
+        url: "https://epoch.ai/benchmarks/swe-bench-verified"
+        verified_date: "2026-04-22"
+      - source: "Alibaba Tech Report"
+        metric: "gpqa"
+        value: 87.8
+        url: "https://qwenlm.github.io/blog/qwen3.6/"
+        verified_date: "2026-04-22"
+      - source: "Alibaba Tech Report"
+        metric: "mmlu"
+        value: 88.0
+        url: "https://qwenlm.github.io/blog/qwen3.6/"
+        verified_date: "2026-04-22"
 
   - id: qwen-3-7-max
     name: Qwen 3.7 Max
@@ -229,6 +245,75 @@ models:
     links:
       website: https://qwenlm.github.io/blog/qwen3.5-moe/
       system_card: https://github.com/QwenLM/Qwen3.5-MoE
+
+  - id: qwen-3-8-32b
+    name: Qwen 3.8 32B
+    developer: Alibaba Cloud
+    release_date: 2026-06-10
+    access: Open Weights
+    class: Midrange Dense
+    benchmarks:
+      mmlu: 90.5
+      gpqa: 89.0
+      swe_bench: 79.5
+      human_eval: 95.8
+      aime: 84.0
+    hallucination_rate: 1.2
+    ethics_rating: 7.5
+    iq_lower: 114
+    iq_upper: 142
+    eq_bench: 72
+    arena_elo: 1335
+    ethics_notes: MIT-licensed open weights model. Built for maximum efficiency within 32GB RAM local environments (Q4_K_M/QAT).
+    lying_rate: 1.4
+    lying_notes: Native reasoning verification passes dramatically cut confabulation in coding and tool execution.
+    best_applications:
+      - High-performance 32GB local agentic IDE assistant (SWE-bench: 79.5%)
+      - Fine-tuning base for enterprise domain agents
+      - Private long-context RAG pipelines
+    links:
+      website: https://qwenlm.github.io/blog/qwen3.8/
+      system_card: https://github.com/QwenLM/Qwen3.8
+
+  - id: qwen-4-preview
+    name: Qwen 4 Preview
+    developer: Alibaba Cloud
+    release_date: 2026-07-01
+    access: Commercial
+    class: Next-Gen Frontier
+    benchmarks:
+      mmlu: 95.8
+      gpqa: 91.0
+      swe_bench: 84.2
+      human_eval: 98.2
+      aime: 95.0
+    hallucination_rate: 0.9
+    ethics_rating: 7.6
+    iq_lower: 124
+    iq_upper: 153
+    eq_bench: 88
+    arena_elo: 1405
+    ethics_notes: Alibaba's next-generation flagship commercial engine. Ultra-fast hybrid reasoning MoE architecture with advanced agentic safeguards.
+    lying_rate: 1.0
+    lying_notes: High factual grounding with dynamic external tool execution checks.
+    best_applications:
+      - Autonomous enterprise engineering pipelines (SWE-bench: 84.2%)
+      - Complex multimodal & agentic workflow automation
+      - Massive-scale data transformation and extraction
+    links:
+      website: https://www.alibabacloud.com/blog/qwen4-preview
+      system_card: https://www.alibabacloud.com/blog/qwen4-preview-system-card
+    citations:
+      - source: "Alibaba Cloud / MLQ.ai"
+        metric: "swe_bench_verified"
+        value: 84.2
+        url: "https://www.alibabacloud.com/blog/qwen4-preview"
+        verified_date: "2026-07-01"
+      - source: "Qwen AI Research"
+        metric: "swe_bench_pro"
+        value: 64.5
+        url: "https://qwenlm.github.io/blog/qwen4-preview"
+        verified_date: "2026-07-01"
 ---
 
 # Alibaba Qwen Series
@@ -238,9 +323,11 @@ Alibaba's Qwen (Tongyi Qianwen) series has emerged as one of the most powerful m
 ### Key Milestones:
 1. **Qwen 2.5 Coder (2024):** A major milestone, showing that a 32B open model could outperform GPT-4 on code generation (HumanEval 93.0%).
 2. **Qwen 3 (2025):** Introduced hybrid reasoning architectures (toggling between thinking/non-thinking token outputs) to match Western reasoning developments.
-3. **Qwen 3.7 Max (2026):** Reached a massive milestone in agentic intelligence (SWE-bench Verified: 80.4%), standing as a leading proprietary model for global autonomous software development.
+3. **Qwen 3.7 Max & Qwen 3.8 32B (2026):** Reached massive milestones in agentic intelligence (SWE-bench Verified: 80.4% commercial / 79.5% 32B open weights), standing as leading models for local and cloud autonomous software development.
+4. **Qwen 4 Preview (July 2026):** Alibaba's flagship next-gen MoE engine with 84.2% SWE-bench score and state-of-the-art multimodal reasoning.
 
 ### Licensing Model & What It Means:
 - **Qwen License Agreement (Qwen 2.5 32B):** Alibaba's custom open-weights agreement. Permissive for research and commercial use, but triggers a commercial license request if monthly active users exceed 100 million.
-- **MIT License (Qwen 3.5, Qwen 3.6):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.
+- **MIT License (Qwen 3.5, Qwen 3.6, Qwen 3.8):** A highly permissive, lightweight open-source license. Allows commercial use, modification, and distribution with no user caps.
 - **Apache 2.0 (Qwen 2.5 MoE, Qwen 3.5 MoE):** Fully permissive, open-source OSI license with no user caps or proprietary restrictions.
+

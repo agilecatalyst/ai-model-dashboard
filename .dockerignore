@@ -1,0 +1,12 @@
+.git
+node_modules
+data/
+scripts/
+.agents/
+.gemini/
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+package-lock.json
+package.json

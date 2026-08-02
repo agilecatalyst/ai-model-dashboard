@@ -31,7 +31,8 @@ def parse_yaml(yaml_str):
                 'id': model_id,
                 'benchmarks': {},
                 'best_applications': [],
-                'links': {}
+                'links': {},
+                'citations': []
             }
             models.append(current_model)
             current_key = None
@@ -45,7 +46,7 @@ def parse_yaml(yaml_str):
                     k = k.strip()
                     v = v.strip().strip("'\"")
                     
-                    if k in ('benchmarks', 'best_applications', 'links'):
+                    if k in ('benchmarks', 'best_applications', 'links', 'citations'):
                         current_key = k
                     else:
                         # Try parsing numbers
@@ -73,9 +74,33 @@ def parse_yaml(yaml_str):
                 elif current_key == 'links' and ':' in trimmed:
                     k, v = trimmed.split(':', 1)
                     current_model['links'][k.strip()] = v.strip().strip("'\"")
+                elif current_key == 'citations' and trimmed.startswith('-'):
+                    content = trimmed[1:].strip()
+                    if ':' in content:
+                        k, v = content.split(':', 1)
+                        k = k.strip()
+                        v = v.strip().strip("'\"")
+                        current_model['citations'].append({k: v})
                 elif current_key == 'best_applications' and trimmed.startswith('-'):
                     val = trimmed[1:].strip().strip("'\"")
                     current_model['best_applications'].append(val)
+            elif indent == 8:
+                if current_key == 'citations' and ':' in trimmed:
+                    k, v = trimmed.split(':', 1)
+                    k = k.strip()
+                    v = v.strip().strip("'\"")
+                    if current_model['citations']:
+                        last_cit = current_model['citations'][-1]
+                        if k == 'value':
+                            try:
+                                if '.' in v:
+                                    last_cit[k] = float(v)
+                                else:
+                                    last_cit[k] = int(v)
+                            except ValueError:
+                                last_cit[k] = v
+                        else:
+                            last_cit[k] = v
                     
     return models
 
@@ -102,6 +127,7 @@ def main():
     ethical_analysis = ""
     co_creation_tips = ""
     private_models_guide = ""
+    beyond_benchmarking_research = ""
     
     files = os.listdir(DATA_DIR)
     for file in files:
@@ -121,6 +147,10 @@ def main():
             _, body = parse_markdown_file(file_path)
             private_models_guide = body
             print(f"Processed private models guide: {file}")
+        elif file == 'beyond_benchmarking_research.md':
+            _, body = parse_markdown_file(file_path)
+            beyond_benchmarking_research = body
+            print(f"Processed research file: {file}")
         elif file.endswith('.md'):
             models, body = parse_markdown_file(file_path)
             for m in models:
@@ -161,6 +191,7 @@ def main():
         'ethical_analysis': ethical_analysis,
         'co_creation_tips': co_creation_tips,
         'private_models_guide': private_models_guide,
+        'beyond_benchmarking_research': beyond_benchmarking_research,
         'compiled_at': '2026-06-13T09:54:00Z' # Static/dynamic build timestamp
     }
     

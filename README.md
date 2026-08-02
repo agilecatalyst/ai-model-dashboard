@@ -30,6 +30,19 @@ python3 -m http.server 8080
 ```
 Open vervolgens **[http://localhost:8080](http://localhost:8080)** in je browser.
 
+### Via Docker & Docker Compose (Containerized)
+Als je het project in een container wilt draaien met Nginx op poort `7931`:
+
+1. Bouw en start de container in de achtergrond:
+   ```bash
+   docker compose up --build -d
+   ```
+2. Open **[http://localhost:7931](http://localhost:7931)** in je browser.
+3. Stop de container indien nodig via:
+   ```bash
+   docker compose down
+   ```
+
 ---
 
 ## 🛠️ Data compileren & Systeemkaarten ophalen

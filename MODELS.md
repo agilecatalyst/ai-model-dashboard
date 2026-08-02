@@ -2,15 +2,19 @@
 
 Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in de database. Het fungeert als een handige referentiekaart voor zowel ontwikkelaars als AI-agents.
 
-**Totaal aantal modellen:** 62
+**Totaal aantal modellen:** 69
 
 ## Model Matrix Tabel
 
 | Model | Developer | Release | Access | Class | MMLU | GPQA | SWE-bench | Lying Rate |
 | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **Kimi K3** | Moonshot AI | 2026-07-05 | Open Weights | Frontier Multimodal Reasoning | 95.2% | 91.5% | 81% | 0.8% |
+| **Qwen 4 Preview** | Alibaba Cloud | 2026-07-01 | Commercial | Next-Gen Frontier | 95.8% | 91% | 84.2% | 0.9% |
+| **GLM-5.2 Open** | Zhipu AI | 2026-06-15 | Open Weights | Next-Gen Frontier | 94.8% | 89.2% | 85.5% | 0.9% |
 | **Zamba2-VL 7B** | Zyphra | 2026-06-12 | Open Weights | Midrange Multimodal | 78.5% | 38.2% | 15.5% | 2.8% |
+| **Qwen 3.8 32B** | Alibaba Cloud | 2026-06-10 | Open Weights | Midrange Dense | 90.5% | 89% | 79.5% | 1.2% |
 | **Claude Fable 5** | Anthropic | 2026-06-09 | Commercial | Next-Gen Frontier | 97.4% | 93% | 71.5% | 0.9% |
-| **Claude Mythos 5** | Anthropic | 2026-06-09 | Commercial (Limited) | Next-Gen Frontier | 97.2% | 92.5% | 72.4% | 1.1% |
+| **Claude Mythos 5** | Anthropic | 2026-06-09 | Commercial (Limited) | Next-Gen Opus Frontier | 97.2% | 92.5% | 72.4% | 1.1% |
 | **Gemma 4 12B QAT** | Google DeepMind | 2026-06-08 | Open Weights | Lightweight Dense QAT | 85.2% | 52.5% | 32.4% | 2.1% |
 | **Gemma 4 31B QAT** | Google DeepMind | 2026-06-08 | Open Weights | Frontier Dense QAT | 89.6% | 66% | 45.2% | 1.8% |
 | **Nemotron 3 Ultra 550B** | NVIDIA | 2026-06-03 | Commercial | Next-Gen Frontier | 94.8% | 86.7% | 71% | 1.2% |
@@ -20,6 +24,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Claude Opus 4.8** | Anthropic | 2026-05-28 | Commercial | Next-Gen Flagship | 96.2% | 91% | 69.2% | 1% |
 | **Qwen 3.7 Max** | Alibaba Cloud | 2026-05-20 | Commercial | Next-Gen Frontier | 94.6% | 80.4% | 80.4% | 1.4% |
 | **Gemini 3.5 Flash** | Google | 2026-05-19 | Commercial | Next-Gen Balanced | 90.5% | 71.2% | 39% | 1.1% |
+| **Kimi K2.7** | Moonshot AI | 2026-05-18 | Open Weights | Next-Gen Frontier | 93.8% | 88.9% | 68.2% | 1.1% |
 | **DeepSeek-V4-Pro** | DeepSeek | 2026-04-24 | Open Weights | Next-Gen Frontier | 94% | 82.5% | 44.5% | 1.5% |
 | **Qwen 3.6 27B** | Alibaba Cloud | 2026-04-22 | Open Weights | Midrange Dense | 88% | 87.8% | 77.2% | 1.5% |
 | **Kimi K2.6** | Moonshot AI | 2026-04-20 | Open Weights | Next-Gen Frontier | 92.5% | 87.6% | 60.4% | 1.2% |
@@ -27,9 +32,11 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Gemma 4 31B Dense** | Google DeepMind | 2026-04-02 | Open Weights | Frontier Dense | 92.4% | 84.3% | 56.5% | 1.6% |
 | **Gemma 4 12B** | Google DeepMind | 2026-04-02 | Open Weights | Lightweight Dense | 88.7% | 78.8% | 46.5% | 1.9% |
 | **GPT-5.5** | OpenAI | 2026-03-24 | Commercial | Next-Gen Frontier | 95.8% | 89.2% | 74% | 1.1% |
+| **MiniMax M2.7** | MiniMax | 2026-03-18 | Commercial | Frontier MoE | 86.4% | 49.8% | 24.5% | 2.2% |
 | **Qwen 3.5 32B** | Alibaba Cloud | 2026-03-10 | Open Weights | Midrange Dense | 85.8% | 52% | 24.5% | 2.1% |
 | **Qwen 3.5 MoE 20B** | Alibaba Cloud | 2026-03-10 | Open Weights | Lightweight MoE | 84.5% | 48.2% | 20.5% | 2% |
 | **GLM-5 Open** | Zhipu AI | 2026-02-11 | Open Weights | Next-Gen Frontier | 92.4% | 86% | 77.8% | 1.3% |
+| **MiniMax M2.5** | MiniMax | 2026-01-15 | Open Weights | Frontier MoE | 80.2% | 41.5% | 15% | 2.8% |
 | **Claude 4.5 Opus** | Anthropic | 2025-12-18 | Commercial | Frontier Heavyweight | 95.1% | 86.8% | 66.8% | 1.2% |
 | **Mistral Large 3** | Mistral AI | 2025-12-02 | Open Weights | Frontier MoE | 88% | 52% | 58.5% | 2.1% |
 | **Claude 4.5 Sonnet** | Anthropic | 2025-11-20 | Commercial | Frontier Hybrid Reasoning | 93.8% | 81.2% | 64% | 1.4% |
@@ -73,7 +80,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 
 ## Model Families Overzicht
 
-### Alibaba Cloud (8 modellen)
+### Alibaba Cloud (10 modellen)
 - **Qwen 2.5 32B** (2024-09-19) - *Midrange Dense*: Governed under Chinese AI regulations. Implements mandatory filters on sensitive topics. Permissive open weights license (Qwen license).
 - **Qwen 2.5 Coder 32B** (2024-11-12) - *Midrange Coding*: High focus on code correctness. Less prone to standard conversational safety issues due to code specialization, but inherits base Qwen filters.
 - **Qwen 2.5 MoE 14B** (2024-09-19) - *Lightweight MoE*: Released under the highly permissive Apache 2.0 license. Features a highly efficient Mixture-of-Experts architecture with 2.5B active parameters per token.
@@ -82,6 +89,8 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Qwen 3.5 MoE 20B** (2026-03-10) - *Lightweight MoE*: Released under the Apache 2.0 license. Features a highly optimized MoE architecture with 4.5B active parameters. Subject to local Chinese regulatory alignment but highly functional for general utility.
 - **Qwen 3.6 27B** (2026-04-22) - *Midrange Dense*: Highly optimized dense open weights model. Subject to Chinese regulatory alignment. MIT-licensed. Built for private autonomous agency.
 - **Qwen 3.7 Max** (2026-05-20) - *Next-Gen Frontier*: Alibaba's proprietary flagship. Highly optimized for agent-centric workloads and long-horizon planning. Subject to China's generative AI security checks.
+- **Qwen 3.8 32B** (2026-06-10) - *Midrange Dense*: MIT-licensed open weights model. Built for maximum efficiency within 32GB RAM local environments (Q4_K_M/QAT).
+- **Qwen 4 Preview** (2026-07-01) - *Next-Gen Frontier*: Alibaba's next-generation flagship commercial engine. Ultra-fast hybrid reasoning MoE architecture with advanced agentic safeguards.
 
 ### Anthropic (9 modellen)
 - **Claude 3 Opus** (2024-03-04) - *Frontier Heavyweight*: Trained using Constitutional AI. High safety profile and conversational helpfulness.
@@ -91,7 +100,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Claude 4.5 Sonnet** (2025-11-20) - *Frontier Hybrid Reasoning*: Uses constitutional reasoning vectors to verify output validity before generation completes.
 - **Claude Fable 5** (2026-06-09) - *Next-Gen Frontier*: Built using constitutional Fable-alignment. High compliance with policy instructions, making it the standard for enterprise deployments.
 - **Claude Haiku 4.5** (2025-10-15) - *Fast Agentic*: Optimized for speed and low cost. First Haiku model supporting "Computer Use" API actions, meaning extensive safety evaluations were done on action boundary escapes.
-- **Claude Mythos 5** (2026-06-09) - *Next-Gen Frontier*: Offered in limited preview with relaxed constraints. Designed for raw research and complex logical exploration without standard conversational filters.
+- **Claude Mythos 5** (2026-06-09) - *Next-Gen Opus Frontier*: Anthropic's flagship Opus-tier frontier research model (Project Glasswing). Offered in limited preview with relaxed conversational refusals for advanced cybersecurity, complex code auditing, and quantitative logic.
 - **Claude Opus 4.8** (2026-05-28) - *Next-Gen Flagship*: State-of-the-art ethical alignment using refined Constitutional AI. Demonstrates strong safety adherence and a low rate of safety bypasses.
 
 ### DeepSeek (3 modellen)
@@ -125,7 +134,9 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **MAI-Code-1-Flash** (2026-06-02) - *Fast Agentic*: Specialized fast-inference model tuned for coding assistance and automated agent loops. Heavily integrated with GitHub Copilot API boundaries.
 - **MAI-Thinking-1** (2026-06-02) - *Frontier Reasoning*: Microsoft's flagship reasoning engine. Employs a reinforcement learning chain-of-thought strategy. Developed under Microsoft's Responsible AI guidelines.
 
-### MiniMax (1 modellen)
+### MiniMax (3 modellen)
+- **MiniMax M2.5** (2026-01-15) - *Frontier MoE*: Released under open weights, allowing local inference. Subject to domestic Chinese generative AI laws (CAC security assessments).
+- **MiniMax M2.7** (2026-03-18) - *Frontier MoE*: Commercial API offering. Subject to Chinese security reviews and toxic content filtering blocklists.
 - **MiniMax M3** (2026-06-01) - *Frontier Multimodal*: Governed under Chinese AI security regulations. Released as open weights, allowing local deployment via platforms like NVIDIA Build and Unsloth Studio.
 
 ### Mistral AI (4 modellen)
@@ -137,10 +148,12 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 ### Mistral AI / NVIDIA (1 modellen)
 - **Mistral NeMo 12B** (2024-07-18) - *Lightweight Dense*: Released under the Apache 2.0 license. Built in collaboration with NVIDIA, featuring an advanced tokenizer (Tekken) with high multilingual efficiency.
 
-### Moonshot AI (3 modellen)
+### Moonshot AI (5 modellen)
 - **Kimi K1.5** (2025-01-20) - *Frontier Reasoning*: Governed under Chinese AI regulations (CAC regulations). Implements safety checks on sensitive topics. Focuses on helpfulness and honesty.
 - **Kimi K2** (2025-07-11) - *Frontier MoE*: Released under Moonshot Modified MIT License. Allows free commercial use under specific parameters. Aligned via RLHF.
 - **Kimi K2.6** (2026-04-20) - *Next-Gen Frontier*: Released under Moonshot Modified MIT License. Employs "Agent Swarm" technology. Tested extensively for agent safety and sandboxing boundary safety.
+- **Kimi K2.7** (2026-05-18) - *Next-Gen Frontier*: Released under Moonshot Modified MIT License. Expanded context length (4M tokens) with linear memory complexity and native agentic tool verification.
+- **Kimi K3** (2026-07-05) - *Frontier Multimodal Reasoning*: Flagship open weights model. Implements "Infinite-Context Swarm MoE" architecture (8M multimodal context) with verifiable tool execution sandboxes.
 
 ### NVIDIA (2 modellen)
 - **Llama 3.1 Nemotron 70B** (2024-10-15) - *Midrange Dense*: Released under the Llama 3 Community License. Fine-tuned with NVIDIA's Nemotron-Reward models to maximize helpfulness and reduce bias.
@@ -153,12 +166,13 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **GPT-OSS-20B** (2025-08-05) - *Lightweight MoE*: OpenAI's first open-weight model family. Released under Apache 2.0. Base weights are aligned, but lack the runtime API guardrails of OpenAI's closed endpoints.
 - **OpenAI o1** (2024-09-12) - *Frontier Reasoning*: Tested under OpenAI's Preparedness Framework. Shows increased jailbreak resistance due to test-time reasoning aligning safety rules before answering.
 
-### Zhipu AI (5 modellen)
+### Zhipu AI (6 modellen)
 - **GLM-4 Air** (2024-08-29) - *Fast Multimodal*: Governed under Chinese AI regulations. High bilingual capability. Employs security checks and active keyword/semantic blocklists for regulatory alignment.
 - **GLM-4 Plus** (2024-08-29) - *Frontier Multimodal*: Flagship API offering. Subject to Chinese generative AI security reviews. Safety alignment includes strict toxic language filtering and sensitive topic constraints.
 - **GLM-4.5 Open** (2025-07-28) - *Frontier MoE*: Released under the open weights MIT license. Aligned using Tsinghua university safety datasets for helpfulness and harmlessness in English/Chinese.
 - **GLM-5 Open** (2026-02-11) - *Next-Gen Frontier*: MIT licensed open weights. Developed and trained entirely on domestic Huawei Ascend chips using MindSpore. Highly aligned for safe autonomous execution.
 - **GLM-5.1 Open** (2026-04-07) - *Next-Gen Frontier*: MIT licensed open weights. Highly optimized for complex agent-based workflows. Governed under Z.ai safety guardrails.
+- **GLM-5.2 Open** (2026-06-15) - *Next-Gen Frontier*: Flagship MIT-licensed open weights MoE trained on Huawei Ascend 920 hardware clusters. Enhanced sandboxed safety and zero-shot tool safety.
 
 ### Zyphra (1 modellen)
 - **Zamba2-VL 7B** (2026-06-12) - *Midrange Multimodal*: Released under a permissive open-weights license. A hybrid VLM model optimized for high efficiency and low-latency local execution on consumer hardware.

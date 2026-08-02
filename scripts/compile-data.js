@@ -40,7 +40,8 @@ function parseYAML(yamlString) {
         id: trimmed.substring(5).trim(),
         benchmarks: {},
         best_applications: [],
-        links: {}
+        links: {},
+        citations: []
       };
       result.models.push(currentModel);
       currentKey = null;
@@ -54,7 +55,7 @@ function parseYAML(yamlString) {
         if (colonIndex !== -1) {
           const key = trimmed.substring(0, colonIndex).trim();
           const val = trimmed.substring(colonIndex + 1).trim();
-          if (key === 'benchmarks' || key === 'best_applications' || key === 'links') {
+          if (key === 'benchmarks' || key === 'best_applications' || key === 'links' || key === 'citations') {
             currentKey = key;
           } else {
             // Check if value is number or boolean or string
@@ -79,7 +80,31 @@ function parseYAML(yamlString) {
           const v = trimmed.substring(colonIndex + 1).trim().replace(/^['"]|['"]$/g, '');
           currentModel.links[k] = v;
         }
-      } else if (indent === 6 && trimmed.startsWith('-')) {
+      } else if (indent === 6 && currentKey === 'citations' && trimmed.startsWith('-')) {
+        const content = trimmed.substring(1).trim();
+        const colonIndex = content.indexOf(':');
+        if (colonIndex !== -1) {
+          const k = content.substring(0, colonIndex).trim();
+          const v = content.substring(colonIndex + 1).trim().replace(/^['"]|['"]$/g, '');
+          const newCitation = {};
+          newCitation[k] = v;
+          currentModel.citations.push(newCitation);
+        }
+      } else if (indent === 8 && currentKey === 'citations') {
+        const colonIndex = trimmed.indexOf(':');
+        if (colonIndex !== -1) {
+          const k = trimmed.substring(0, colonIndex).trim();
+          const v = trimmed.substring(colonIndex + 1).trim().replace(/^['"]|['"]$/g, '');
+          const lastCitation = currentModel.citations[currentModel.citations.length - 1];
+          if (lastCitation) {
+            if (k === 'value' && !isNaN(v) && v !== '') {
+              lastCitation[k] = Number(v);
+            } else {
+              lastCitation[k] = v;
+            }
+          }
+        }
+      } else if (indent === 6 && currentKey === 'best_applications' && trimmed.startsWith('-')) {
         // List item in best_applications
         const val = trimmed.substring(1).trim().replace(/^['"]|['"]$/g, '');
         currentModel.best_applications.push(val);
@@ -112,6 +137,7 @@ function run() {
   let ethicalAnalysis = '';
   let coCreationTips = '';
   let privateModelsGuide = '';
+  let beyondBenchmarkingResearch = '';
 
   for (const file of files) {
     const filePath = path.join(DATA_DIR, file);
@@ -127,6 +153,10 @@ function run() {
       const { body } = parseMarkdownFile(filePath);
       privateModelsGuide = body;
       console.log(`Processed private models guide file: ${file}`);
+    } else if (file === 'beyond_benchmarking_research.md') {
+      const { body } = parseMarkdownFile(filePath);
+      beyondBenchmarkingResearch = body;
+      console.log(`Processed research file: ${file}`);
     } else if (file.endsWith('.md')) {
       const { frontmatter, body } = parseMarkdownFile(filePath);
       if (frontmatter.models) {
@@ -184,6 +214,7 @@ function run() {
     ethical_analysis: ethicalAnalysis,
     co_creation_tips: coCreationTips,
     private_models_guide: privateModelsGuide,
+    beyond_benchmarking_research: beyondBenchmarkingResearch,
     compiled_at: new Date().toISOString()
   };
 
