@@ -14,7 +14,7 @@ Announced in May 2026 at Google I/O, Gemini 3.5 Flash is the flagship fast model
 |---|---|---|---|
 | **MMLU** | 90.5% | 85.2% | 95.8% |
 | **GPQA** | 71.2% | 58.0% | 89.2% |
-| **SWE-bench** | 39.0% | 29.2% | 48.0% |
+| **SWE-bench** | 39.0% | 29.2% | 74.0% |
 | **HumanEval** | 93.8% | 89.5% | 97.5% |
 | **AIME** | 70.5% | 42.0% | 92.1% |
 

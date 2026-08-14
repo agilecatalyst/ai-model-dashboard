@@ -271,6 +271,64 @@ models:
     links:
       website: https://www.anthropic.com/news/claude-mythos-5
       system_card: https://www.anthropic.com/claude/system-card-mythos-5
+
+  - id: claude-5-sonnet
+    name: Claude 5 Sonnet
+    developer: Anthropic
+    release_date: 2026-07-15
+    access: Commercial
+    class: Next-Gen Balanced Frontier
+    benchmarks:
+      mmlu: 96.5
+      gpqa: 91.8
+      swe_bench: 72.0
+      human_eval: 98.5
+      aime: 93.5
+    hallucination_rate: 0.8
+    ethics_rating: 9.3
+    iq_lower: 128
+    iq_upper: 154
+    eq_bench: 95
+    arena_elo: 1442
+    ethics_notes: Engineered using 5th-generation Constitutional AI with real-time vector alignment. Provides high security for autonomous coding agents.
+    lying_rate: 0.6
+    lying_notes: Very low sycophancy rate; actively refuses ambiguous context assertions rather than guessing.
+    best_applications:
+      - High-speed software engineering and autonomous agent workflows
+      - Complex visual document parsing and UI synthesis
+      - Enterprise compliance and secure API integrations
+    links:
+      website: https://www.anthropic.com/news/claude-5-sonnet
+      system_card: https://www.anthropic.com/claude/system-card-5-sonnet
+
+  - id: claude-5-opus
+    name: Claude 5 Opus
+    developer: Anthropic
+    release_date: 2026-08-04
+    access: Commercial
+    class: Next-Gen Heavyweight Frontier
+    benchmarks:
+      mmlu: 98.1
+      gpqa: 94.5
+      swe_bench: 74.8
+      human_eval: 99.2
+      aime: 97.2
+    hallucination_rate: 0.6
+    ethics_rating: 9.5
+    iq_lower: 132
+    iq_upper: 158
+    eq_bench: 97
+    arena_elo: 1455
+    ethics_notes: Anthropic's flagship 5th-generation model. Implements deep test-time constitutional self-verification with minimal false refusals.
+    lying_rate: 0.4
+    lying_notes: Demonstrates exceptional factual honesty; achieves industry-best truthfulness scores on multi-hop reasoning.
+    best_applications:
+      - Frontier scientific research and mathematical proof generation
+      - End-to-end multi-repo software architecture and deployment
+      - Strategic corporate risk analysis and regulatory auditing
+    links:
+      website: https://www.anthropic.com/news/claude-5-opus
+      system_card: https://www.anthropic.com/claude/system-card-5-opus
 ---
 
 # Anthropic Claude Series

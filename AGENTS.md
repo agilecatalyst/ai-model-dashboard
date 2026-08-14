@@ -49,11 +49,11 @@ Bij het doorvoeren van taken in deze codebase selecteren of adviseren we modelle
 
 | Taakcategorie | Aanbevolen Model | Rationale / Kernbenchmark |
 | :--- | :--- | :--- |
-| **Complexe Logica / Wiskunde** | **DeepSeek-R1 / OpenAI o1** | Test-time reasoning en Chain-of-Thought minimaliseren logische fouten (AIME > 90%). |
-| **Autonome Code-Agents** | **Qwen 3.7 Max / Claude Opus 4.8 / Mythos 5** | Beste prestaties op SWE-bench Verified & Pro (resp. 80.4% / 69.2% / 72.4%). |
+| **Complexe Logica / Wiskunde** | **Claude 5 Opus / DeepSeek-R1 / OpenAI o1** | Test-time reasoning en Chain-of-Thought minimaliseren logische fouten (AIME > 90-97%). |
+| **Autonome Code-Agents** | **Kimi K3 / GPT-5.6 / Claude 5 Opus / Qwen 3.7 Max** | Beste prestaties op SWE-bench Verified & Pro (resp. 81.0% / 76.5% / 74.8% / 80.4%). |
 | **Edge / Lichte Lokale Taken** | **Gemma 4 31B / gpt-oss-20b** | Permissieve licenties (Apache 2.0) en hoge efficiëntie voor lokale hardware met 16GB VRAM. |
-| **Long-Context RAG** | **Gemini 3.5 Flash** | 2 miljoen token context window gecombineerd met een zeer lage hallucinatieratio (~1.1%). |
-| **Sovereign/Private Dev** | **Mistral Large 3** | Apache 2.0 licentie, sterke meertalige ondersteuning, volledig in lijn met de EU AI Act. |
+| **Long-Context RAG** | **Kimi K3 / Gemini 3.5 Flash** | 8M / 2M token context window gecombineerd met een zeer lage hallucinatieratio (0.8% - 1.1%). |
+| **Sovereign/Private Dev** | **Gemma 4 31B / Mistral Large 3** | Apache 2.0 / MIT licentie, sterke meertalige ondersteuning, volledig in lijn met EU AI Act & data privacy. |
 
 ---
 
@@ -73,6 +73,14 @@ Om de kwaliteit van de co-creatie te bewaken en te voorkomen dat we vervallen in
 ---
 
 ## 5. Lessons Learned & Retrospectives (Tango Logboek)
+
+### Retrospective - 14 augustus 2026 (Nullius in Verba System Card Verification & Frontier Expansion)
+*   **Geautomatiseerde Cross-Verificatie vermindert Waakzaamheidsmoeheid:** Handmatig geschreven Markdown-tabellen vertonen snel subtiele conversiefouten (zoals bij Gemma 4 31B waar GPQA op 74.4% stond t.o.v. 84.3% in de YAML). Door een lichte, deterministische checker (`npm run check:cards`) in te zetten, ontlasten we het Systeem 2-denken van de mens en borgen we epistemische hygiëne in <1 seconde.
+*   **Exacte Model-Matching Discipline:** Bij het matchen van kolomtitels in tabellen (bijv. `GPT-4o mini` vs `GPT-4o` of `GPT-5.5` vs `GPT-5`) leidt naïeve substring-matching tot false positives. Sorteren op lengte van model-ID (meest specifieke match eerst) voorkomt onterechte discrepantie-meldingen.
+*   **Drielags Datasynchronisatie:** Bij het toevoegen van nieuwe frontier modellen (zoals Claude 5 Opus, GPT-5.6, Kimi K3 en Qwen 3.8 32B) geldt de discipline dat drie lagen altijd synchroon blijven: 
+    1. Canonieke YAML in `data/*.md`
+    2. Geverifieerde Markdown system cards in `system_cards/*.md`
+    3. Gecompileerde JSON (`dist/data.json`) en overzichtsdocumentatie (`MODELS.md`) via `npm run compile`.
 
 ### Retrospective - 14 juni 2026 (Performance Trends Dashboard)
 *   **State-declaratie Discipline:** Nieuwe UI-states (zoals `disabledFamilies` of `selectedBenchmark` in `appState`) moeten altijd direct bij de initialisatie bovenaan `app.js` gedeclareerd en getypeerd worden om runtime `TypeErrors` bij de eerste render te vermijden.

@@ -44,6 +44,14 @@ const cardsToDownload = [
   {
     filename: 'gemini-1-5-report.pdf',
     url: 'https://arxiv.org/pdf/2403.05530'
+  },
+  {
+    filename: 'muse-spark-system-card.md',
+    url: 'https://raw.githubusercontent.com/meta-llama/muse/main/SYSTEM_CARD.md'
+  },
+  {
+    filename: 'muse-glimmer-30b-system-card.md',
+    url: 'https://raw.githubusercontent.com/meta-llama/muse/main/GLIMMER_30B_CARD.md'
   }
 ];
 

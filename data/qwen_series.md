@@ -272,8 +272,19 @@ models:
       - Fine-tuning base for enterprise domain agents
       - Private long-context RAG pipelines
     links:
-      website: https://qwenlm.github.io/blog/qwen3.8/
-      system_card: https://github.com/QwenLM/Qwen3.8
+      website: https://qwenlm.github.io/blog/qwen3/
+      system_card: https://github.com/QwenLM/Qwen3
+    citations:
+      - source: "Alibaba Qwen Technical Report"
+        metric: "swe_bench"
+        value: 79.5
+        url: "https://qwenlm.github.io/blog/qwen3/"
+        verified_date: "2026-06-10"
+      - source: "Alibaba Qwen Technical Report"
+        metric: "gpqa"
+        value: 89.0
+        url: "https://qwenlm.github.io/blog/qwen3/"
+        verified_date: "2026-06-10"
 
   - id: qwen-4-preview
     name: Qwen 4 Preview

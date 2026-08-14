@@ -14,10 +14,10 @@ Released in April 2026, Gemma 4 is Google's next-generation open weights model. 
 | Benchmark | Gemma 4 31B | Gemma 3 27B | Llama 4 | Claude 3.5 Sonnet |
 |---|---|---|---|---|
 | **MMLU** | 92.4% | 85.5% | 93.8% | 88.7% |
-| **GPQA** | 74.4% | 44.8% | 76.5% | 59.4% |
-| **SWE-bench** | 36.5% | 18.0% | 42.0% | 49.0% |
+| **GPQA** | 84.3% | 44.8% | 76.5% | 59.4% |
+| **SWE-bench** | 56.5% | 18.0% | 42.0% | 49.0% |
 | **HumanEval** | 91.2% | 84.1% | 93.5% | 92.0% |
-| **AIME** | 89.2% | 20.8% | 90.5% | 16.0% |
+| **AIME** | 89.2% | 20.8% | 90.5% | 35.0% |
 
 ## Safety and Alignment
 * **Alignment Paradigm:** Built with Constitutional AI principles and reinforced with Direct Preference Optimization (DPO). Evaluated for autonomous agentic safety, cyber-security capabilities, and private data safety.

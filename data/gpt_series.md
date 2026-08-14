@@ -155,6 +155,35 @@ models:
     links:
       website: https://openai.com/gpt-5-5
       system_card: https://assets.ctfassets.net/kftzwdyau1h5/gpt-5-5-system-card.pdf
+
+  - id: gpt-5-6
+    name: GPT-5.6
+    developer: OpenAI
+    release_date: 2026-07-28
+    access: Commercial
+    class: Next-Gen Flagship Frontier
+    benchmarks:
+      mmlu: 97.8
+      gpqa: 93.8
+      swe_bench: 76.5
+      human_eval: 98.4
+      aime: 95.5
+    hallucination_rate: 0.7
+    ethics_rating: 8.5
+    iq_lower: 130
+    iq_upper: 156
+    eq_bench: 96
+    arena_elo: 1450
+    ethics_notes: Next-generation agentic flagship model with dynamic test-time compute scaling. Tested under OpenAI's updated Preparedness Framework for high-capability autonomous software operations.
+    lying_rate: 0.6
+    lying_notes: Background verification loops actively prevent over-confident assertions, showing high calibration on complex mathematical and code benchmarks.
+    best_applications:
+      - Complex multi-agent software engineering & autonomous repository management
+      - Advanced quantitative research and financial modeling
+      - Multimodal real-time vision, audio and interactive tool execution
+    links:
+      website: https://openai.com/gpt-5-6
+      system_card: https://assets.ctfassets.net/kftzwdyau1h5/gpt-5-6-system-card.pdf
 ---
 
 # OpenAI GPT Series

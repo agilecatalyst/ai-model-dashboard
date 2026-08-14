@@ -6,6 +6,8 @@
   "scripts": {
     "compile": "node scripts/compile-data.js && python3 scripts/generate-models-md.py",
     "download-cards": "node scripts/download-system-cards.js",
+    "check:cards": "node scripts/check-system-cards.js",
+    "check:online": "node scripts/verify-online-models.js",
     "serve": "npx -y http-server -p 8080 ."
   },
   "dependencies": {},

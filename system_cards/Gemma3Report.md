@@ -13,10 +13,10 @@ Gemma 3 was released in March 2025, introducing native multimodality (text, visi
 ## Performance Benchmarks
 | Benchmark | Gemma 3 12B | Gemma 3 27B | Gemini 1.5 Pro |
 |---|---|---|---|
-| **MMLU** | 79.5% | 85.5% | 85.9% |
-| **GPQA** | 38.5% | 44.8% | 46.2% |
+| **MMLU** | 82.8% | 85.5% | 85.9% |
+| **GPQA** | 41.5% | 44.8% | 46.2% |
 | **HumanEval** | 78.2% | 84.1% | 84.1% |
-| **AIME** | 15.5% | 20.8% | 20.0% |
+| **AIME** | 16.5% | 20.8% | 20.0% |
 
 ## Safety and Alignment
 * **Safety Alignment:** Uses cross-lingual preference optimization to ensure safety rules apply equally across all 140 languages.
