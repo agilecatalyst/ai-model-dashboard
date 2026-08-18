@@ -2,7 +2,7 @@
 
 Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in de database. Het fungeert als een handige referentiekaart voor zowel ontwikkelaars als AI-agents.
 
-**Totaal aantal modellen:** 74
+**Totaal aantal modellen:** 76
 
 ## Model Matrix Tabel
 
@@ -17,6 +17,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Qwen 4 Preview** | Alibaba Cloud | 2026-07-01 | Commercial | Next-Gen Frontier | 95.8% | 91% | 84.2% | 0.9% |
 | **GLM-5.2 Open** | Zhipu AI | 2026-06-15 | Open Weights | Next-Gen Frontier | 94.8% | 89.2% | 85.5% | 0.9% |
 | **Zamba2-VL 7B** | Zyphra | 2026-06-12 | Open Weights | Midrange Multimodal | 78.5% | 38.2% | 15.5% | 2.8% |
+| **Qwen 3.8 27B** | Alibaba Cloud | 2026-06-10 | Open Weights | Midrange Dense | 91.2% | 89.5% | 79.8% | 1.2% |
 | **Qwen 3.8 32B** | Alibaba Cloud | 2026-06-10 | Open Weights | Midrange Dense | 90.5% | 89% | 79.5% | 1.2% |
 | **Claude Fable 5** | Anthropic | 2026-06-09 | Commercial | Next-Gen Frontier | 97.4% | 93% | 71.5% | 0.9% |
 | **Claude Mythos 5** | Anthropic | 2026-06-09 | Commercial (Limited) | Next-Gen Opus Frontier | 97.2% | 92.5% | 72.4% | 1.1% |
@@ -30,6 +31,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 | **Qwen 3.7 Max** | Alibaba Cloud | 2026-05-20 | Commercial | Next-Gen Frontier | 94.6% | 80.4% | 80.4% | 1.4% |
 | **Gemini 3.5 Flash** | Google | 2026-05-19 | Commercial | Next-Gen Balanced | 90.5% | 71.2% | 39% | 1.1% |
 | **Kimi K2.7** | Moonshot AI | 2026-05-18 | Open Weights | Next-Gen Frontier | 93.8% | 88.9% | 68.2% | 1.1% |
+| **Qwen 3.6 30B MoE (A3B)** | Alibaba Cloud | 2026-05-04 | Open Weights | Lightweight MoE | 89.4% | 79.2% | 68.5% | 1.3% |
 | **DeepSeek-V4-Pro** | DeepSeek | 2026-04-24 | Open Weights | Next-Gen Frontier | 94% | 82.5% | 44.5% | 1.5% |
 | **Qwen 3.6 27B** | Alibaba Cloud | 2026-04-22 | Open Weights | Midrange Dense | 88% | 87.8% | 77.2% | 1.5% |
 | **Kimi K2.6** | Moonshot AI | 2026-04-20 | Open Weights | Next-Gen Frontier | 92.5% | 87.6% | 60.4% | 1.2% |
@@ -85,7 +87,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 
 ## Model Families Overzicht
 
-### Alibaba Cloud (10 modellen)
+### Alibaba Cloud (12 modellen)
 - **Qwen 2.5 32B** (2024-09-19) - *Midrange Dense*: Governed under Chinese AI regulations. Implements mandatory filters on sensitive topics. Permissive open weights license (Qwen license).
 - **Qwen 2.5 Coder 32B** (2024-11-12) - *Midrange Coding*: High focus on code correctness. Less prone to standard conversational safety issues due to code specialization, but inherits base Qwen filters.
 - **Qwen 2.5 MoE 14B** (2024-09-19) - *Lightweight MoE*: Released under the highly permissive Apache 2.0 license. Features a highly efficient Mixture-of-Experts architecture with 2.5B active parameters per token.
@@ -93,7 +95,9 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Qwen 3.5 32B** (2026-03-10) - *Midrange Dense*: Governed under Chinese AI regulations. Permissive open weights license (MIT license). Aligned to prevent safety violations while keeping high utility.
 - **Qwen 3.5 MoE 20B** (2026-03-10) - *Lightweight MoE*: Released under the Apache 2.0 license. Features a highly optimized MoE architecture with 4.5B active parameters. Subject to local Chinese regulatory alignment but highly functional for general utility.
 - **Qwen 3.6 27B** (2026-04-22) - *Midrange Dense*: Highly optimized dense open weights model. Subject to Chinese regulatory alignment. MIT-licensed. Built for private autonomous agency.
+- **Qwen 3.6 30B MoE (A3B)** (2026-05-04) - *Lightweight MoE*: Apache 2.0 open-weights MoE model with 30B total parameters and 3B active parameters per token. Highly optimized for high-throughput edge agents.
 - **Qwen 3.7 Max** (2026-05-20) - *Next-Gen Frontier*: Alibaba's proprietary flagship. Highly optimized for agent-centric workloads and long-horizon planning. Subject to China's generative AI security checks.
+- **Qwen 3.8 27B** (2026-06-10) - *Midrange Dense*: MIT-licensed open weights model. Flagship 27B dense architecture, optimized for local developer workstations (24GB-32GB RAM).
 - **Qwen 3.8 32B** (2026-06-10) - *Midrange Dense*: MIT-licensed open weights model. Built for maximum efficiency within 32GB RAM local environments (Q4_K_M/QAT).
 - **Qwen 4 Preview** (2026-07-01) - *Next-Gen Frontier*: Alibaba's next-generation flagship commercial engine. Ultra-fast hybrid reasoning MoE architecture with advanced agentic safeguards.
 

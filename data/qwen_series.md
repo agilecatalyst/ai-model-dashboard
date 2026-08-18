@@ -246,6 +246,70 @@ models:
       website: https://qwenlm.github.io/blog/qwen3.5-moe/
       system_card: https://github.com/QwenLM/Qwen3.5-MoE
 
+  - id: qwen-3-6-30b-moe-a3b
+    name: Qwen 3.6 30B MoE (A3B)
+    developer: Alibaba Cloud
+    release_date: 2026-05-04
+    access: Open Weights
+    class: Lightweight MoE
+    benchmarks:
+      mmlu: 89.4
+      gpqa: 79.2
+      swe_bench: 68.5
+      human_eval: 95.2
+      aime: 81.0
+    hallucination_rate: 1.3
+    ethics_rating: 7.4
+    iq_lower: 110
+    iq_upper: 138
+    eq_bench: 70
+    arena_elo: 1260
+    ethics_notes: Apache 2.0 open-weights MoE model with 30B total parameters and 3B active parameters per token. Highly optimized for high-throughput edge agents.
+    lying_rate: 1.5
+    lying_notes: Low confabulation rate during multi-step tool calls due to active MoE gating verification.
+    best_applications:
+      - High-throughput local multi-agent tool execution (3B active parameters)
+      - Low-latency edge RAG pipelines and code completion
+      - Resource-constrained local server deployments
+    links:
+      website: https://qwenlm.github.io/blog/qwen3/
+      system_card: system_cards/qwen-3-6-30b-moe-a3b-system-card.md
+
+  - id: qwen-3-8-27b
+    name: Qwen 3.8 27B
+    developer: Alibaba Cloud
+    release_date: 2026-06-10
+    access: Open Weights
+    class: Midrange Dense
+    benchmarks:
+      mmlu: 91.2
+      gpqa: 89.5
+      swe_bench: 79.8
+      human_eval: 96.2
+      aime: 86.0
+    hallucination_rate: 1.2
+    ethics_rating: 7.6
+    iq_lower: 115
+    iq_upper: 143
+    eq_bench: 73
+    arena_elo: 1340
+    ethics_notes: MIT-licensed open weights model. Flagship 27B dense architecture, optimized for local developer workstations (24GB-32GB RAM).
+    lying_rate: 1.3
+    lying_notes: Native reasoning verification passes dramatically cut confabulation in coding and tool execution.
+    best_applications:
+      - High-performance local IDE coding assistant (SWE-bench: 79.8%)
+      - Enterprise multi-agent local orchestration
+      - High-precision mathematical and logical synthesis
+    links:
+      website: https://qwenlm.github.io/blog/qwen3/
+      system_card: system_cards/qwen-3-8-27b-system-card.md
+    citations:
+      - source: "Alibaba Qwen Technical Report"
+        metric: "swe_bench"
+        value: 79.8
+        url: "https://qwenlm.github.io/blog/qwen3/"
+        verified_date: "2026-06-10"
+
   - id: qwen-3-8-32b
     name: Qwen 3.8 32B
     developer: Alibaba Cloud
@@ -273,7 +337,7 @@ models:
       - Private long-context RAG pipelines
     links:
       website: https://qwenlm.github.io/blog/qwen3/
-      system_card: https://github.com/QwenLM/Qwen3
+      system_card: system_cards/qwen-3-8-32b-system-card.md
     citations:
       - source: "Alibaba Qwen Technical Report"
         metric: "swe_bench"

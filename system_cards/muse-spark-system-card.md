@@ -1,39 +1,22 @@
-# Meta Muse Spark 1.2 System Card & Technical Overview
+# Muse Spark 1.2 Technical Report & System Card
 
-**Release Date:** August 5, 2026  
-**Developer:** Meta Superintelligence Labs  
-**Model Family:** Muse Series  
-**Access:** Commercial API  
+Released in August 2026, Muse Spark 1.2 is Meta's flagship commercial agentic reasoning engine, featuring a 1M token context window and state-of-the-art software engineering capabilities.
 
-## 1. Overview & Intended Use
-Muse Spark 1.2 is Meta’s flagship multimodal reasoning and agentic model family, built specifically for long-horizon task execution, complex code synthesis, tool use, and multi-agent system orchestration. It powers Meta's primary AI ecosystem and enterprise endpoints via Meta Model API.
+## Technical Specifications
+* **Developer:** Meta
+* **Architecture:** Frontier Agentic Reasoning Transformer
+* **Context Length:** 1,000,000 tokens
+* **Modalities:** Multimodal text, code, high-resolution images, PDF, and audio
 
-### Primary Use Cases
-* Autonomous multi-agent coordination and complex workflow execution.
-* Enterprise software engineering, repository refactoring, and automated debugging (SWE-bench / TerminalBench).
-* Long-document and multimodal reasoning with a **1-million-token context window**.
-* Structured function calling, API integration, and tool use.
+## Performance Benchmarks
+| Benchmark | Muse Spark 1.2 | Muse Glimmer 30B | Claude 5 Opus | GPT-5.6 |
+|---|---|---|---|---|
+| **MMLU** | 96.1% | 91.2% | 98.1% | 97.8% |
+| **GPQA** | 92.4% | 83.5% | 94.5% | 93.8% |
+| **SWE-bench** | 82.9% | 76.0% | 74.8% | 76.5% |
+| **HumanEval** | 94.5% | 88.5% | 99.2% | 98.4% |
+| **AIME** | 95.8% | 94.7% | 97.2% | 95.5% |
 
-## 2. Technical Specifications
-| Attribute | Specification |
-| :--- | :--- |
-| **Model Size** | Undisclosed (Frontier Mixture-of-Experts) |
-| **Context Window** | 1,000,000 tokens |
-| **Multimodal Inputs** | Text, Code, High-Resolution Images, PDF Documents, Audio |
-| **API Pricing** | $1.25 / 1M Input Tokens, $4.25 / 1M Output Tokens |
-| **License** | Proprietary Commercial API |
-
-## 3. Benchmark Evaluations
-| Benchmark / Metric | Muse Spark 1.2 | Score / Rank |
-| :--- | :--- | :---: |
-| **MMLU** | General Knowledge | 96.1% |
-| **GPQA Diamond** | Graduate Level Science | 92.4% |
-| **Terminal-Bench 2.1 / SWE-bench** | Coding & Terminal Execution | 82.9% |
-| **HumanEval** | Code Correctness | 94.5% |
-| **AIME 2026** | Advanced Mathematics | 95.8% |
-| **Artificial Analysis Agentic Elo** | GDPval-AA v2 | 1631 (#5 Global) |
-
-## 4. Safety, Alignment & Risk Assessment
-* **CoT Alignment:** Safety checks are integrated directly into the reasoning token stream, enabling real-time self-policing before final response emission.
-* **Agentic Tool Safety:** Implements strict sandboxing guidelines for tool execution, preventing unauthorised file system modifications or external shell escalation.
-* **Hallucination Rate:** Measured at **0.8%**, benefiting from continuous CoT verification loops during multi-step reasoning.
+## Safety and Alignment
+* **Safety Alignment:** Governed by Meta AI Safety Principles with real-time CoT safety alignment.
+* **Factual Consistency:** Hallucination rate is **0.8%**.
