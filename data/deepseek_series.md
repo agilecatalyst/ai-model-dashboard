@@ -86,6 +86,36 @@ models:
     links:
       website: https://www.deepseek.com
       system_card: https://github.com/deepseek-ai/DeepSeek-V4/blob/main/DeepSeek_V4.pdf
+
+  - id: deepseek-v4-1-flash
+    name: DeepSeek-V4.1-Flash
+    developer: DeepSeek
+    release_date: 2026-09-10
+    access: Open Weights
+    class: Efficient Open MoE
+    benchmarks:
+      gpqa: 90.9
+    arena_elo: 1475
+    ethics_notes: MIT-licensed 552B MoE with only 8B active parameters on input and 16B on output, updated by the 1017 checkpoint on 2026-10-17. Training-data provenance remains undisclosed, as with earlier DeepSeek releases.
+    lying_notes: No comparable hallucination benchmark published at the time of writing.
+    best_applications:
+      - Self-hosted agentic coding under a permissive MIT licence
+      - Very low-cost high-volume inference
+      - Private RAG pipelines with a 1M-token context
+    links:
+      website: https://www.deepseek.com/en/news/deepseek-v4-1-flash
+      system_card: https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash
+    citations:
+      - source: "DeepSeek model card (vendor-reported, instruct, max effort)"
+        metric: "gpqa"
+        value: 90.9
+        url: "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+        verified_date: "2026-10-26"
+      - source: "LMArena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1475
+        url: "https://lmarena.ai/leaderboard/text"
+        verified_date: "2026-10-26"
 ---
 
 # DeepSeek Series

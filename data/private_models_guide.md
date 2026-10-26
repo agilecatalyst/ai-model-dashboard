@@ -289,3 +289,54 @@ Door een eigen On-Premise AI Box met Hermes Agent, OpenClaw, ComfyUI en DuckDB B
 | **Meeting Transcriptie** | Otter.ai / Fireflies.ai (€50 - €150/mnd) | **Lokale Whisper + Gemma 4 / Qwen Summarizer** | **€600 - €1.800 / jaar** |
 | **TOTAAL GESCHATTE BESPARING** | *Versnipperde cloud SaaS abonnementen* | **1 On-Premise AI Box (Eenmalige HW investering)** | **€10.800 - €34.200 / JAAR** |
 
+
+## 🇧🇪 KMO-Praktijk in België / Vlaanderen (status 26 oktober 2026)
+
+Deze sectie is specifiek geschreven voor de Vlaamse kmo. Alle data en bedragen zijn geverifieerd op 26 oktober 2026; controleer ze opnieuw voor je er beleid op bouwt (*Nullius in Verba*).
+
+### 1. EU AI Act: wat geldt er vandaag écht?
+
+De *Digital Omnibus* is geen voorstel meer maar **Verordening (EU) 2026/1744**, in werking sinds 27 juli 2026. Die verordening heeft een aantal deadlines verschoven, dus oudere blogposts kloppen niet meer.
+
+| Verplichting | Datum | Wat betekent dit voor een kmo? |
+| :--- | :--- | :--- |
+| Verboden praktijken | sinds 02-02-2025 | Geldt nu. Uitbreiding voor NCII/CSAM-generatie vanaf 02-12-2026. |
+| AI-geletterdheid (art. 4) | sinds 02-02-2025 | De gewijzigde tekst vraagt maatregelen die de geletterdheid van je medewerkers **ondersteunen**; geen gegarandeerd niveau per persoon. |
+| GPAI-modelaanbieders | sinds 02-08-2025 | Enkel als je zélf een model aanbiedt. Een model van derden gebruiken maakt je geen aanbieder. |
+| Transparantie (art. 50) | vanaf 02-08-2026 | Gebruikers informeren bij directe AI-interactie, synthetische output markeren, deepfakes bekendmaken. Enkel voor art. 50(2)-markering geldt een overgang tot 02-12-2026 voor systemen die vóór 02-08-2026 op de markt waren. |
+| Hoog-risico (bijlage III) | **verschoven naar 02-12-2027** | Niet meer augustus 2026. Kmo's krijgen *vereenvoudigde* technische documentatie, geen vrijstelling. |
+| Hoog-risico (bijlage I, producten) | **verschoven naar 02-08-2028** | Idem. |
+
+Bronnen: [Verordening (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/1744/oj/eng) en de [AI Act-tijdlijn van de Europese Commissie](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai).
+
+### 2. Vlaamse steun: realistisch beeld
+
+* **KMO-portefeuille: voorlopig dicht.** VLAIO meldt dat het budget 2026 op **15 oktober 2026** uitgeput is; de Vlaamse Regering stopt de maatregel vanaf 01-01-2027 of zodra het budget op is. Reken er dus **niet** op voor je AI-opleidingsbudget. ([VLAIO](https://www.vlaio.be/nl/nieuws/budget-kmo-portefeuille-is-uitgeput))
+* **VLAIO onderzoeks- en ontwikkelingsprojecten** blijven wel open: onderzoeksprojecten 25–60% steun (minimum €100.000 toekenning), ontwikkelingsprojecten 25–50% (minimum €25.000). Dit is voor échte O&O, niet voor het aankopen of integreren van een standaardchatbot. ([VLAIO AI-steunoverzicht](https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/maatregelen/artificiele-intelligentie-subsidies))
+* **Flanders AI EDIH** biedt test-before-invest, coaching en opleiding aan verlaagd tarief. Let op: het geregistreerde legacy-project liep tot 30-04-2026 en er is geen ondertekende opvolgerovereenkomst gevonden. Bevestig prijs en capaciteit vóór je dit inboekt. ([Flanders AI EDIH](https://www.flandersai-edih.be))
+
+### 3. GDPR en "soevereiniteit": het verschil tussen locatie en controle
+
+De GDPR legt **geen** algemene EU-lokalisatieplicht op. Wat wel telt:
+
+1. Persoonsgegevens in prompts, outputs én logs vallen onder de GDPR.
+2. Doorgiftes buiten de EER moeten voldoen aan hoofdstuk V (bv. SCC's) — bovenop rechtsgrond, minimalisatie en verwerkersovereenkomst.
+3. "EU-hosted" zegt iets over de **locatie**, niet over wie het bedrijf controleert, wie support-logs kan inkijken of welk recht van toepassing is.
+
+Vraag een leverancier concreet: waar draait de inferentie, waar staan de logs en back-ups, wie zijn de subverwerkers, hoelang wordt bewaard, en wordt er op jouw data getraind? Zelf hosten vermindert externe blootstelling, maar heft je GDPR-plichten niet op. ([EDPB-gids voor kmo's](https://www.edpb.europa.eu/sme/be-compliant/international-data-transfers_en), [brochure Gegevensbeschermingsautoriteit](https://www.dataprotectionauthority.be/publications/information-brochure-on-artificial-intelligence-systems-and-the-gdpr.pdf))
+
+### 4. Modelkeuze per kmo-use case (najaar 2026)
+
+| Use case in de kmo | Aanbevolen model | Waarom (geverifieerd) |
+| :--- | :--- | :--- |
+| Hoog volume: samenvatten, classificeren, mailtriage | **Claude Haiku 5.5** | $0,10/$0,50 per 1M tokens, GPQA Diamond 86,2% (onafhankelijk). Laagste kost per taak van de 5.5-reeks. |
+| Dagelijks ontwikkelwerk en documentgeneratie | **Claude Sonnet 5.5** of **GPT-6.1 Sol** | Beide $2/$10 per 1M tokens en GPQA 92,4% resp. 94,4% (onafhankelijk). Let bij Sonnet op het hoge aantal outputtokens per taak. |
+| Autonoom bugs oplossen in een echte repo | **Grok 4.6** | 95,6% SWE-bench Verified (onafhankelijk, Vals AI) aan $2/$6. Wél 34,3% AA-Omniscience-hallucinaties: blijf verifiëren. |
+| Wetenschappelijke of juridische analyse | **Gemini 4 Argon** | 96,5% GPQA Diamond (onafhankelijk). Introprijs $2/$10 stijgt na 30-11-2026 naar $4/$20. |
+| EU-verwerker gewenst, geen zelf-hosting | **Mistral Large 4** | EU-gevestigde aanbieder, $1,36/$4,18 per 1M tokens. Nog **geen** open gewichten en **geen** licentie gepubliceerd. |
+| Zelf hosten, commercieel veilig | **GLM-5.3 Flash** (MIT) of **DeepSeek-V4.1-Flash** (MIT) | Permissieve licentie, respectievelijk 18B en 8–16B actieve parameters. GLM-5.3 (groot) stapte over op een eigen licentie — lees ze eerst. |
+| Draaien op 16–32 GB RAM op kantoor | **Gemma 4 31B QAT** / **gpt-oss-20b** | Zie de hardwaretabel hierboven; de 2026-frontiermodellen passen niet op kmo-hardware. |
+
+### 5. Waarschuwing bij het lezen van de benchmarkbalken
+
+Voor de modellen van najaar 2026 zijn veel klassieke scores (MMLU, HumanEval, AIME) **niet gepubliceerd**: de labs rapporteren nu op nieuwere suites zoals SWE-bench Pro, DeepSWE en Terminal-bench. Dit dashboard toont daarom bewust **N/A** in plaats van een geschat getal. Een leeg vakje betekent "niet gemeten", niet "slecht".

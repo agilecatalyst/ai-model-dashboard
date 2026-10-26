@@ -232,7 +232,7 @@ function renderTimeline() {
   const halfYears = [
     'H1 2024', 'H2 2024',
     'H1 2025', 'H2 2025',
-    'H1 2026'
+    'H1 2026', 'H2 2026'
   ];
 
   halfYears.forEach(hy => {
@@ -289,6 +289,12 @@ function renderModelsGrid() {
     const gpqa = model.benchmarks.gpqa || 0;
     const swe = model.benchmarks.swe_bench || 0;
 
+    // Not every (recent) model has a published score for every benchmark.
+    // Show 'N/A' instead of a misleading 0%.
+    const mmluTxt = model.benchmarks.mmlu !== undefined ? `${mmlu}%` : 'N/A';
+    const gpqaTxt = model.benchmarks.gpqa !== undefined ? `${gpqa}%` : 'N/A';
+    const sweTxt = model.benchmarks.swe_bench !== undefined ? `${swe}%` : 'N/A';
+
     card.innerHTML = `
       <div>
         <div class="model-card-header">
@@ -305,7 +311,7 @@ function renderModelsGrid() {
           <div class="metric-row">
             <div class="metric-label-container">
               <span class="metric-label">MMLU (General)</span>
-              <span class="metric-val">${mmlu}%</span>
+              <span class="metric-val">${mmluTxt}</span>
             </div>
             <div class="metric-bar-container">
               <div class="metric-bar mmlu-bar" style="width: ${mmlu}%"></div>
@@ -315,7 +321,7 @@ function renderModelsGrid() {
           <div class="metric-row">
             <div class="metric-label-container">
               <span class="metric-label">GPQA (Expert Knowledge)</span>
-              <span class="metric-val">${gpqa}%</span>
+              <span class="metric-val">${gpqaTxt}</span>
             </div>
             <div class="metric-bar-container">
               <div class="metric-bar gpqa-bar" style="width: ${gpqa}%"></div>
@@ -325,7 +331,7 @@ function renderModelsGrid() {
           <div class="metric-row">
             <div class="metric-label-container">
               <span class="metric-label">SWE-bench (Coding)</span>
-              <span class="metric-val">${swe}%</span>
+              <span class="metric-val">${sweTxt}</span>
             </div>
             <div class="metric-bar-container">
               <div class="metric-bar swe-bar" style="width: ${swe}%"></div>
@@ -337,7 +343,7 @@ function renderModelsGrid() {
       <div class="model-card-footer">
         <span class="date-released">${formatDate(model.release_date)}</span>
         <span class="hallucination-badge">
-          <i class="fa-solid fa-triangle-exclamation"></i> Lying Rate: ${model.hallucination_rate}%
+          <i class="fa-solid fa-triangle-exclamation"></i> Lying Rate: ${model.hallucination_rate !== undefined ? `${model.hallucination_rate}%` : 'N/A'}
         </span>
       </div>
     `;
@@ -413,7 +419,8 @@ function openDetailModal(modelId) {
   // Convert markdown to HTML for description
   const descriptionHtml = parseMarkdownBlocks(model.description_markdown);
 
-  // Calculate A-IQ percentages
+  // Calculate A-IQ percentages (only shown when an estimate exists)
+  const hasIqEstimate = model.iq_lower !== undefined && model.iq_upper !== undefined;
   const minScore = 70;
   const maxScore = 160;
   const span = maxScore - minScore;
@@ -493,6 +500,13 @@ function openDetailModal(modelId) {
     ` : ''}
 
     <h2 class="detail-section-title"><i class="fa-solid fa-brain"></i> Cognitive Range (A-IQ)</h2>
+    ${!hasIqEstimate ? `
+      <div class="iq-section-container">
+        <div class="iq-disclaimer">
+          <i class="fa-solid fa-circle-info"></i> No A-IQ range has been estimated for this model yet, so no range is shown instead of a placeholder.
+        </div>
+      </div>
+    ` : `
     <div class="iq-section-container">
       <div class="iq-scale-ticks">
         <span style="left: 0%;">70</span>
@@ -512,10 +526,11 @@ function openDetailModal(modelId) {
         <i class="fa-solid fa-triangle-exclamation"></i> <strong>Disclaimer:</strong> A-IQ is not equivalent to human intelligence or consciousness. It measures out-of-the-box zero-shot reasoning capabilities (calibrated against offline <a href="https://www.mensa.org" target="_blank" class="iq-disclaimer-link">Mensa</a> reasoning items and the <a href="https://arxiv.org/abs/2311.12022" target="_blank" class="iq-disclaimer-link">GPQA</a> benchmark). Targeted advanced prompting and co-creation can achieve <a href="#" class="iq-disclaimer-link" id="iq-disclaimer-trigger">Intelligence Amplification (1+1=3)</a>.
       </div>
     </div>
+    `}
 
     <h2 class="detail-section-title"><i class="fa-solid fa-triangle-exclamation"></i> Factuality & Hallucination ("Lying" Rate)</h2>
     <div class="ethics-meter-container">
-      <div class="ethics-rate-number" style="color: #ff4757;">${model.hallucination_rate}%</div>
+      <div class="ethics-rate-number" style="color: #ff4757;">${model.hallucination_rate !== undefined ? `${model.hallucination_rate}%` : 'N/A'}</div>
       <div class="ethics-p" style="margin: 0;">
         <strong>Hallucination Rate (Vectara HHEM):</strong> ${model.lying_notes || 'N/A'}
       </div>
@@ -523,7 +538,7 @@ function openDetailModal(modelId) {
 
     <h2 class="detail-section-title"><i class="fa-solid fa-scale-balanced"></i> Ethical Evaluation & Alignment</h2>
     <div class="ethics-meter-container">
-      <div class="ethics-rate-number">${model.ethics_rating}/10</div>
+      <div class="ethics-rate-number">${model.ethics_rating !== undefined ? `${model.ethics_rating}/10` : 'N/A'}</div>
       <div class="ethics-p" style="margin: 0;">
         <strong>Ethics & Safety:</strong> ${model.ethics_notes || 'N/A'}
       </div>
@@ -537,10 +552,10 @@ function openDetailModal(modelId) {
             <i class="fa-solid fa-heart-pulse"></i> 
             <a href="https://eqbench.com" target="_blank" class="metric-source-link">EQ-Bench (Emotional IQ) <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.7;"></i></a>
           </span>
-          <span class="behavioral-value">${model.eq_bench}%</span>
+          <span class="behavioral-value">${model.eq_bench !== undefined ? `${model.eq_bench}%` : 'N/A'}</span>
         </div>
         <div class="behavioral-bar-track">
-          <div class="behavioral-bar-fill eq-fill" style="width: ${model.eq_bench}%;"></div>
+          <div class="behavioral-bar-fill eq-fill" style="width: ${model.eq_bench || 0}%;"></div>
         </div>
       </div>
       <div class="behavioral-metric-box">
@@ -550,12 +565,12 @@ function openDetailModal(modelId) {
             <a href="https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard" target="_blank" class="metric-source-link">Chatbot Arena Elo <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem; opacity: 0.7;"></i></a>
           </span>
           <span class="behavioral-value">
-            ${model.arena_elo}
+            ${model.arena_elo !== undefined ? model.arena_elo : 'N/A'}
             ${hasEloCitation ? `<i class="fa-solid fa-circle-check verification-badge" data-metric="arena_elo" title="Bekijk geverifieerde bron" style="font-size: 0.9rem; margin-left: 0.25rem;"></i>` : ''}
           </span>
         </div>
         <div class="behavioral-bar-track">
-          <div class="behavioral-bar-fill elo-fill" style="width: ${Math.max(0, Math.min(100, ((model.arena_elo - 800) / 700) * 100))}%;"></div>
+          <div class="behavioral-bar-fill elo-fill" style="width: ${Math.max(0, Math.min(100, (((model.arena_elo || 800) - 800) / 700) * 100))}%;"></div>
         </div>
       </div>
       <div class="sycophancy-warning-box">
@@ -942,7 +957,7 @@ function renderTrendsChart() {
 
   const yField = appState.selectedBenchmark;
   const minTime = new Date('2024-01-01').getTime();
-  const maxTime = new Date('2026-06-30').getTime();
+  const maxTime = new Date('2026-12-31').getTime();
   const timeRange = maxTime - minTime;
 
   const width = 900;
@@ -983,7 +998,8 @@ function renderTrendsChart() {
     { label: 'H2 2024', labelTime: new Date('2024-10-01').getTime(), lineTime: new Date('2025-01-01').getTime() },
     { label: 'H1 2025', labelTime: new Date('2025-04-01').getTime(), lineTime: new Date('2025-07-01').getTime() },
     { label: 'H2 2025', labelTime: new Date('2025-10-01').getTime(), lineTime: new Date('2026-01-01').getTime() },
-    { label: 'H1 2026', labelTime: new Date('2026-04-01').getTime(), lineTime: null }
+    { label: 'H1 2026', labelTime: new Date('2026-04-01').getTime(), lineTime: new Date('2026-07-01').getTime() },
+    { label: 'H2 2026', labelTime: new Date('2026-10-01').getTime(), lineTime: null }
   ];
 
   divisions.forEach(div => {
@@ -1108,7 +1124,8 @@ function renderTrendsChart() {
       { start: '2024-07-01', end: '2024-12-31', mid: '2024-10-01' },
       { start: '2025-01-01', end: '2025-06-30', mid: '2025-04-01' },
       { start: '2025-07-01', end: '2025-12-31', mid: '2025-10-01' },
-      { start: '2026-01-01', end: '2026-06-30', mid: '2026-04-01' }
+      { start: '2026-01-01', end: '2026-06-30', mid: '2026-04-01' },
+      { start: '2026-07-01', end: '2026-12-31', mid: '2026-10-01' }
     ];
 
     const commPathData = [];
