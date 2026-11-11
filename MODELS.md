@@ -2,12 +2,23 @@
 
 Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in de database. Het fungeert als een handige referentiekaart voor zowel ontwikkelaars als AI-agents.
 
-**Totaal aantal modellen:** 76
+**Totaal aantal modellen:** 87
 
 ## Model Matrix Tabel
 
 | Model | Developer | Release | Access | Class | MMLU | GPQA | SWE-bench | Lying Rate |
 | :--- | :--- | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **Gemini 4 Argon** | Google | 2026-10-13 | Commercial | Next-Gen Flagship Frontier | - | 96.5% | - | - |
+| **Claude Haiku 5.5** | Anthropic | 2026-10-07 | Commercial | Fast Agentic | - | 86.2% | - | - |
+| **Mistral Large 4** | Mistral AI | 2026-10-06 | Commercial | Frontier MoE (API preview) | - | - | - | - |
+| **GPT-6.1 Sol** | OpenAI | 2026-09-29 | Commercial | Next-Gen Value Frontier | - | 94.4% | - | - |
+| **Claude Sonnet 5.5** | Anthropic | 2026-09-28 | Commercial | Next-Gen Balanced Frontier | - | 92.4% | - | - |
+| **Claude Opus 5.5** | Anthropic | 2026-09-22 | Commercial | Next-Gen Heavyweight Frontier | - | 90.2% | - | - |
+| **DeepSeek-V4.1-Flash** | DeepSeek | 2026-09-10 | Open Weights | Efficient Open MoE | - | 90.9% | - | - |
+| **GPT-6 Astra** | OpenAI | 2026-09-03 | Commercial | Next-Gen Flagship Frontier | - | 94.4% | - | - |
+| **GLM-5.3 Flash** | Zhipu AI | 2026-08-26 | Open Weights | Efficient Open MoE | - | 90.9% | - | - |
+| **GLM-5.3** | Zhipu AI | 2026-08-14 | Open Weights | Next-Gen Frontier | - | - | - | - |
+| **Grok 4.6** | xAI | 2026-08-14 | Commercial | Next-Gen Frontier Reasoning | - | 92.8% | 95.6% | - |
 | **Muse Glimmer 30B** | Meta | 2026-08-10 | Open Weights | Midrange Multimodal Agentic | 91.2% | 83.5% | 76% | 1.3% |
 | **Muse Spark 1.2** | Meta | 2026-08-05 | Commercial | Frontier Agentic Reasoning | 96.1% | 92.4% | 82.9% | 0.8% |
 | **Claude 5 Opus** | Anthropic | 2026-08-04 | Commercial | Next-Gen Heavyweight Frontier | 98.1% | 94.5% | 74.8% | 0.6% |
@@ -101,7 +112,7 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Qwen 3.8 32B** (2026-06-10) - *Midrange Dense*: MIT-licensed open weights model. Built for maximum efficiency within 32GB RAM local environments (Q4_K_M/QAT).
 - **Qwen 4 Preview** (2026-07-01) - *Next-Gen Frontier*: Alibaba's next-generation flagship commercial engine. Ultra-fast hybrid reasoning MoE architecture with advanced agentic safeguards.
 
-### Anthropic (11 modellen)
+### Anthropic (14 modellen)
 - **Claude 3 Opus** (2024-03-04) - *Frontier Heavyweight*: Trained using Constitutional AI. High safety profile and conversational helpfulness.
 - **Claude 3.5 Sonnet** (2024-06-20) - *Frontier Balanced*: Developed using Constitutional AI. High safety adherence. Often praised for its professional tone and detailed coding outputs.
 - **Claude 3.7 Sonnet** (2025-02-24) - *Frontier Hybrid Reasoning*: First model with an integrated "extended thinking" mode. The safety alignment runs through the reasoning token path, allowing the model to actively self-police its outputs before they are generated.
@@ -111,19 +122,24 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Claude 5 Sonnet** (2026-07-15) - *Next-Gen Balanced Frontier*: Engineered using 5th-generation Constitutional AI with real-time vector alignment. Provides high security for autonomous coding agents.
 - **Claude Fable 5** (2026-06-09) - *Next-Gen Frontier*: Built using constitutional Fable-alignment. High compliance with policy instructions, making it the standard for enterprise deployments.
 - **Claude Haiku 4.5** (2025-10-15) - *Fast Agentic*: Optimized for speed and low cost. First Haiku model supporting "Computer Use" API actions, meaning extensive safety evaluations were done on action boundary escapes.
+- **Claude Haiku 5.5** (2026-10-07) - *Fast Agentic*: Small, fast Haiku-class model with adjustable effort and a 1M-token context. No comparable HHEM hallucination rate published.
 - **Claude Mythos 5** (2026-06-09) - *Next-Gen Opus Frontier*: Anthropic's flagship Opus-tier frontier research model (Project Glasswing). Offered in limited preview with relaxed conversational refusals for advanced cybersecurity, complex code auditing, and quantitative logic.
 - **Claude Opus 4.8** (2026-05-28) - *Next-Gen Flagship*: State-of-the-art ethical alignment using refined Constitutional AI. Demonstrates strong safety adherence and a low rate of safety bypasses.
+- **Claude Opus 5.5** (2026-09-22) - *Next-Gen Heavyweight Frontier*: Released under Anthropic's Responsible Scaling Policy with an ASL-3 deployment standard. Anthropic has not published a Vectara-style hallucination rate; Artificial Analysis measures 64.6% AA-Omniscience accuracy, which is not directly comparable to the HHEM rates used elsewhere in this dashboard.
+- **Claude Sonnet 5.5** (2026-09-28) - *Next-Gen Balanced Frontier*: Sonnet-class successor to Claude Sonnet 5 with always-on thinking. Covered by the Claude Sonnet 5.5 system card; no independent HHEM hallucination rate published.
 
-### DeepSeek (3 modellen)
+### DeepSeek (4 modellen)
 - **DeepSeek-R1** (2025-01-20) - *Frontier Reasoning*: Open-weights reasoning model using reinforcement learning. First open model to match OpenAI o1 on complex reasoning. Safe on general topics, but censored on specific political topics.
 - **DeepSeek-V3** (2024-12-26) - *Frontier MoE*: Released under an open-weights license with specific commercial and safety guidelines. Governed under Chinese regulations, leading to structural censorship/filters on politically sensitive topics.
 - **DeepSeek-V4-Pro** (2026-04-24) - *Next-Gen Frontier*: Flagship 1.6-trillion parameter MoE model. Deeply cost-disruptive (75% API price cut in May 2026). Open-weights under permissive conditions. Fails to provide details on training data origins.
+- **DeepSeek-V4.1-Flash** (2026-09-10) - *Efficient Open MoE*: MIT-licensed 552B MoE with only 8B active parameters on input and 16B on output, updated by the 1017 checkpoint on 2026-10-17. Training-data provenance remains undisclosed, as with earlier DeepSeek releases.
 
-### Google (4 modellen)
+### Google (5 modellen)
 - **Gemini 1.5 Pro** (2024-05-14) - *Frontier Multimodal*: Managed under Google's Responsible AI Principles. Tested extensively for bias and safety hazards. Features built-in safety filters on Google AI Studio APIs.
 - **Gemini 2.0 Flash** (2024-12-11) - *Fast Multimodal*: Designed for low latency real-time voice and video agents. Underwent significant red-teaming for real-time safety, emotional alignment, and sound-based safety filters.
 - **Gemini 2.5 Flash Lite** (2025-09-18) - *Fast Multimodal*: Highlighted on the Vectara HHEM leaderboard for its low hallucination rate (~3.3% on complex document summarization). Safety checks are optimized for edge workflows.
 - **Gemini 3.5 Flash** (2026-05-19) - *Next-Gen Balanced*: Google I/O 2026 flagship announcement. Integrates advanced MCP (Model Context Protocol) safety guidelines. Red-teamed for autonomous computer control.
+- **Gemini 4 Argon** (2026-10-13) - *Next-Gen Flagship Frontier*: Announced 2026-09-30 and made publicly available 2026-10-13 under Google DeepMind's Frontier Safety Framework. The official model card publishes agentic and knowledge-work results rather than classic MMLU/HumanEval figures.
 
 ### Google DeepMind (8 modellen)
 - **Gemma 2 27B** (2024-06-27) - *Lightweight Dense*: Google open model license. Restricts malicious use. Adheres to Google's safety thresholds. Refusal profile can sometimes be overly cautious.
@@ -152,10 +168,11 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **MiniMax M2.7** (2026-03-18) - *Frontier MoE*: Commercial API offering. Subject to Chinese security reviews and toxic content filtering blocklists.
 - **MiniMax M3** (2026-06-01) - *Frontier Multimodal*: Governed under Chinese AI security regulations. Released as open weights, allowing local deployment via platforms like NVIDIA Build and Unsloth Studio.
 
-### Mistral AI (4 modellen)
+### Mistral AI (5 modellen)
 - **Codestral 22B** (2024-05-29) - *Lightweight Coding*: Specialized for coding under Mistral AI Non-Production License. Safety guardrails are centered on software use cases, with limited general dialogue safety filters.
 - **Mistral Large 2** (2024-07-24) - *Midrange Dense*: Released under Mistral Research License (free for non-commercial/research, paid for commercial). Formulated with a focus on European multilingual alignment and strict formatting compliance.
 - **Mistral Large 3** (2025-12-02) - *Frontier MoE*: Released under the highly permissive Apache 2.0 license. Sparse MoE architecture (675B total, 41B active). Highly aligned to European privacy and safety mandates (GDPR, EU AI Act).
+- **Mistral Large 4** (2026-10-06) - *Frontier MoE (API preview)*: EU-domiciled provider, relevant for Belgian and other EU SMEs that need an EU-controlled processor rather than only an EU hosting region. Unlike Mistral Large 3 this is an API preview - as of 2026-10-26 no open weights and no licence have been published, so Apache 2.0 must not be assumed.
 - **Mixtral 8x22B** (2024-04-10) - *Midrange MoE*: Released under the fully permissive Apache 2.0 license. Sparse MoE architecture allows high reasoning-per-token efficiency.
 
 ### Mistral AI / NVIDIA (1 modellen)
@@ -172,25 +189,30 @@ Dit bestand is een automatisch gegenereerd overzicht van alle active modellen in
 - **Llama 3.1 Nemotron 70B** (2024-10-15) - *Midrange Dense*: Released under the Llama 3 Community License. Fine-tuned with NVIDIA's Nemotron-Reward models to maximize helpfulness and reduce bias.
 - **Nemotron 3 Ultra 550B** (2026-06-03) - *Next-Gen Frontier*: Subject to NVIDIA Open Model License (permissive for research and commercial usage, but contains distribution constraints). Fully aligned for enterprise agency.
 
-### OpenAI (6 modellen)
+### OpenAI (8 modellen)
 - **GPT-4o** (2024-05-13) - *Frontier Multimodal*: Employs standard RLHF and centralized safety mechanisms. Faced controversy over voice-actor mimicry (Sky voice) and departures of high-profile safety researchers.
 - **GPT-5** (2025-10-15) - *Next-Gen Frontier*: Deep integration of agentic safety protocols and strict bias filtering. The Preparedness Team implemented active red-teaming for autonomous agency risks.
 - **GPT-5.5** (2026-03-24) - *Next-Gen Frontier*: Evaluated for long-term safety, power-seeking behaviors, and persuasion capacity. Implements advanced RLHF with truthfulness feedback.
 - **GPT-5.6** (2026-07-28) - *Next-Gen Flagship Frontier*: Next-generation agentic flagship model with dynamic test-time compute scaling. Tested under OpenAI's updated Preparedness Framework for high-capability autonomous software operations.
+- **GPT-6 Astra** (2026-09-03) - *Next-Gen Flagship Frontier*: Evaluated under OpenAI's Preparedness Framework; the deployment-safety page carries the full GPT-6 Astra system card. No Vectara-style hallucination rate published.
+- **GPT-6.1 Sol** (2026-09-29) - *Next-Gen Value Frontier*: Shipped with an addendum to the GPT-6 Astra system card rather than a standalone card. No Vectara-style hallucination rate published.
 - **GPT-OSS-20B** (2025-08-05) - *Lightweight MoE*: OpenAI's first open-weight model family. Released under Apache 2.0. Base weights are aligned, but lack the runtime API guardrails of OpenAI's closed endpoints.
 - **OpenAI o1** (2024-09-12) - *Frontier Reasoning*: Tested under OpenAI's Preparedness Framework. Shows increased jailbreak resistance due to test-time reasoning aligning safety rules before answering.
 
-### Zhipu AI (6 modellen)
+### Zhipu AI (8 modellen)
 - **GLM-4 Air** (2024-08-29) - *Fast Multimodal*: Governed under Chinese AI regulations. High bilingual capability. Employs security checks and active keyword/semantic blocklists for regulatory alignment.
 - **GLM-4 Plus** (2024-08-29) - *Frontier Multimodal*: Flagship API offering. Subject to Chinese generative AI security reviews. Safety alignment includes strict toxic language filtering and sensitive topic constraints.
 - **GLM-4.5 Open** (2025-07-28) - *Frontier MoE*: Released under the open weights MIT license. Aligned using Tsinghua university safety datasets for helpfulness and harmlessness in English/Chinese.
 - **GLM-5 Open** (2026-02-11) - *Next-Gen Frontier*: MIT licensed open weights. Developed and trained entirely on domestic Huawei Ascend chips using MindSpore. Highly aligned for safe autonomous execution.
 - **GLM-5.1 Open** (2026-04-07) - *Next-Gen Frontier*: MIT licensed open weights. Highly optimized for complex agent-based workflows. Governed under Z.ai safety guardrails.
 - **GLM-5.2 Open** (2026-06-15) - *Next-Gen Frontier*: Flagship MIT-licensed open weights MoE trained on Huawei Ascend 920 hardware clusters. Enhanced sandboxed safety and zero-shot tool safety.
+- **GLM-5.3** (2026-08-14) - *Next-Gen Frontier*: 743B-parameter flagship published under a custom "GLM-5.3 License" - unlike GLM-5.2 this is not MIT, so SMEs must read the licence before commercial self-hosting. No independent hallucination measurement published.
+- **GLM-5.3 Flash** (2026-08-26) - *Efficient Open MoE*: MIT-licensed 320B MoE with 18B active parameters, which makes it the most permissive high-end open model of this generation for EU SMEs that need self-hosted inference. No independent hallucination measurement published.
 
 ### Zyphra (1 modellen)
 - **Zamba2-VL 7B** (2026-06-12) - *Midrange Multimodal*: Released under a permissive open-weights license. A hybrid VLM model optimized for high efficiency and low-latency local execution on consumer hardware.
 
-### xAI (2 modellen)
+### xAI (3 modellen)
+- **Grok 4.6** (2026-08-14) - *Next-Gen Frontier Reasoning*: Shipped with an official xAI model card. Artificial Analysis measures a 34.3% AA-Omniscience hallucination rate, which uses a different scale from the Vectara HHEM rates listed for older models here and must not be compared directly.
 - **Grok-2** (2024-08-12) - *Frontier Multimodal*: Positioned as a "wry" and less censored assistant. Initially allowed generation of controversial/copyrighted images without safety filters, leading to public debate. Governed under xAI safety cards.
 - **Grok-3** (2025-02-17) - *Frontier Reasoning*: Features a specialized "Think" mode utilizing reinforcement learning. Safety guidelines were hardened compared to Grok-2 to prevent generation of dangerous cyber or biological instructions during thinking processes.

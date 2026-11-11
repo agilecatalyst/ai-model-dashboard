@@ -57,6 +57,42 @@ models:
     links:
       website: https://x.ai/blog/grok-3
       system_card: https://x.ai/grok-3-system-card
+
+  - id: grok-4-6
+    name: Grok 4.6
+    developer: xAI
+    release_date: 2026-08-14
+    access: Commercial
+    class: Next-Gen Frontier Reasoning
+    benchmarks:
+      gpqa: 92.8
+      swe_bench: 95.6
+    arena_elo: 1454
+    ethics_notes: Shipped with an official xAI model card. Artificial Analysis measures a 34.3% AA-Omniscience hallucination rate, which uses a different scale from the Vectara HHEM rates listed for older models here and must not be compared directly.
+    lying_notes: AA-Omniscience indicates a substantial share of confidently wrong answers on questions outside its knowledge; verification remains necessary for factual claims.
+    best_applications:
+      - Autonomous bug fixing on real repositories (95.6% SWE-bench Verified, independently measured)
+      - Code generation (88.2% LiveCodeBench, vendor-reported)
+      - Cost-efficient reasoning at $2/$6 per 1M tokens
+    links:
+      website: https://x.ai/news/grok-4-6
+      system_card: https://x.ai/grok-4-6-system-card
+    citations:
+      - source: "Vals AI SWE-bench Verified leaderboard (independent)"
+        metric: "swe_bench"
+        value: 95.6
+        url: "https://www.vals.ai/benchmarks/swebench"
+        verified_date: "2026-10-26"
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 92.8
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1454
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
 ---
 
 # xAI Grok Series

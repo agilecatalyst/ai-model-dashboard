@@ -329,6 +329,90 @@ models:
     links:
       website: https://www.anthropic.com/news/claude-5-opus
       system_card: https://www.anthropic.com/claude/system-card-5-opus
+
+  - id: claude-opus-5-5
+    name: Claude Opus 5.5
+    developer: Anthropic
+    release_date: 2026-09-22
+    access: Commercial
+    class: Next-Gen Heavyweight Frontier
+    benchmarks:
+      gpqa: 90.2
+    arena_elo: 1508
+    ethics_notes: Released under Anthropic's Responsible Scaling Policy with an ASL-3 deployment standard. Anthropic has not published a Vectara-style hallucination rate; Artificial Analysis measures 64.6% AA-Omniscience accuracy, which is not directly comparable to the HHEM rates used elsewhere in this dashboard.
+    lying_notes: No comparable HHEM hallucination measurement published at the time of writing. Independent AA-Omniscience results indicate strong but not perfect abstention behaviour on unanswerable questions.
+    best_applications:
+      - Long-horizon agentic coding on real repositories (89.9% SWE-bench Pro, vendor-reported)
+      - Computer use and desktop automation (81.8% OSWorld, vendor-reported)
+      - High-stakes knowledge work and regulatory analysis
+    links:
+      website: https://www.anthropic.com/news/claude-opus-5-5
+      system_card: https://www.anthropic.com/news/claude-opus-5-5
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 90.2
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1508
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
+
+  - id: claude-sonnet-5-5
+    name: Claude Sonnet 5.5
+    developer: Anthropic
+    release_date: 2026-09-28
+    access: Commercial
+    class: Next-Gen Balanced Frontier
+    benchmarks:
+      gpqa: 92.4
+    arena_elo: 1475
+    ethics_notes: Sonnet-class successor to Claude Sonnet 5 with always-on thinking. Covered by the Claude Sonnet 5.5 system card; no independent HHEM hallucination rate published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - Everyday feature building and bug fixing at $2/$10 per 1M tokens
+      - Document, slide and spreadsheet generation
+      - Responsive agentic loops at lower effort settings
+    links:
+      website: https://www.anthropic.com/news/claude-sonnet-5-5
+      system_card: https://www.anthropic.com/claude-sonnet-5-5-system-card
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 92.4
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1475
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
+
+  - id: claude-haiku-5-5
+    name: Claude Haiku 5.5
+    developer: Anthropic
+    release_date: 2026-10-07
+    access: Commercial
+    class: Fast Agentic
+    benchmarks:
+      gpqa: 86.2
+    ethics_notes: Small, fast Haiku-class model with adjustable effort and a 1M-token context. No comparable HHEM hallucination rate published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - High-volume summarisation and classification at $0.10/$0.50 per 1M tokens
+      - Sub-agents and browser/computer use in agent swarms
+      - Latency-sensitive SME workflows where cost per task dominates
+    links:
+      website: https://www.anthropic.com/news/claude-haiku-5-5
+      system_card: https://www.anthropic.com/document/claude-haiku-5-5-system-card
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 86.2
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
 ---
 
 # Anthropic Claude Series

@@ -87,6 +87,29 @@ models:
       website: https://mistral.ai/news/mistral-large-3/
       system_card: https://mistral.ai/large-3-system-card
 
+  - id: mistral-large-4
+    name: Mistral Large 4
+    developer: Mistral AI
+    release_date: 2026-10-06
+    access: Commercial
+    class: Frontier MoE (API preview)
+    arena_elo: 1432
+    ethics_notes: EU-domiciled provider, relevant for Belgian and other EU SMEs that need an EU-controlled processor rather than only an EU hosting region. Unlike Mistral Large 3 this is an API preview - as of 2026-10-26 no open weights and no licence have been published, so Apache 2.0 must not be assumed.
+    lying_notes: No hallucination measurement published at the time of writing.
+    best_applications:
+      - EU-controlled API inference for GDPR-sensitive SME workloads
+      - Long-context document processing (1,048,576 tokens)
+      - Cost-efficient multilingual generation (Dutch, French, German)
+    links:
+      website: https://mistral.ai/news/mistral-large-4
+      system_card: https://docs.mistral.ai/models/mistral-large-4-0
+    citations:
+      - source: "LMArena Text leaderboard (independent, preview listing)"
+        metric: "arena_elo"
+        value: 1432
+        url: "https://lmarena.ai/leaderboard/text"
+        verified_date: "2026-10-26"
+
   - id: mixtral-8x22b
     name: Mixtral 8x22B
     developer: Mistral AI

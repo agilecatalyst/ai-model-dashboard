@@ -184,6 +184,64 @@ models:
         value: 85.5
         url: "https://artificialanalysis.ai/models/glm-5-2"
         verified_date: "2026-06-15"
+
+  - id: glm-5-3-open
+    name: GLM-5.3
+    developer: Zhipu AI
+    release_date: 2026-08-14
+    access: Open Weights
+    class: Next-Gen Frontier
+    arena_elo: 1479
+    ethics_notes: 743B-parameter flagship published under a custom "GLM-5.3 License" - unlike GLM-5.2 this is not MIT, so SMEs must read the licence before commercial self-hosting. No independent hallucination measurement published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - Self-hosted coding agents (84.3% SWE-bench Pro V2 with mini-swe-agent, independently measured by Scale AI)
+      - Sovereign on-premise deployments with a 1M-token context
+      - Hardware-independent inference outside the US cloud stack
+    links:
+      website: https://z.ai/blog/glm-5.3
+      system_card: https://github.com/zai-org/GLM-5.3
+    citations:
+      - source: "Scale AI SWE-bench Pro V2 leaderboard (independent)"
+        metric: "swe_bench_pro_v2"
+        value: 84.3
+        url: "https://labs.scale.com/leaderboard/swe_bench_pro_public_v2"
+        verified_date: "2026-10-26"
+      - source: "LMArena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1479
+        url: "https://lmarena.ai/leaderboard/text"
+        verified_date: "2026-10-26"
+
+  - id: glm-5-3-flash
+    name: GLM-5.3 Flash
+    developer: Zhipu AI
+    release_date: 2026-08-26
+    access: Open Weights
+    class: Efficient Open MoE
+    benchmarks:
+      gpqa: 90.9
+    arena_elo: 1474
+    ethics_notes: MIT-licensed 320B MoE with 18B active parameters, which makes it the most permissive high-end open model of this generation for EU SMEs that need self-hosted inference. No independent hallucination measurement published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - MIT-licensed self-hosted inference for GDPR-sensitive workloads
+      - Cost-efficient agentic coding at 18B active parameters
+      - Long-context document processing (1M tokens)
+    links:
+      website: https://huggingface.co/zai-org/GLM-5.3-Flash
+      system_card: https://github.com/zai-org/GLM-5.3-Flash
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 90.9
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "LMArena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1474
+        url: "https://lmarena.ai/leaderboard/text"
+        verified_date: "2026-10-26"
 ---
 
 # Zhipu AI GLM Series (z.ai)

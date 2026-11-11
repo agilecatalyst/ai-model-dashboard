@@ -184,6 +184,66 @@ models:
     links:
       website: https://openai.com/gpt-5-6
       system_card: https://assets.ctfassets.net/kftzwdyau1h5/gpt-5-6-system-card.pdf
+
+  - id: gpt-6-astra
+    name: GPT-6 Astra
+    developer: OpenAI
+    release_date: 2026-09-03
+    access: Commercial
+    class: Next-Gen Flagship Frontier
+    benchmarks:
+      gpqa: 94.4
+    arena_elo: 1477
+    ethics_notes: Evaluated under OpenAI's Preparedness Framework; the deployment-safety page carries the full GPT-6 Astra system card. No Vectara-style hallucination rate published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - Frontier software engineering (65.5% FrontierSWE v2, vendor-reported)
+      - Deep web research and browsing agents (91.5% BrowseComp, vendor-reported)
+      - Long-context analysis over 1.05M tokens
+    links:
+      website: https://openai.com/index/gpt-6-astra
+      system_card: https://deploymentsafety.openai.com/gpt-6-astra
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 94.4
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1477
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
+
+  - id: gpt-6-1-sol
+    name: GPT-6.1 Sol
+    developer: OpenAI
+    release_date: 2026-09-29
+    access: Commercial
+    class: Next-Gen Value Frontier
+    benchmarks:
+      gpqa: 94.4
+    arena_elo: 1484
+    ethics_notes: Shipped with an addendum to the GPT-6 Astra system card rather than a standalone card. No Vectara-style hallucination rate published.
+    lying_notes: Not independently measured on a comparable hallucination benchmark at the time of writing.
+    best_applications:
+      - Near-frontier quality at $2/$10 per 1M tokens for cost-sensitive SME workloads
+      - High-throughput agentic coding loops
+      - Long-context retrieval over 1.05M tokens
+    links:
+      website: https://openai.com/index/introducing-gpt-6-1-sol
+      system_card: https://deploymentsafety.openai.com/gpt-6-1-sol
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent, Pareto routing)"
+        metric: "gpqa"
+        value: 94.4
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent)"
+        metric: "arena_elo"
+        value: 1484
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
 ---
 
 # OpenAI GPT Series

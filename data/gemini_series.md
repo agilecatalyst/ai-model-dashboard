@@ -115,6 +115,36 @@ models:
     links:
       website: https://deepmind.google/technologies/gemini-3-5/
       system_card: https://deepmind.google/technologies/gemini-3-5/
+
+  - id: gemini-4-argon
+    name: Gemini 4 Argon
+    developer: Google
+    release_date: 2026-10-13
+    access: Commercial
+    class: Next-Gen Flagship Frontier
+    benchmarks:
+      gpqa: 96.5
+    arena_elo: 1524
+    ethics_notes: Announced 2026-09-30 and made publicly available 2026-10-13 under Google DeepMind's Frontier Safety Framework. The official model card publishes agentic and knowledge-work results rather than classic MMLU/HumanEval figures.
+    lying_notes: Artificial Analysis reports the lowest measured AA-Omniscience hallucination behaviour among frontier models, but on a scale that is not comparable to the Vectara HHEM rates used elsewhere in this dashboard.
+    best_applications:
+      - Agentic coding on long-horizon repositories (77.9% DeepSWE v1.1, vendor-reported)
+      - Legal and finance agents (19.6% Harvey Legal Agent, 65.4% Vals Finance Agent v2, vendor-reported)
+      - Very long-context retrieval (84.2% GraphWalks 256K-1M, vendor-reported)
+    links:
+      website: https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon
+      system_card: https://deepmind.google/models/model-cards/gemini-4-argon
+    citations:
+      - source: "OpenRouter GPQA Diamond leaderboard (independent)"
+        metric: "gpqa"
+        value: 96.5
+        url: "https://openrouter.ai/benchmarks/gpqa-diamond"
+        verified_date: "2026-10-26"
+      - source: "Arena Text leaderboard (independent, preliminary)"
+        metric: "arena_elo"
+        value: 1524
+        url: "https://arena.ai/leaderboard/chat/text"
+        verified_date: "2026-10-26"
 ---
 
 # Google Gemini Series
