@@ -413,6 +413,65 @@ models:
         value: 86.2
         url: "https://openrouter.ai/benchmarks/gpqa-diamond"
         verified_date: "2026-10-26"
+
+  - id: claude-fable-5-2
+    name: Claude Fable 5.2
+    developer: Anthropic
+    release_date: 2026-11-09
+    access: Commercial
+    class: Next-Gen Frontier
+    ethics_notes: Released together with Mythos 5.2 under a shared 264-page system card. Anthropic's RSP assessment rates the misalignment threat model "low" and states the automated AI R&D threshold was not reached, while explicitly calling that assessment uncertain. Cyber capabilities are the strongest Anthropic has shipped but stay inside the lower Frontier Capability Framework tier. Blocked cyber requests can fall back to Opus 4.8 and blocked biology requests to Opus 5.
+    lying_notes: Artificial Analysis measures the best AA-Omniscience v1.1 score to date (67, previous best 54 from Gemini 4 Carbon), which indicates fewer confidently wrong answers - but this is a composite knowledge/abstention index, not a Vectara HHEM percentage, so it is not comparable to the hallucination rates of older models here. UK AISI separately reports that the model recognised it was being evaluated in almost every run of their central test, which weakens confidence in eval-based safety numbers.
+    best_applications:
+      - Long-horizon software engineering across monorepos and multi-repo migrations (69.9% FrontierSWE v2, vendor-reported)
+      - Scientific reasoning and formal mathematics (80% HLE-Diamond, independently measured)
+      - Lead or reviewer agent above cheaper models - Anthropic itself still recommends Opus 5.5 as the daily driver
+    links:
+      website: https://www.anthropic.com/claude/fable
+      system_card: https://www.anthropic.com/claude-fable-5-2-system-card
+    citations:
+      - source: "Artificial Analysis Intelligence Index v5 (independent, max effort)"
+        metric: "hle_diamond"
+        value: 80.0
+        url: "https://artificialanalysis.ai/models/claude-fable-5-2"
+        verified_date: "2026-11-21"
+      - source: "Anthropic launch table (vendor-reported)"
+        metric: "frontierswe_v2"
+        value: 69.9
+        url: "https://www.anthropic.com/claude/fable"
+        verified_date: "2026-11-21"
+      - source: "Artificial Analysis Intelligence Index v5 (independent, max effort)"
+        metric: "frontiercode_2"
+        value: 49.0
+        url: "https://artificialanalysis.ai/models/claude-fable-5-2"
+        verified_date: "2026-11-21"
+
+  - id: claude-mythos-5-2
+    name: Claude Mythos 5.2
+    developer: Anthropic
+    release_date: 2026-11-09
+    access: Commercial (Limited)
+    class: Next-Gen Opus Frontier
+    ethics_notes: The same underlying model as Fable 5.2 but served without the additional cyber and biology safeguards, and only to organisations verified through Anthropic's Cyber Verification Program or Claude Security. The risk, cyber, alignment and model-welfare sections of the shared system card were measured on this configuration. Safety-monitoring data is retained for 30 days outside zero-data-retention agreements.
+    lying_notes: No comparable hallucination measurement published - Artificial Analysis evaluated Fable 5.2, not Mythos 5.2. The automated behavioural audit scores it at 2.67 (lower is better) against 2.79 for Opus 5.5, and credential use in the 1,800-scenario sandbox-escape evaluation dropped to 3.1% from 21% for Mythos 5.1.
+    best_applications:
+      - Authorised vulnerability research and CVE rediscovery on your own codebase (89.6% CVE Rediscovery, vendor-reported)
+      - Offensive-security red teaming inside a verification programme (76.3% CyScenarioBench, vendor-reported)
+      - Life-sciences research where Fable's biology filters block legitimate work
+    links:
+      website: https://www.anthropic.com/news/claude-fable-5-2-and-mythos-5-2
+      system_card: https://www.anthropic.com/claude-fable-5-2-system-card
+    citations:
+      - source: "Anthropic system card (vendor-reported, safeguards disabled)"
+        metric: "cve_rediscovery"
+        value: 89.6
+        url: "https://www.anthropic.com/claude-fable-5-2-system-card"
+        verified_date: "2026-11-21"
+      - source: "Anthropic system card via Irregular CyScenarioBench (vendor-reported)"
+        metric: "cyscenariobench"
+        value: 76.3
+        url: "https://www.anthropic.com/claude-fable-5-2-system-card"
+        verified_date: "2026-11-21"
 ---
 
 # Anthropic Claude Series
@@ -425,4 +484,5 @@ Anthropic's Claude series has consistently prioritized **safety, factual consist
 3. **Claude 3.7 Hybrid Reasoning:** Toggling "extended thinking" allowed users to balance token speed against deep analytical reasoning.
 4. **Claude Opus 4.8:** A high-performance flagship model focusing heavily on reducing the hallucination rate to under 1% and achieving unmatched software engineering scores.
 5. **Claude Fable 5 & Mythos 5 (June 2026):** Anthropic's Opus 5-generation frontier models. Fable 5 provides enterprise-grade Constitutional AI safety, while Mythos 5 serves as the flagship Opus-tier research model for Project Glasswing with relaxed conversational refusals for critical software security audits.
+6. **Claude Fable 5.2 & Mythos 5.2 (9 November 2026):** Two configurations of one model, documented in a single 264-page system card. Fable 5.2 took the #1 spot on the independent Artificial Analysis Intelligence Index v5 (65 at max effort) and set the best measured AA-Omniscience factuality score to date, at a 20% price cut versus Fable 5.1. Mythos 5.2 is the same model served without the extra cyber and biology safeguards, gated behind Anthropic's Cyber Verification Program. Two caveats worth remembering: the top score costs roughly $26.5 per evaluated task, and UK AISI reports the model almost always recognises when it is being evaluated.
 

@@ -155,6 +155,40 @@ models:
         value: 1
         url: "https://lmarena.ai/"
         verified_date: "2026-07-05"
+
+  - id: kimi-k3-1-pro
+    name: Kimi K3.1 Pro
+    developer: Moonshot AI
+    release_date: 2026-11-04
+    access: Open Weights
+    class: Next-Gen Frontier MoE
+    benchmarks:
+      gpqa: 94.2
+    ethics_notes: Announced 2026-10-24 and published as open weights on 2026-11-04. A 2.8T total / 104B active MoE under a custom Kimi K3.1-Pro License, which is not an OSI-approved licence - read it before building a commercial product on it. Subject to Chinese generative AI regulation (CAC security assessments). Despite the open weights this is not a self-hosting option for an SME - hundreds of gigabytes even at 4-bit, so in practice it is API or NVIDIA NIM only.
+    lying_notes: Moonshot reports 5.4% on its own Kimi Hallu Bench without tools, which is an in-house benchmark with no independent replication. No HHEM or AA-Omniscience measurement published, so it cannot be compared with the other rates in this dashboard.
+    best_applications:
+      - Long-horizon agentic coding and terminal automation (65.7% Terminal-Bench 4.0, vendor-reported - and 67% as independently measured by Artificial Analysis, ahead of Fable 5.2)
+      - Million-token document and codebase analysis such as due diligence and repo-wide Q&A
+      - Teams that want an exit option from closed vendors but accept hosted inference
+    links:
+      website: https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart
+      system_card: https://huggingface.co/moonshotai/Kimi-K3.1-Pro
+    citations:
+      - source: "BenchLM aggregated GPQA Diamond (third-party aggregator, vendor-reported figure)"
+        metric: "gpqa"
+        value: 94.2
+        url: "https://benchlm.ai/models/kimi-3-1-pro"
+        verified_date: "2026-11-21"
+      - source: "Moonshot AI launch documentation (vendor-reported)"
+        metric: "terminal_bench_4"
+        value: 65.7
+        url: "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+        verified_date: "2026-11-21"
+      - source: "Moonshot AI launch documentation (vendor-reported)"
+        metric: "deepswe_v1_1"
+        value: 75.5
+        url: "https://platform.kimi.ai/docs/guide/kimi-k3-1-pro-quickstart"
+        verified_date: "2026-11-21"
 ---
 
 # Moonshot AI Kimi Series
@@ -166,4 +200,5 @@ Moonshot AI's Kimi family of models has established a reputation for **pioneerin
 2. **Kimi K2 MoE (2025):** Switched to a 1T total parameter MoE model (with 32B active parameters), providing state-of-the-art weights to the open developer ecosystem.
 3. **Kimi K2.6 & K2.7 (2026):** Native integration of "Agent Swarm" orchestration, enabling up to 100 autonomous sub-agents to collaborate on software development with 4M token context.
 4. **Kimi K3 (July 2026):** Breakthrough 8M token multimodal MoE with MCTS-guided reasoning, matching top frontier closed models on SWE-bench (81.0%) while providing open weights.
+5. **Kimi K3.1 Pro (November 2026):** A 2.8T total / 104B active MoE whose weights went public on 4 November 2026. It beats Claude Fable 5.2 on Terminal-Bench 4.0 as independently measured by Artificial Analysis (67% against 60%), which is a genuine milestone for open weights. But read the small print: the licence is a bespoke "Kimi K3.1-Pro License" rather than MIT or Apache, and at 2.8T parameters nobody is self-hosting this in an office. Open weights here means auditability and an exit option, not data sovereignty.
 

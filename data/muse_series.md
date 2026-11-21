@@ -57,6 +57,38 @@ models:
     links:
       website: https://huggingface.co/meta-llama/Muse-Glimmer-30B
       system_card: system_cards/muse-glimmer-30b-system-card.md
+
+  - id: muse-wonder-full
+    name: Muse Wonder Full
+    developer: Meta
+    release_date: 2026-10-12
+    access: Commercial (Limited)
+    class: Frontier Agentic Reasoning
+    ethics_notes: Despite the Muse family's open-weight reputation this model is closed and subscription-only - it is reachable exclusively through the Muse Code plans (reported at $50 and $200 per month) and has no API, while the sibling Muse Wonder does have an API at $4/$20 per 1M tokens. Meta publishes no parameter count and no training detail. For an SME with data-sovereignty requirements this combination (US vendor, subscription-only, no API contract, no weights) is the weakest governance position of the autumn 2026 releases.
+    lying_notes: Artificial Analysis measures a 23% AA-Omniscience hallucination rate (Muse Wonder 27%) and an AA-Omniscience score of only 30, against 46 for Claude Opus 5.5 - it hallucinates less than its sibling but also knows markedly less. Not comparable to the HHEM rates of older models here.
+    best_applications:
+      - Long-running multi-step agent work inside Meta's own Muse Code terminal agent, its only delivery channel
+      - Coding agent workloads where it matches Claude Code on the AA Coding Agents Index (68)
+      - Multimodal intake of audio, video and PDF for teams already committed to Meta's stack
+    links:
+      website: https://ai.meta.com/muse
+      system_card: https://ai.meta.com/muse/wonder-model-card
+    citations:
+      - source: "Artificial Analysis Intelligence Index v4.3 (independent)"
+        metric: "aa_intelligence_index"
+        value: 56
+        url: "https://artificialanalysis.ai/articles/muse-wonder"
+        verified_date: "2026-11-21"
+      - source: "Artificial Analysis Coding Agents Index, max effort in Muse Code (independent)"
+        metric: "aa_coding_agents_index"
+        value: 68
+        url: "https://artificialanalysis.ai/articles/muse-wonder"
+        verified_date: "2026-11-21"
+      - source: "Meta launch table (vendor-reported)"
+        metric: "swe_marathon"
+        value: 57.5
+        url: "https://ai.meta.com/muse"
+        verified_date: "2026-11-21"
 ---
 
 # Meta Muse Series (Commercial & Open Weights)
@@ -66,3 +98,4 @@ The Meta Muse series represents Meta's next-generation multimodal reasoning and 
 ### Key Milestones:
 1. **Muse Spark 1.2 (August 2026):** Meta's flagship proprietary agentic model featuring a 1M token context window, state-of-the-art SWE-bench / TerminalBench coding capabilities, and deep multi-agent coordination support.
 2. **Muse Glimmer 30B (August 2026):** An open-weight (Apache 2.0) 29.6B multimodal model distilled from Muse Spark, equipped with DFlash speculative decoding for ultra-fast local execution on consumer hardware with 24–32GB VRAM.
+3. **Muse Wonder Full (October 2026):** Meta Superintelligence Labs' frontier agentic model, notable mainly for how it is *not* delivered - subscription-only inside Muse Code, with no API, no weights and no published parameter count. It matches Claude Code on the independent AA Coding Agents Index (68) but scores only 30 on AA-Omniscience, far behind Opus 5.5 (46). For an EU SME it is the weakest governance position of the autumn 2026 releases, which is precisely why it is documented here.

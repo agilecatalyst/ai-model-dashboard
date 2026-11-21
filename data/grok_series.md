@@ -93,6 +93,43 @@ models:
         value: 1454
         url: "https://arena.ai/leaderboard/chat/text"
         verified_date: "2026-10-26"
+
+  - id: grok-4-7
+    name: Grok 4.7
+    developer: xAI
+    release_date: 2026-09-21
+    access: Commercial
+    class: Next-Gen Frontier Reasoning
+    ethics_notes: Shipped with an official model card from xAI, which now brands itself SpaceXAI. xAI claims its strongest jailbreak resistance so far with a 3.3% pass-through rate on HackerBench, but no independent replication of that number was found. Red-team access to offensive capabilities is invite-only for selected cybersecurity partners. The model card states supplementary training on anonymised Cursor workflow data. A widely shared claim of 2.1T parameters comes only from a post on X and is not in the model card, so it is not recorded here.
+    lying_notes: Artificial Analysis measures a 29% AA-Omniscience hallucination rate, down from 34% for Grok 4.6 but still high in absolute terms - treat factual claims as unverified. Note also that AA reproduces Terminal-Bench 4.0 at roughly 26% in a neutral harness against the 37.6% xAI reports, which is a useful reminder that vendor harnesses flatter vendor scores.
+    best_applications:
+      - Long agentic coding sessions in Cursor or Grok Build (71.0% DeepSWE v1.1, vendor-reported)
+      - Long-horizon knowledge work and document production (1657 Elo AA-Briefcase, 1695 Elo GDPval-AA, independently measured)
+      - Cost-sensitive domain agents at $2/$6 per 1M tokens, provided you budget for roughly double the output tokens per task of Grok 4.6
+    links:
+      website: https://docs.x.ai/developers/release-notes
+      system_card: https://x.ai/grok-4-7-model-card
+    citations:
+      - source: "ARC Prize verified results (independent)"
+        metric: "arc_agi_v1"
+        value: 90.2
+        url: "https://arcprize.org/results/xai-grok-4-7"
+        verified_date: "2026-11-21"
+      - source: "ARC Prize verified results (independent)"
+        metric: "arc_agi_v2"
+        value: 61.4
+        url: "https://arcprize.org/results/xai-grok-4-7"
+        verified_date: "2026-11-21"
+      - source: "xAI model card (vendor-reported)"
+        metric: "deepswe_v1_1"
+        value: 71.0
+        url: "https://docs.x.ai/developers/release-notes"
+        verified_date: "2026-11-21"
+      - source: "Artificial Analysis neutral harness (independent)"
+        metric: "terminal_bench_4"
+        value: 26.0
+        url: "https://artificialanalysis.ai/articles/benchmarking-grok-4-7"
+        verified_date: "2026-11-21"
 ---
 
 # xAI Grok Series
@@ -103,3 +140,4 @@ xAI's Grok models are designed to be "fun, witty, and real-time." By integrating
 1. **Grok-2 (2024):** A major step forward that established xAI as a direct competitor to GPT-4. It introduced integrated visual capabilities and was paired with FLUX for image generation.
 2. **Grok-3 (2025):** Launched with a dedicated reasoning mode ("Think") that allowed it to compete with OpenAI's o1. It was trained on xAI's Colossus cluster in Memphis, Tennessee.
 3. **Censorship Philosophy:** xAI positions Grok as a model that will answer questions other models refuse, though it maintains core guardrails against harmful content.
+4. **Grok 4.7 (September 2026):** Released on 21 September 2026 by the company now branding itself SpaceXAI, with verified ARC-AGI results (90.2% on v1, 61.4% on v2) and frontier-level Elo on AA-Briefcase and GDPval. It is also the clearest case study in this dashboard of harness effects: xAI reports 37.6% on Terminal-Bench 4.0, Artificial Analysis reproduces roughly 26% in a neutral harness. Same benchmark, different scaffold, 45% relative gap.

@@ -290,9 +290,11 @@ Door een eigen On-Premise AI Box met Hermes Agent, OpenClaw, ComfyUI en DuckDB B
 | **TOTAAL GESCHATTE BESPARING** | *Versnipperde cloud SaaS abonnementen* | **1 On-Premise AI Box (Eenmalige HW investering)** | **€10.800 - €34.200 / JAAR** |
 
 
-## 🇧🇪 KMO-Praktijk in België / Vlaanderen (status 26 oktober 2026)
+## 🇧🇪 KMO-Praktijk in België / Vlaanderen (status 21 november 2026)
 
-Deze sectie is specifiek geschreven voor de Vlaamse kmo. Alle data en bedragen zijn geverifieerd op 26 oktober 2026; controleer ze opnieuw voor je er beleid op bouwt (*Nullius in Verba*).
+Deze sectie is specifiek geschreven voor de Vlaamse kmo. Alle data en bedragen zijn geverifieerd op 21 november 2026; controleer ze opnieuw voor je er beleid op bouwt (*Nullius in Verba*).
+
+> ⏰ **Wat deze week telt: 2 december 2026.** Draaide je op 2 augustus 2026 al een generatief systeem dat synthetische tekst, beeld, audio of video produceert, dan loopt de overgangstermijn voor **machineleesbare markering** (art. 50(2) AI Act) af op **2 december 2026** - over elf dagen. De Digital Omnibus heeft die termijn op vier maanden gezet, niet op de zes die eerst voorgesteld waren. Dit is géén hoog-risicoverplichting die naar 2027 opschuift; dit geldt voor de doodgewone chatbot op je website en voor AI-gegenereerde marketingbeelden.
 
 ### 1. EU AI Act: wat geldt er vandaag écht?
 
@@ -311,9 +313,10 @@ Bronnen: [Verordening (EU) 2026/1744](https://eur-lex.europa.eu/eli/reg/2026/174
 
 ### 2. Vlaamse steun: realistisch beeld
 
-* **KMO-portefeuille: voorlopig dicht.** VLAIO meldt dat het budget 2026 op **15 oktober 2026** uitgeput is; de Vlaamse Regering stopt de maatregel vanaf 01-01-2027 of zodra het budget op is. Reken er dus **niet** op voor je AI-opleidingsbudget. ([VLAIO](https://www.vlaio.be/nl/nieuws/budget-kmo-portefeuille-is-uitgeput))
+* **KMO-portefeuille: definitief dicht, bevestigd op 21-11-2026.** VLAIO bevestigt dat het budget sinds **15 oktober 2026** volledig opgebruikt is, dat er **sinds die datum geen nieuwe aanvragen** meer mogelijk zijn, en dat de Vlaamse Regering de maatregel stopzet vanaf 01-01-2027. Loopt er nog een aanvraag, dan kan je dat traject afwerken **tot en met 31 december 2027**. Reken hier dus **niet** op voor je AI-opleidingsbudget. Ter herinnering: de adviespijler verdween al op 01-02-2026, en ook cybersecurity-advies zit niet langer in de portefeuille (vervangen door aparte verbetertrajecten). ([VLAIO](https://www.vlaio.be/nl/nieuws/budget-kmo-portefeuille-is-uitgeput))
 * **VLAIO onderzoeks- en ontwikkelingsprojecten** blijven wel open: onderzoeksprojecten 25–60% steun (minimum €100.000 toekenning), ontwikkelingsprojecten 25–50% (minimum €25.000). Dit is voor échte O&O, niet voor het aankopen of integreren van een standaardchatbot. ([VLAIO AI-steunoverzicht](https://www.vlaio.be/nl/subsidies-financiering/subsidiedatabank/maatregelen/artificiele-intelligentie-subsidies))
-* **Flanders AI EDIH** biedt test-before-invest, coaching en opleiding aan verlaagd tarief. Let op: het geregistreerde legacy-project liep tot 30-04-2026 en er is geen ondertekende opvolgerovereenkomst gevonden. Bevestig prijs en capaciteit vóór je dit inboekt. ([Flanders AI EDIH](https://www.flandersai-edih.be))
+* **Flanders AI EDIH: bevestigd operationeel en nu de belangrijkste niet-cash route.** In de officiële EC-catalogus staat de hub actief geregistreerd (Kapeldreef 75, 3001 Leuven) met *test before invest* (eerste advies, individuele coaching, technische haalbaarheidsstudie, juridische workshops en het gesubsidieerde **Start AI**-coachingtraject), *skills & training* en een Digital Maturity Assessment, met fysieke aanwezigheid in elke Vlaamse provincie. Dit corrigeert de vorige status in dit document, waarin de opvolging onzeker stond. Bevestig nog steeds je eigen prijs en capaciteit, en vraag naar de financiering ná de huidige programmaperiode - daarover is niets gepubliceerd. ([EC EDIH-catalogus](https://european-digital-innovation-hubs.ec.europa.eu/edih-catalogue/flanders-ai-edih), [Flanders AI EDIH](https://www.flandersai-edih.be))
+* **Geen opvolger voor de kmo-portefeuille gevonden.** Er is géén gepubliceerde beslissing van de Vlaamse Regering over een vervangende maatregel of een AI-opleidingsbudget 2027. Wie beweert dat die er komt, mag de regeringsbeslissing tonen. Wat wél overblijft: Start AI via de EDIH, de aparte cybersecurity-verbetertrajecten, en de VLAIO-innovatie-instrumenten voor échte O&O. Opleidingskosten blijven hoe dan ook aftrekbaar als beroepskost.
 
 ### 3. GDPR en "soevereiniteit": het verschil tussen locatie en controle
 
@@ -325,17 +328,34 @@ De GDPR legt **geen** algemene EU-lokalisatieplicht op. Wat wel telt:
 
 Vraag een leverancier concreet: waar draait de inferentie, waar staan de logs en back-ups, wie zijn de subverwerkers, hoelang wordt bewaard, en wordt er op jouw data getraind? Zelf hosten vermindert externe blootstelling, maar heft je GDPR-plichten niet op. ([EDPB-gids voor kmo's](https://www.edpb.europa.eu/sme/be-compliant/international-data-transfers_en), [brochure Gegevensbeschermingsautoriteit](https://www.dataprotectionauthority.be/publications/information-brochure-on-artificial-intelligence-systems-and-the-gdpr.pdf))
 
+**Wat de GBA zelf doet (en niet doet).** Op 13 april 2026 publiceerde de Gegevensbeschermingsautoriteit *"The Impact of Artificial Intelligence (AI) on Privacy"*, de eerste uitgave in haar nieuwe reeks **AI & Gegevensbescherming**. Uit haar strategisch plan 2026-2028 volgt iets dat je als kmo concreet raakt: de GBA verwacht **géén** markttoezichthouder onder de AI Act te worden, zet in op **meer bemiddeling en minder volledige onderzoeken**, en kondigt minder rechtstreeks contact aan. Lees dat niet als "minder risico" maar als **meer zelfredzaamheid verwacht**: de verantwoordelijkheid voor je eigen dossier verschuift naar jou. ([GBA-nieuwsbericht 13-04-2026](https://www.dataprotectionauthority.be/citizen/news/2026/04/13/ai-data-protection-series---the-impact-of-artificial-intelligence-on-privacy))
+
+**Praktische noot:** veel rondgaande "Belgische AI-DPIA-checklists" komen van commentaarsites, niet van de GBA. Voor generatieve AI is het meest concrete gepubliceerde document momenteel de *Guidance generative AI and the GDPR* van de **Nederlandse** AP (13-07-2026); een Belgisch equivalent bestaat nog niet.
+
+### 3b. Soevereine opties: vier niveaus, eerlijk gerangschikt
+
+| Niveau | Wat het is | Wat het echt oplost |
+| :--- | :--- | :--- |
+| **EU-hosted US-cloud** | AWS European Sovereign Cloud (live sinds januari 2026, fysiek gescheiden installatie in Duitsland, enkel EU-personeel) | Locatie en personeel. **Niet** de jurisdictiekwestie - het moederbedrijf blijft Amerikaans. |
+| **EU-aanbieder, EU-model** | Mistral AI op eigen hardware (Bruyères-le-Châtel); Outscale + Mistral op SecNumCloud 3.2 | Jurisdictie en verwerker. Nog steeds een derde partij met jouw data. |
+| **EU Cloud Sovereignty Framework** | Geselecteerde consortia, waaronder **Proximus** (met S3NS, Clarence en Mistral AI) - het meest Belgisch-relevante spoor | Aanbestedingsnormen voor residency, operationele controle en extraterritoriale toegang. Verifieer de officiële gunningsbeslissing vóór je erop rekent. |
+| **Eigen hardware** | Open-weight model op je eigen machine (zie **Inkling 2 Mini**, Apache 2.0, ~20 GB, 32 GB RAM) | Alles - er vertrekt niets. Structurele soevereiniteit in plaats van contractuele. Je ruilt wel capaciteit in voor controle. |
+
+Eén nuchtere vaststelling: er bestaat nog **geen EU-native beheerd AI/ML-platform** dat vergelijkbaar is met SageMaker of Azure ML. OVHcloud levert GPU-instances, geen platform. Wie soevereiniteit wil, bouwt vandaag zelf meer dan hij koopt.
+
 ### 4. Modelkeuze per kmo-use case (najaar 2026)
 
 | Use case in de kmo | Aanbevolen model | Waarom (geverifieerd) |
 | :--- | :--- | :--- |
 | Hoog volume: samenvatten, classificeren, mailtriage | **Claude Haiku 5.5** | $0,10/$0,50 per 1M tokens, GPQA Diamond 86,2% (onafhankelijk). Laagste kost per taak van de 5.5-reeks. |
-| Dagelijks ontwikkelwerk en documentgeneratie | **Claude Sonnet 5.5** of **GPT-6.1 Sol** | Beide $2/$10 per 1M tokens en GPQA 92,4% resp. 94,4% (onafhankelijk). Let bij Sonnet op het hoge aantal outputtokens per taak. |
-| Autonoom bugs oplossen in een echte repo | **Grok 4.6** | 95,6% SWE-bench Verified (onafhankelijk, Vals AI) aan $2/$6. Wél 34,3% AA-Omniscience-hallucinaties: blijf verifiëren. |
-| Wetenschappelijke of juridische analyse | **Gemini 4 Argon** | 96,5% GPQA Diamond (onafhankelijk). Introprijs $2/$10 stijgt na 30-11-2026 naar $4/$20. |
+| Dagelijks ontwikkelwerk en documentgeneratie | **Gemini 4 Hydrogen** of **Claude Sonnet 5.5** | Hydrogen is nieuw (12-11-2026) aan een vlakke $1,50/$7,50 over het volledige 1M-venster, AA Intelligence Index 51 (onafhankelijk). Let op de breedsprakigheid: AA zet Hydrogen op plaats 78 van 79 qua outputtokens, dus reken per taak, niet per token. |
+| Autonoom bugs oplossen in een echte repo | **Grok 4.6** | 95,6% SWE-bench Verified (onafhankelijk, Vals AI) aan $2/$6. Wél 34,3% AA-Omniscience-hallucinaties: blijf verifiëren. De nieuwere **Grok 4.7** publiceert géén SWE-bench Verified en verbruikt ruim het dubbele aan tokens per taak. |
+| Wetenschappelijke of juridische analyse | **Gemini 4 Carbon** | Laagste geverifieerde hallucinatieratio van de lichting (11% AA-Omniscience bij high, 4,2% bij medium) en rang 2 van 29 op Vals Index v2.2 (onafhankelijk). Introprijs $2/$10 stijgt op 01-12-2026 naar $4/$20. |
+| Allermoeilijkste redeneertaken, kost ondergeschikt | **Claude Fable 5.2** | Nummer 1 op de AA Intelligence Index v5 (65, onafhankelijk), maar ~$26,5 per indextaak - ongeveer 2,6x Opus 5.5. Voor een kmo zelden het juiste standaardmodel. |
 | EU-verwerker gewenst, geen zelf-hosting | **Mistral Large 4** | EU-gevestigde aanbieder, $1,36/$4,18 per 1M tokens. Nog **geen** open gewichten en **geen** licentie gepubliceerd. |
 | Zelf hosten, commercieel veilig | **GLM-5.3 Flash** (MIT) of **DeepSeek-V4.1-Flash** (MIT) | Permissieve licentie, respectievelijk 18B en 8–16B actieve parameters. GLM-5.3 (groot) stapte over op een eigen licentie — lees ze eerst. |
-| Draaien op 16–32 GB RAM op kantoor | **Gemma 4 31B QAT** / **gpt-oss-20b** | Zie de hardwaretabel hierboven; de 2026-frontiermodellen passen niet op kmo-hardware. |
+| Draaien op 16–32 GB RAM op kantoor | **Inkling 2 Mini** (Apache 2.0), anders **Gemma 4 31B QAT** / **gpt-oss-20b** | Inkling 2 Mini (20-11-2026) is 26,4B totaal / 3,4B actief, ~20 GB checkpoint, draait offline op een 32 GB-machine. **Let op:** de 79,2% SWE-bench Verified is een leverancierscijfer en botst met een onafhankelijk gemeten AA Intelligence Index van 20 - test het eerst op je eigen repo. |
+| "Open weights" als exit-strategie, niet als zelf-hosting | **Kimi K3.1 Pro** of **LongCat-2.5** | Beide gepubliceerd in november 2026, maar met 2,8T resp. 1,6T parameters passen ze niet op kmo-hardware. LongCat is MIT (schoon), Kimi heeft een eigen licentie. Hosted inferentie betekent in beide gevallen een doorgifte naar China. |
 
 ### 5. Waarschuwing bij het lezen van de benchmarkbalken
 

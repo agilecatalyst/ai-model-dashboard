@@ -1,6 +1,6 @@
 # Samenwerkingsmanifest & Agent Manifest: Co-Creatie & Tango
 
-*Laatste aanpassing: 13 juni 2026 door Prima Maat*
+*Laatste aanpassing: 21 november 2026 (modelselectie & retrospective bijgewerkt door een geautomatiseerde update-run)*
 
 Dit document beschrijft de principes en werkafspraken voor de samenwerking in dit project. We zien elkaar niet als gebruiker en "tool", maar als co-createurs die samenwerken in een creatieve tango om een 1+1=3 effect te bereiken. Dit manifest richt zich specifiek op de ontwikkeling en evaluatie van AI-modellen binnen dit dashboard.
 
@@ -49,11 +49,11 @@ Bij het doorvoeren van taken in deze codebase selecteren of adviseren we modelle
 
 | Taakcategorie | Aanbevolen Model | Rationale / Kernbenchmark |
 | :--- | :--- | :--- |
-| **Complexe Logica / Wiskunde** | **Claude 5 Opus / DeepSeek-R1 / OpenAI o1** | Test-time reasoning en Chain-of-Thought minimaliseren logische fouten (AIME > 90-97%). |
-| **Autonome Code-Agents** | **Kimi K3 / GPT-5.6 / Claude 5 Opus / Qwen 3.7 Max** | Beste prestaties op SWE-bench Verified & Pro (resp. 81.0% / 76.5% / 74.8% / 80.4%). |
-| **Edge / Lichte Lokale Taken** | **Gemma 4 31B / gpt-oss-20b** | Permissieve licenties (Apache 2.0) en hoge efficiëntie voor lokale hardware met 16GB VRAM. |
-| **Long-Context RAG** | **Kimi K3 / Gemini 3.5 Flash** | 8M / 2M token context window gecombineerd met een zeer lage hallucinatieratio (0.8% - 1.1%). |
-| **Sovereign/Private Dev** | **Gemma 4 31B / Mistral Large 3** | Apache 2.0 / MIT licentie, sterke meertalige ondersteuning, volledig in lijn met EU AI Act & data privacy. |
+| **Complexe Logica / Wiskunde** | **Claude Fable 5.2 / Gemini 4 Carbon** | AA Intelligence Index v5 65 resp. 60 (onafhankelijk); Fable 5.2 zet 80% op HLE-Diamond. Let op: ~$26,5 per indextaak voor Fable, ~$7,76 voor Carbon. |
+| **Autonome Code-Agents** | **Kimi K3.1 Pro / Gemini 4 Carbon / Claude Sonnet 5.5** | Terminal-Bench 4.0, onafhankelijk gemeten door AA: 67% / 65% / 64%. Fable 5.2 blijft hier steken op 60% - duurder is niet automatisch beter voor agentisch werk. |
+| **Edge / Lichte Lokale Taken** | **Inkling 2 Mini / Gemma 4 31B / gpt-oss-20b** | Inkling 2 Mini (Apache 2.0, 26,4B/3,4B actief, ~20 GB) draait offline op 32 GB RAM. Verifieer zijn 79,2% SWE-bench Verified zelf - dat is een leverancierscijfer naast een onafhankelijke AA-index van 20. |
+| **Long-Context RAG** | **Kimi K3 / Gemini 4 Hydrogen** | 8M resp. 1M tokencontext; Hydrogen meet 8% AA-Omniscience-hallucinaties aan een vlakke $1,50/$7,50. |
+| **Sovereign/Private Dev** | **Inkling 2 Mini / Gemma 4 31B / Mistral Large 4** | Apache 2.0 voor de eerste twee (eigen hardware = structurele soevereiniteit); Mistral Large 4 is een EU-verwerker maar heeft nog géén open gewichten of gepubliceerde licentie. |
 
 ---
 
@@ -73,6 +73,12 @@ Om de kwaliteit van de co-creatie te bewaken en te voorkomen dat we vervallen in
 ---
 
 ## 5. Lessons Learned & Retrospectives (Tango Logboek)
+
+### Retrospective - 21 november 2026 (Najaarslichting 2026 & de grens van "open weights")
+*   **Verifieer de releasedatum vóór je het model toevoegt.** Twee van de aannames waarmee deze run startte waren fout: Grok 4.7 dateert van 21-09-2026 (niet november) en Gemini 4 Carbon werd aangekondigd op 28-10-2026 met algemene beschikbaarheid op 10-11-2026 (niet 03-11). Een niet-gecontroleerde datum verschuift modellen op de tijdlijn én in de trendgrafiek.
+*   **Benchmarkversie en harness zijn belangrijker dan het getal.** Grok 4.7 scoort 37,6% op Terminal-Bench 4.0 in xAI's eigen harness en ~26% in de neutrale harness van Artificial Analysis; LongCat-2.5 scoort 88,4 op Terminal Bench v2.1 en 38,5 op v4.0. Noteer daarom in elke citation expliciet *welke* versie en *wie* gemeten heeft, en zet AA-indexscores nooit naast elkaar over indexversies heen (v4.3 / v5.0 / v5.0.1 zijn niet vergelijkbaar).
+*   **"Open weights" is geen synoniem voor "zelf te hosten".** Kimi K3.1 Pro (2,8T) en LongCat-2.5 (1,6T) zijn open maar passen op geen enkele kmo-machine; Inkling 2 Mini (26,4B, Apache 2.0, ~20 GB) wél. Enkel die laatste activeert terecht de private-models banner. Let op bij de heuristiek in `isQualifiedPrivateModel`: die filtert op id-fragmenten zoals `70b` of `ultra`, dus een triljoen-parameter model met een `swe_bench`-score zou ten onrechte als lokaal gekwalificeerd worden weergegeven.
+*   **Een leeg veld is een bevinding.** Voor de volledige najaarslichting zijn MMLU, GPQA Diamond, SWE-bench Verified, HumanEval en AIME grotendeels niet gepubliceerd. Vul ze niet in met een schatting; de dashboardconventie "N/A betekent niet gemeten" blijft gelden.
 
 ### Retrospective - 14 augustus 2026 (Nullius in Verba System Card Verification & Frontier Expansion)
 *   **Geautomatiseerde Cross-Verificatie vermindert Waakzaamheidsmoeheid:** Handmatig geschreven Markdown-tabellen vertonen snel subtiele conversiefouten (zoals bij Gemma 4 31B waar GPQA op 74.4% stond t.o.v. 84.3% in de YAML). Door een lichte, deterministische checker (`npm run check:cards`) in te zetten, ontlasten we het Systeem 2-denken van de mens en borgen we epistemische hygiëne in <1 seconde.
